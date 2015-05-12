@@ -45,31 +45,35 @@ If no authorization header is submitted with the request, or an invalid username
 ## Endpoints
 
 ### System Administration Endpoints
-- `/APIKey` <code>GET</code>
-- `/APIKeys` <code>GET</code>
-- `/Database` <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code>
-- `/Databases` <code>GET</code>
+Endpoint | Operations (Verbs) | Description
+-------- | ------------------ | -----------
+`/APIKey` | <code>GET</code> | Gets information on a single API Key
+`/APIKeys` | <code>GET</code> | Gets a list of all API Keys installed on the server
+`/Database` |  <code>GET</code><code>PUT</code><code>DELETE</code> | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD)
+`/Databases` | <code>GET</code><code>POST</code> | Manages the Databases the API is able to interact with in bulk
 
 ### Company Endpoints
-- `/Company` <code>GET</code>
-- `/Customer` [<code>GET</code>](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md)<code>POST</code><code>PATCH</code><code>DELETE</code>
-- `/CustomerControl` <code>GET</code>
-- `/Customers` <code>GET</code>
-- `/Document` <code>GET</code><code>POST</code><code>PATCH</code>
-- `/EC` <code>GET</code>
-- `/ECCategories` <code>GET</code>
-- `/GiftCard` <code>GET</code>
-- `/GiftCardCode` <code>GET</code>
-- `/GiftCardCodes` <code>GET</code>
-- `/GiftCards` <code>GET</code>
-- `/InventoryControl` <code>GET</code>
-- `/Item` <code>GET</code>
-- `/ItemCategories` <code>GET</code>
-- `/ItemCategory` <code>GET</code>
-- `/Items` <code>GET</code>
-- `/PayCode` <code>GET</code>
-- `/PayCodes` <code>GET</code>
-- `/Store` <code>GET</code>
-- `/TaxCodes` <code>GET</code>
-- `/User` <code>GET</code>
-- `/Workgroup` <code>GET</code>
+Endpoint | Operations (Verbs) | Description
+-------- | ------------------ | -----------
+`/Company` | <code>GET</code> | Gets information about the given company (from SY_COMP & DB_CTL)
+`/Customer` |  [<code>GET</code>](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md)<code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manager customer information
+`/CustomerControl` | <code>GET</code> | Gets customer control information
+`/Customers` | <code>GET</code> | Gets information on customers in bulk
+`/Document` | <code>GET</code><code>POST</code><code>PATCH</code> | Methods to add or edit documents (tickets)
+`/EC` | <code>GET</code> | Gets eCommerce settings
+`/ECCategories` | <code>GET</code> | Gets eCommerce Categories and items
+`/GiftCard` | <code>GET</code> | Gets gift card information
+`/GiftCardCode` | <code>GET</code> | Gets gift card code information
+`/GiftCardCodes` | <code>GET</code> | Gets information on gift card codes in bulk
+`/GiftCards` | <code>GET</code> | Gets information of Gift Cards in bulk
+`/InventoryControl` | <code>GET</code> | Gets inventory control information
+`/Item` | <code>GET</code> | Methods to get item and item inventory information
+`/ItemCategories` | <code>GET</code> | Gets item Categories in bulk
+`/ItemCategory` | <code>GET</code> | Gets item category information
+`/Items` | <code>GET</code> | Gets item information in bulk
+`/PayCode` | <code>GET</code> | Gets information on a Paycode
+`/PayCodes` | <code>GET</code> | Gets infomration on Paycodes in bulk
+`/Store` | <code>GET</code> | Gets infomration on a store or station
+`/TaxCodes` | <code>GET</code> | Gets information on Tax Codes
+`/User` | <code>GET</code> | Gets information on a User
+`/Workgroup` | <code>GET</code> | Gets workgroup information
