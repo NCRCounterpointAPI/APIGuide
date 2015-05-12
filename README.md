@@ -41,55 +41,31 @@ If no authorization header is submitted with the request, or an invalid username
 ## Endpoints
 
 ### System Administration Endpoints
-`/APIKey`
-
-`/APIKeys`
-
-`/Database`
-
-`/Databases`
+- `/APIKey` <code>GET</code>
+- `/APIKeys` <code>GET</code>
+- `/Database` <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code>
+- `/Databases` <code>GET</code>
 
 ### Company Endpoints
-`/Company`
-
-`/Customer`
-
-`/CustomerControl`
-
-`/Customers`
-
-`/Document`
-
-`/EC`
-
-`/ECCategories`
-
-`/GiftCard`
-
-`/GiftCardCode`
-
-`/GiftCardCodes`
-
-`/GiftCards`
-
-`/InventoryControl`
-
-`/Item`
-
-`/ItemCategories`
-
-`/ItemCategory`
-
-`/Items`
-
-`/PayCode`
-
-`/PayCodes`
-
-`/Store`
-
-`/TaxCodes`
-
-`/User`
-
-`/Workgroup`
+- `/Company` <code>GET</code>
+- `/Customer` <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code>
+- `/CustomerControl` <code>GET</code>
+- `/Customers` <code>GET</code>
+- `/Document` <code>GET</code><code>POST</code><code>PATCH</code>
+- `/EC` <code>GET</code>
+- `/ECCategories` <code>GET</code>
+- `/GiftCard` <code>GET</code>
+- `/GiftCardCode` <code>GET</code>
+- `/GiftCardCodes` <code>GET</code>
+- `/GiftCards` <code>GET</code>
+- `/InventoryControl` <code>GET</code>
+- `/Item` <code>GET</code>
+- `/ItemCategories` <code>GET</code>
+- `/ItemCategory` <code>GET</code>
+- `/Items` <code>GET</code>
+- `/PayCode` <code>GET</code>
+- `/PayCodes` <code>GET</code>
+- `/Store` <code>GET</code>
+- `/TaxCodes` <code>GET</code>
+- `/User` <code>GET</code>
+- `/Workgroup` <code>GET</code>
