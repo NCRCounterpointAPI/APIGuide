@@ -24,74 +24,72 @@ System administrator logins are identifiable by the lack of a company name/alias
 ### Authorization
 The NCR Counterpoint API uses standard http basic authentication to validate NCR Counterpoint credentials in each call. Per basic authentication requirements, each call must contain an "Authorization" header in the following format:
 
-> Authorization : Basic UUFUZXN0R29sZi5NR1I6UGFzc3dvcmQx
+`Authorization : Basic UUFUZXN0R29sZi5NR1I6UGFzc3dvcmQx`
 
 The value after the word "Basic" is a base64 encoded (not encrypted) string containing the username and password of the NCR Counterpoint user for which the request is being submitted. For all company level requests, the company name/alias must be provided as a prefix to the user name in the format <CompanyAlias>.<UserName>. For instance, if my company alias is "QATestGolf", my Counterpoint user name is "MGR", and my Counterpoint password is "password1", I'll form the authentication string as such:
 
-> QATestGolf.MGR:password1
+`QATestGolf.MGR:password1`
 
 Base64 encoding the above string will yield "UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx", which is the string included in the sample Basic authentication example above.
 
 **NOTE** Base64 encoding is not a form of encryption and does not provide security. All data included an an NCR Counterpoint API request and response is encoded via the use of SSL. You can find a 3rd party website to experiment with base64 encoding and decoding [here](https://www.base64encode.org/).
 
-If no authorization header is submitted with the request, or an invalid username or password is submitted, the request will fail with a **401 Invalid username or password** http response.
+If no authorization header is submitted with the request, or an invalid username or password is submitted, the request will fail with a `401 Invalid username or password` http response.
 
 ## Common http Response codes
 
 ## Endpoints
 
 ### System Administration Endpoints
-> /APIKey
+`/APIKey`
 
-> /APIKeys
+`/APIKeys`
 
-> /Database
+`/Database`
 
-> /Databases
+`/Databases`
 
 ### Company Endpoints
-> /Company
+`/Company`
 
-> /Customer
+`/Customer`
 
-> /CustomerControl
+`/CustomerControl`
 
-> /Customers
+`/Customers`
 
-> /Document
+`/Document`
 
-> /EC
+`/EC`
 
-> /ECCategories
+`/ECCategories`
 
-> /GiftCard
+`/GiftCard`
 
-> /GiftCardCode
+`/GiftCardCode`
 
-> /GiftCardCodes
+`/GiftCardCodes`
 
-> /GiftCards
+`/GiftCards`
 
-> /InventoryControl
+`/InventoryControl`
 
-> /Item
+`/Item`
 
-> /ItemCategories
+`/ItemCategories`
 
-> /ItemCategory
+`/ItemCategory`
 
-> /Items
+`/Items`
 
-> /PayCode
+`/PayCode`
 
-> /PayCodes
+`/PayCodes`
 
-> /Store
+`/Store`
 
-> /TaxCodes
+`/TaxCodes`
 
-> /User
+`/User`
 
-> /Workgroup
-
-
+`/Workgroup`
