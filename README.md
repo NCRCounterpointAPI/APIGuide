@@ -1,6 +1,6 @@
-# NCRCounterpointAPI
+# NCR Counterpoint API
 The NCR Counterpoint API is a [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) API server designed to be hosted on premises or in the cloud. It is built in pure .NET (C#) using the [ServiceStack](https://github.com/ServiceStack/ServiceStack/wiki) framework and uses [basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) using existing NCR Counterpoint user credentials. Some key features of the API are:
-- Independent from Counterpoint code: The API shares no code with Counterpoint, and thus can be installed on a non-Counterpoint machine. This also allows flexibility in forward and backward compatibility and ensures that API upgrades aren't dependent on Counterpoint upgrades
+- Independent from Counterpoint code: The API has no runtime dependencies on Counterpoint, and thus can be installed on a non-Counterpoint machine. This also allows flexibility in forward and backward compatibility and ensures that API upgrades aren't dependent on Counterpoint upgrades.
 - Multi-company capable: The API server can connect to multiple independent NCR Counterpoint companies from the same and or separate installs. As long as the API server has connectivity to a Counterpoint system, it can work with it
 - Multi-version capable: The API server is designed to work with multiple versions of Counterpoint systems simultaneously. The same server instance can work with an 8.4.6.12 company and an 8.5.0 company. The API server determines the version of Counterpoint its connected to by querying <code>DB_CTL.DB_VER</code> from the Counterpoint database, and executes the proper set of business rules for the target version of Counterpoint.
 - Lightweight, simple, and performant: As much as possible, we hope to keep the API server small, simple, and high performance. As with any software, it will grow as functionality grows, but key design goals are simplicity and performance.
@@ -26,7 +26,7 @@ System administrator logins are identifiable by the lack of a company name/alias
 
 ## Common http Request elements
 ### Authorization
-The NCR Counterpoint API uses standard http basic authentication to validate NCR Counterpoint credentials in each call. Per basic authentication requirements, each call must contain an "Authorization" header in the following format:
+The NCR Counterpoint API uses standard http [basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) to validate NCR Counterpoint credentials in each call. Per basic authentication requirements, each call must contain an "Authorization" header in the following format:
 
 `Authorization : Basic UUFUZXN0R29sZi5NR1I6UGFzc3dvcmQx`
 
