@@ -1,8 +1,9 @@
 # NCRCounterpointAPI
-Repository for NCR Counterpoint API Documentation
-
-## Installation
-In progress
+The NCR Counterpoint API is a Rest API server designed to be hosted on premises or in the cloud. It is built in pure .NET (C#) using the ServiceStack framework and uses basic authentication using existing NCR Counterpoint user credentials. Some key features of the API are:
+- Independent from Counterpoint code: The API shares no code with Counterpoint, and thus can be installed on a non-Counterpoint machine. This also allows flexibility in forward and backward compatibility and ensures that API upgrades aren't dependent on Counterpoint upgrades
+- Multi-company capable: The API server can connect to multiple independent NCR Counterpoint companies from the same and or separate installs. As long as the API server has connectivity to a Counterpoint system, it can work with it
+- Multi-version capable: The API server is designed to work with multiple versions of Counterpoint systems simultaneously. The same server instance can work with an 8.4.6.12 company and an 8.5.0 company. The API server determines the version of Counterpoint its connected to by querying <code>DB_CTL.DB_VER</code> from the Counterpoint database, and executes the proper set of business rules for the target version of Counterpoint.
+- Lightweight, simple, and performant: As much as possible, we hope to keep the API server small, simple, and high performance. As with any software, it will grow as functionality grows, but key design goals are simplicity and performance.
 
 ## Requirements
 Any instance of the NCR Counterpoint API server can connect to multiple NCR Counterpoint installations and companies. In order for the server to work against an NCR Counterpoint company, the following requirements must be met:
@@ -11,6 +12,9 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 * The NCR Counterpoint API server must have administrative access to the company database
 * The company the server is connecting to must have the API user option enabled in its registration.ini file. There are some limited functions that will work without the API user option, but the bulk of the endpoints do require the registration option. See the documentation for an individual endpoint to determine if it requires the registration.ini option for use.
 * Client applications or scripts using the API must provide a valid API Key, which is installed on the API Server, and included in the "APIKey" header for the request. See the page on APIKeys for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
+
+## Installation
+In progress
 
 ## Configuration and Administration
 In progress
