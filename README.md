@@ -52,7 +52,7 @@ If no authorization header is submitted with the request, or an invalid username
 
 ### Company Endpoints
 - `/Company` <code>GET</code>
-- `/Customer` <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code>
+- `/Customer` [<code>GET</code>](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md)<code>POST</code><code>PATCH</code><code>DELETE</code>
 - `/CustomerControl` <code>GET</code>
 - `/Customers` <code>GET</code>
 - `/Document` <code>GET</code><code>POST</code><code>PATCH</code>
