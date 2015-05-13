@@ -19,7 +19,18 @@ CustNo | path | string | true | The CUST_NO of the customer to retrieve.
 - **<code>404 Not Found</code>** The CUST_NO provided was not a valid CUST_NO in the AR_CUST table.
 - **<code>500 Internal Server Error</code>** The request could not be fulfilled due to an unexpected internal error. This could be caused by a bug in the system, an unavailable database, or any other unexpected internal problem processing the request.
 
+#### Response Body
+This endpoint returns data related to a customer, essentially from the AR_CUST and related tables. The data is hierarchically structured in the response, as such:
+
+```
+AR_CUST
+  AR_CUST_NOTES<Array>
+  AR_SHIP_ADRS<Array>
+  AR_CARDS<ARRAY> 
+```
+
 #### Sample Response Body
+
 ```
 {
   "AR_CUST": {
@@ -153,14 +164,6 @@ CustNo | path | string | true | The CUST_NO of the customer to retrieve.
         "USR_ID": "MGR",
         "NOTE": "{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\fs16 This is an Auto-display note used for Account Management. This note is also one that can be printed using a Preview function and Crystal will do word-wrap on the notes column.\\par\r\n}\r\n",
         "NOTE_TXT": "This is an Auto-display note used for Account Management. This note is also one that can be printed using a Preview \r\nfunction and Crystal will do word-wrap on the notes column.\r\r\n"
-      },
-      {
-        "CUST_NO": "1000",
-        "NOTE_ID": "AUTO",
-        "NOTE_DAT": "/Date(1300110432000-0000)/",
-        "USR_ID": "MGR",
-        "NOTE": "{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\fs16 Have Bill verify his current phone number.  (we could not reach him last week)\\par\r\n\\par\r\nAH\\par\r\n}\r\n",
-        "NOTE_TXT": "Have Bill verify his current phone number.  (we could not reach him last week)\r\r\n\r\r\nAH\r\r\n"
       }
     ],
     "AR_SHIP_ADRS": [
