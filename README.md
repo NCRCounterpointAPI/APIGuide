@@ -38,10 +38,18 @@ Base64 encoding the above string will yield "UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx", 
 
 **NOTE** Base64 encoding is not a form of encryption and does not provide security. All data included an an NCR Counterpoint API request and response is encoded via the use of SSL. You can find a 3rd party website to experiment with base64 encoding and decoding [here](https://www.base64encode.org/).
 
-If no authorization header is submitted with the request, or an invalid username or password is submitted, the request will fail with a `401 Invalid username or password` http response.
+If no authorization header is submitted with the request, or an invalid username or password is submitted, the request will fail with a `401 Unauthorized` http response.
 
-## Common http Response codes
-
+## Common http Result status codes
+Status Code | Name | Description
+----------- | ---- | -----------
+200 | Success | The call was successful. Most commonly used with GET operations.
+201 | Created | The call was successful and the resource submitted was created. Typically used with POST operations that add resources to Counterpoint.
+400 | Bad Request | The call failed because the required information was not provided. This could mean JSON was malformed, required data was missing, or invlalid data was submitted.
+401 | Unauthorized | The username or password submitted in the basic authorization header was not valid. This could include an invalid company name prefix on a username.
+403 | Forbidden | The user is not allowed to make this request. Often this means the required "APIKey" header was not supplied or is invalid, or the company does not have the API option enabled in their registration.ini file.
+404 | Not Found | The resource requested does not exist. This typically means the URI provide may not be valid.
+500 | Internal Server Error | The request could not be fulfilled due to an internal error. This could indicate a configuration issue, a bug in the system, or some other error.
 ## Endpoints
 
 ### System Administration Endpoints
