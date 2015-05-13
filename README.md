@@ -55,33 +55,43 @@ Status Code | Name | Description
 ### System Administration Endpoints
 Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
-`/APIKey` | <code>GET</code> | Gets information on a single API Key
-`/APIKeys` | <code>GET</code> | Gets a list of all API Keys installed on the server
-`/Database` |  <code>GET</code><code>PUT</code><code>DELETE</code> | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD)
-`/Databases` | <code>GET</code><code>POST</code> | Manages the Databases the API is able to interact with in bulk
+`/APIKey` | <code>GET</code> | Gets information on a single API Key.
+`/APIKeys` | <code>GET</code> | Gets a list of all API Keys installed on the server.
+`/Database` |  <code>GET</code><code>PUT</code><code>DELETE</code> | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD).
+`/Databases` | <code>GET</code><code>POST</code> | Manages the Databases the API is able to interact with in bulk.
 
 ### Company Endpoints
 Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
-`/Company` | <code>GET</code> | Gets information about the given company (from SY_COMP & DB_CTL)
-`/Customer` |  [<code>GET</code>](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md)<code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manager customer information
-`/CustomerControl` | <code>GET</code> | Gets customer control information
-`/Customers` | <code>GET</code> | Gets information on customers in bulk
-`/Document` | <code>GET</code><code>POST</code><code>PATCH</code> | Methods to add or edit documents (tickets)
-`/EC` | <code>GET</code> | Gets eCommerce settings
-`/ECCategories` | <code>GET</code> | Gets eCommerce Categories and items
-`/GiftCard` | <code>GET</code> | Gets gift card information
-`/GiftCardCode` | <code>GET</code> | Gets gift card code information
-`/GiftCardCodes` | <code>GET</code> | Gets information on gift card codes in bulk
-`/GiftCards` | <code>GET</code> | Gets information of Gift Cards in bulk
-`/InventoryControl` | <code>GET</code> | Gets inventory control information
-`/Item` | <code>GET</code> | Methods to get item and item inventory information
-`/ItemCategories` | <code>GET</code> | Gets item Categories in bulk
-`/ItemCategory` | <code>GET</code> | Gets item category information
-`/Items` | <code>GET</code> | Gets item information in bulk
-`/PayCode` | <code>GET</code> | Gets information on a Paycode
-`/PayCodes` | <code>GET</code> | Gets information on Paycodes in bulk
-`/Store` | <code>GET</code> | Gets information on a store or station
-`/TaxCodes` | <code>GET</code> | Gets information on Tax Codes
-`/User` | <code>GET</code> | Gets information on a User
-`/Workgroup` | <code>GET</code> | Gets workgroup information
+`/Company` | <code>GET</code> | Gets information about the given company (from SY_COMP & DB_CTL).
+`/Customer` |  [<code>GET</code>](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md)<code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manager customer information.
+`/Customer/{CustNo}/Address` | <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manage customer shipping addresses.
+`/Customer/{CustNo}/Card` | <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manage customer cards on file.
+`/Customer/{CustNo}/Note` | <code>GET</code><code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manage customer notes.
+`/Customer/{CustNo}/OpenItems` | <code>GET</code> | Gets customer AR Open Item information.
+`/CustomerControl` | <code>GET</code> | Gets customer control information.
+`/Customers` | <code>GET</code> | Gets information on customers in bulk.
+`/Customers/EC` | <code>GET</code> | Gets information on eCommerce customers in bulk.
+`/Document` | <code>GET</code><code>POST</code> | Methods to add or edit documents (tickets).
+`/Document/{DocId}/Contact` | <code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to add or edit document contacts.
+`/Document/{DocId}/Lines` | <code>POST</code> | Adds Lines to a document.
+`/Document/{DocId}/Note` | <code>POST</code><code>PATCH</code><code>DELETE</code> | Methods to manage document notes.
+`/Document/{DocId}/Payments` | <code>POST</code> | Adds Payments to a document.
+`/EC` | <code>GET</code> | Gets eCommerce settings.
+`/ECCategories` | <code>GET</code> | Gets eCommerce Categories and items.
+`/GiftCard` | <code>GET</code> | Gets gift card information.
+`/GiftCardCode` | <code>GET</code> | Gets gift card code information.
+`/GiftCardCodes` | <code>GET</code> | Gets information on gift card codes in bulk.
+`/GiftCards` | <code>GET</code> | Gets information of Gift Cards in bulk.
+`/InventoryControl` | <code>GET</code> | Gets inventory control information.
+`/Item` | <code>GET</code> | Methods to get item and item inventory information.
+`/ItemCategories` | <code>GET</code> | Gets item Categories in bulk.
+`/ItemCategory` | <code>GET</code> | Gets item category information.
+`/Items` | <code>GET</code> | Gets item information in bulk.
+`/PayCode` | <code>GET</code><code>PATCH</code> | Methods to manage PayCodes.
+`/PayCodes` | <code>GET</code> | Gets information on Paycodes in bulk.
+`/Store` | <code>GET</code> | Gets information on a store.
+`/Store/{StoreId}/Station` | <code>GET</code> | Gets information on a station.
+`/TaxCodes` | <code>GET</code> | Gets information on Tax Codes.
+`/User` | <code>GET</code> | Gets information on a User.
+`/Workgroup` | <code>GET</code> | Gets workgroup information.
