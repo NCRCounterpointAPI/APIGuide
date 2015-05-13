@@ -80,8 +80,8 @@ Endpoint | Operations (Verbs) | Description
 `/ItemCategory` | <code>GET</code> | Gets item category information
 `/Items` | <code>GET</code> | Gets item information in bulk
 `/PayCode` | <code>GET</code> | Gets information on a Paycode
-`/PayCodes` | <code>GET</code> | Gets infomration on Paycodes in bulk
-`/Store` | <code>GET</code> | Gets infomration on a store or station
+`/PayCodes` | <code>GET</code> | Gets information on Paycodes in bulk
+`/Store` | <code>GET</code> | Gets information on a store or station
 `/TaxCodes` | <code>GET</code> | Gets information on Tax Codes
 `/User` | <code>GET</code> | Gets information on a User
 `/Workgroup` | <code>GET</code> | Gets workgroup information
