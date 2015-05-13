@@ -30,7 +30,7 @@ The NCR Counterpoint API uses standard http [basic authentication](http://en.wik
 
 `Authorization : Basic UUFUZXN0R29sZi5NR1I6UGFzc3dvcmQx`
 
-The value after the word "Basic" is a base64 encoded (not encrypted) string containing the username and password of the NCR Counterpoint user for which the request is being submitted. For all company level requests, the company name/alias must be provided as a prefix to the user name in the format <CompanyAlias>.<UserName>. For instance, if my company alias is "QATestGolf", my Counterpoint user name is "MGR", and my Counterpoint password is "password1", I'll form the authentication string as such:
+The value after the word "Basic" is a base64 encoded (not encrypted) string containing the username and password of the NCR Counterpoint user for which the request is being submitted. For all company level requests, the company name/alias must be provided as a prefix to the user name in the format `<CompanyAlias>.<UserName>`. For instance, if my company alias is "QATestGolf", my Counterpoint user name is "MGR", and my Counterpoint password is "password1", I'll form the authentication string as such:
 
 `QATestGolf.MGR:password1`
 
@@ -43,7 +43,7 @@ If no authorization header is submitted with the request, or an invalid username
 ## Common http Result status codes
 Status Code | Name | Description
 ----------- | ---- | -----------
-200 | Success | The call was successful. Most commonly used with GET operations.
+200 | OK / Success | The call was successful. Most commonly used with GET operations.
 201 | Created | The call was successful and the resource submitted was created. Typically used with POST operations that add resources to Counterpoint.
 400 | Bad Request | The call failed because the required information was not provided. This could mean JSON was malformed, required data was missing, or invlalid data was submitted.
 401 | Unauthorized | The username or password submitted in the basic authorization header was not valid. This could include an invalid company name prefix on a username.
