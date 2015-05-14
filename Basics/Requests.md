@@ -39,7 +39,31 @@ The `Content-Type` header is a standard http header that describes the type of d
 ## Accept header
 The `Accept` header is another standard http header that descripts the format of the data that should be returned in the response. Again, all testing on the NCR Counterpoint API is done using JSON data. If this header is not present in a request, then `Accept : application/json` is assumed.
 
-## Cache-Control header
-Certain data that is assumed to be relatively static is cached by the server after it's intially read. See the page on caching for more information. To force the server to reload data, the `Cache-Control` header can be used.
+## Caching
+Certain data that is assumed to be relatively static is cached by the server after it's intially read. See the page on caching for more information. To force the server to reload data, the `need name` header can be used.
+
+The following data is cached for 24 hours from the point it's intially loaded. No data is preloaded, it is all lazily loaded upon the first request for the data:
+
+- Company
+- Customer Control
+- Databases
+- eCommerce Control
+- eCommerce Categories
+- Gift Card Codes
+- Inventory Control
+- Item Categories
+- Items (not inventory information
+- PayCodes
+- Stores
+- Stations
+- Tax Codes
+- Workstations
+
+**NOTE:** When resources are added through the server (such as a POST to /Database), the cache is automatically updated with the new information, since the server is aware of the change. The cache typically will become stale when changes are made to the TLD or Counterpoint database that don't go through the API.
+
+There are three ways to force the cache to be updated:
+- Restart the NCR Counterpoint API server
+- Issue a DELETE request to the /CACHE endpoint: All data cached for the company indicated in the authentication header will be invalidated and reloaded upon the next request for that data.
+- Include a `need name` header in the request. This will invalidate all cached data for the company indicated in the authentication header. All data will be reloaded upon the next request for that data.
 More to come...
 
