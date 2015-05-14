@@ -22,17 +22,8 @@ In progress
 ## Making http requests
 Calls to the API Server are made in the form of http requests. See the page on [API requests](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Requests.md) for specifics on how to form http requests for the NCR Counterpoint API. See documentation on the language or script being used to make the request for details on how to properly create the request in your code.
 
-## Common http Result status codes
-Status Code | Name | Description
------------ | ---- | -----------
-200 | OK / Success | The call was successful. Most commonly used with GET operations.
-201 | Created | The call was successful and the resource submitted was created. Typically used with POST operations that add resources to Counterpoint.
-400 | Bad Request | The call failed because the required information was not provided. This could mean JSON was malformed, required data was missing, or invlalid data was submitted.
-401 | Unauthorized | The username or password submitted in the basic authorization header was not valid. This could include an invalid company name prefix on a username.
-403 | Forbidden | The user is not allowed to make this request. Often this means the required "APIKey" header was not supplied or is invalid, or the company does not have the API option enabled in their registration.ini file.
-404 | Not Found | The resource requested does not exist. This typically means the provided endpoint may not be valid.
-500 | Internal Server Error | The request could not be fulfilled due to an internal error. This could indicate a configuration issue, a bug in the system, or some other error.
-## Endpoints
+## Working with http responses
+Calls to the API Server issue http responses similarly to other REST APIs. See the page on [API responses](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Responses.md) for specifics on how to work with http responses. See documentation on the language or script being used to handle the response for details on how to properly work with the response in your code.
 
 ### System Administration Endpoints
 Endpoint | Operations (Verbs) | Description
