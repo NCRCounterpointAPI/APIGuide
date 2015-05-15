@@ -29,6 +29,11 @@ CustNo | path | string | true | The CUST_NO of the customer to retrieve.
 - **<code>403 Forbidden</code>** The request could not be fulfilled. Likely due to a missing, invalid, or expired APIKey, or a missing API option in the company's registration.ini 
 - **<code>404 Not Found</code>** The CUST_NO provided was not a valid CUST_NO in the AR_CUST table.
 - **<code>500 Internal Server Error</code>** The request could not be fulfilled due to an unexpected internal error. This could be caused by a bug in the system, an unavailable database, or any other unexpected internal problem processing the request.
+ 
+#### Error Codes
+The following error codes may be returned from requests to this endpoint:
+- `SUCCESS`: The request was successful and the customer information is present under the `AR_CUST` section of the response body.
+- `ERROR_RECORD_NOT_FOUND`: The requested CUST_NO was not present. This is returned when a 404 http response is returned.
 
 #### Response Body
 This endpoint returns data related to a customer, essentially from the AR_CUST and related tables. The data is hierarchically structured in the response, as such:
