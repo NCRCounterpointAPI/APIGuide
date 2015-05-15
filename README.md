@@ -19,6 +19,9 @@ In progress
 ## Configuration and Administration
 In progress
 
+### Testing
+For ad hoc testing, we use and recommend the [Postman (Packaged app)](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en). It's a chrome web app that allows creating and saving REST requests. We're writing automated functional tests using Postman (and their $10 "Jetpacks" addon, which is well worth it). We plan on sharing our Postman tests via GitHub in the future as well so the community can see what we test, use our tests, and contribute to our tests.
+
 ## Making http requests
 Calls to the API Server are made in the form of http requests. See the page on [API requests](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Requests.md) for specifics on how to form http requests for the NCR Counterpoint API. See documentation on the language or script being used to make the request for details on how to properly create the request in your code.
 
