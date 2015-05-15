@@ -37,7 +37,7 @@ Endpoint | Operations (Verbs) | Description
 Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
 `/Company` | `GET` | Gets information about the given company (from SY_COMP & DB_CTL).
-`/Customer` |  [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) `POST` `PATCH` `DELETE` | Methods to manager customer information.
+`/Customer` |  [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) `POST` `PATCH` `DELETE` | Methods to manage customer information.
 `/Customer/{CustNo}/Address` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer shipping addresses.
 `/Customer/{CustNo}/Card` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer cards on file.
 `/Customer/{CustNo}/Note` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer notes.
