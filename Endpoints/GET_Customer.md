@@ -14,12 +14,9 @@ The endpoint gets information about the specified customer
 `GET https://localhost:81/Customer/100010`
 
 **Headers**
-
-`Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
-
-`APIKey : vpmk0tqApzFu5EesAMQgstBtQAEwK1ySwMZ4zwiC`
-
-`Accept : application/json`
+- `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
+- `APIKey : vpmk0tqApzFu5EesAMQgstBtQAEwK1ySwMZ4zwiC`
+- `Accept : application/json`
 
 #### Parameters
 Name | Parameter Type | Data Type | Required | Description
