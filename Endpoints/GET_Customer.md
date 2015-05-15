@@ -1,7 +1,7 @@
 # GET /Customer/{CustNo}
 
 #### Description
-The endpoint gets information about the specified customer
+Retrieves information about a specified customer
 
 - Requires API Key: Yes
 - Requires System Administrator: No
