@@ -235,9 +235,9 @@ MARKETING_MAILOUT_OPT_IN_DAT | |
 RPT_EMAIL | |
 MBL_PHONE_1 | |
 MBL_PHONE_2 | |
-List[AR_CUST_NOTE_POST] AR_CUST_NOTE | |
-List[AR_SHIP_ADRS_POST] AR_SHIP_ADRS | |
-List[AR_CUST_CARDS_POST] AR_CUST_CARDS | |
+List[AR_CUST_NOTE] | |
+List[AR_SHIP_ADRS] | |
+List[AR_CUST_CARDS] | |
 
 #### Response Codes
 - **<code>201 Created</code>** The request was successful, the customer was added to the Counterpoint database.
