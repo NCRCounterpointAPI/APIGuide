@@ -100,10 +100,10 @@ CR_LIM | |
 CR_RATE | |
 NO_MAX_CHK_AMT | |
 MAX_CHK_AMT | |
-CR_CARD_PAY_COD_1 | |
-CR_CARD_NO_1 | |
-CR_CARD_EXP_DAT_1 | |
-CR_CARD_NAM_1 | |
+CR_CARD_PAY_COD_1 | | Valid for 8.4.6 only. For 8.5 and later submit a AR_CUST_CARD record for cards on file. The pay code for the customer's card on file.
+CR_CARD_NO_1 | | Valid for 8.4.6 only. For 8.5 and later submit a AR_CUST_CARD record for cards on file. The credit card number for the customer's card on file. For CPG stores, the card number will be encrypted before being saved. For NCR Secure Pay stores, the card will be tokenized per the customer's store NCR Secure Pay settings.
+CR_CARD_EXP_DAT_1 | | Valid for 8.4.6 only. For 8.5 and later submit a AR_CUST_CARD record for cards on file. The expiration date of the customer's card on file.
+CR_CARD_NAM_1 | | Valid for 8.4.6 only. For 8.5 and later submit a AR_CUST_CARD record for cards on file. The cardholder name for the customer's card on file.
 UNPSTD_BAL | |
 BAL_METH | |
 AR_ACCT_NO | |
