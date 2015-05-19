@@ -196,8 +196,7 @@ AR_CUST
     ],
     "AR_CUST_CARDS": []
   },
-  "IsSuccessful": true,
-  "ResultCode": 0
+  "ErrorCode": "SUCCESS"
 }
 ```
 
