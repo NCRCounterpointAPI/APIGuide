@@ -35,13 +35,14 @@ Endpoint | Operations (Verbs) | Description
 `/APIKeys` | `GET` | Gets a list of all API Keys installed on the server.
 `/Database` |  `GET` `PUT` `DELETE` | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD).
 `/Databases` | `GET` `POST` | Manages the Databases the API is able to interact with in bulk.
+`/Databases/ini` | `GET` | Gets a list of company DB information from a companies.ini file
 `/SystemInfo` | `GET` | Gets information about the API server and hardware environment.
 
 ### Company Endpoints
 Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
 `/Company` | `GET` | Gets information about the given company (from SY_COMP & DB_CTL).
-`/Customer` |  [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Customer.md) `PATCH` `DELETE` | Methods to manage customer information.
+`/Customer` |  [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Customer.md) `PATCH` | Methods to manage customer information.
 `/Customer/{CustNo}/Address` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer shipping addresses.
 `/Customer/{CustNo}/Card` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer cards on file.
 `/Customer/{CustNo}/Note` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer notes.
