@@ -35,6 +35,7 @@ Endpoint | Operations (Verbs) | Description
 `/APIKeys` | `GET` | Gets a list of all API Keys installed on the server.
 `/Database` |  `GET` `PUT` `DELETE` | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD).
 `/Databases` | `GET` `POST` | Manages the Databases the API is able to interact with in bulk.
+`/SystemInfo` | `GET` | Gets information about the API server and hardware environment.
 
 ### Company Endpoints
 Endpoint | Operations (Verbs) | Description
