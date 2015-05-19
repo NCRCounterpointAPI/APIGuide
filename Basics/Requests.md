@@ -39,6 +39,17 @@ The `Content-Type` header is a standard http header that describes the type of d
 ## Accept header
 The `Accept` header is another standard http header that descripts the format of the data that should be returned in the response. Again, all testing on the NCR Counterpoint API is done using JSON data. If this header is not present in a request, then `Accept : application/json` is assumed.
 
+## Working with Dates and Times
+The NCR Counterpoint API server uses dates in the [ISO8601](http://en.wikipedia.org/wiki/ISO_8601) date format, as it is human readable, sortable, and increasingly considered the standard way to express dates on the web. Dates will be provided in the format 
+
+`YYYY-MM-DDTHH:MM:SS.SSSSSSS`
+
+such as:
+
+`2006-03-19T00:00:00.0000000`
+
+When submitting dates and times in a request, the same format should be used. If only a date is needed, the time portion can be left off. Similarly, the precision of the seconds can be shortened if it isn't needed. If only a time is needed, and no date, the date portion will be ignored (but must be provided).
+
 ## Caching
 Certain data that is assumed to be relatively static is cached by the server after it's intially read. See the page on caching for more information. To force the server to reload data, the `need name` header can be used.
 
