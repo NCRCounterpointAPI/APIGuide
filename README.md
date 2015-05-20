@@ -20,7 +20,9 @@ In progress
 In progress
 
 ### Testing
-For ad hoc testing, we use and recommend the [Postman (Packaged app)](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en). It's a chrome web app that allows creating and saving REST requests. We're writing automated functional tests using Postman (and their $10 "Jetpacks" addon, which is well worth it). We plan on sharing our Postman tests via GitHub in the future as well so the community can see what we test, use our tests, and contribute to our tests.
+For ad hoc testing, we use and recommend the [Postman (Packaged app)](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en). It's a chrome web app that allows creating and saving REST requests. We're writing automated functional tests using Postman (and their $10 "Jetpacks" addon, which is well worth it). 
+
+You can find all the automated tests we run for the API [here](https://github.com/NCRCounterpointAPI/APITests). They are written to run against a standard Counterpoint test database and TLD (coming soon). The tests are published not only as reference examples of API usage, but also in hopes the community will contribute to the test cases as well, to help reproduce bugs and improve test coverage. The preferable way to get an improvement to tests or documentation is for users to submit pull requests containing tests to illustrate issues or provide new test coverage. Please submit tests that will work against the standard test database and are structured similarly to our existing conventions.
 
 ## Making http requests
 Calls to the API Server are made in the form of http requests. See the page on [API requests](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Requests.md) for specifics on how to form http requests for the NCR Counterpoint API. See documentation on the language or script being used to make the request for details on how to properly create the request in your code.
