@@ -1,5 +1,5 @@
 
-# GET /(endpoint)
+# GET /APIKey
 
 #### Description
 
