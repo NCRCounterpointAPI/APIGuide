@@ -31,8 +31,8 @@ Calls to the API Server issue http responses similarly to other REST APIs. See t
 ### System Administration Endpoints
 Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
-`/APIKey` | `GET` | Gets information on a single API Key.
-`/APIKeys` | `GET` | Gets a list of all API Keys installed on the server.
+`/APIKey` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKey.md) | Gets information on a single API Key.
+`/APIKeys` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKeys.md) | Gets a list of all API Keys installed on the server.
 `/Database` |  `GET` `PUT` `DELETE` | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD).
 `/Databases` | `GET` `POST` | Manages the Databases the API is able to interact with in bulk.
 `/Databases/ini` | `GET` | Gets a list of company DB information from a companies.ini file
