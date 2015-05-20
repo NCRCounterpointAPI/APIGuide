@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /APIKeys
 
 #### Description
-
+Gets a list of all APIKeys installed in the system.
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/APIKeys`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
@@ -28,31 +28,53 @@ None
  
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
-- `SUCCESS`: The request was successful and the customer information is present under the `SystemInfo` section of the response body.
-- `ERROR_RECORD_NOT_FOUND`: The requested System Info was not present. Restarting the server should regenerate the information
+- `SUCCESS`: The request was successful and the customer information is present under the `APIKey` section of the response body.
 
 #### Sample Response Body
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
+  "APIKeys": [
+    {
+      "DevID": "f7f5bdb1-4dc8-4844-a5e1-f57b885e1b65",
+      "DevName": "Hall of Justice",
+      "IssuedTo": "Clark Kent",
+      "eMail1": "Clark.Kent@HallofJustice.com",
+      "eMail2": "Bruce.Wayne@HallofJustice.com",
+      "AppID": "ee51f0f2-1d1c-4b02-a428-013833b1575d",
+      "AppName": "Test Key",
+      "AppDescription": "Clark's test key",
+      "expiration": "2017-05-06T00:00:00.0000000"
+    },
+    {
+      "DevID": "f7f5bdb1-4dc8-4844-a5e1-f57b885e1b65",
+      "DevName": "Hall of Justice",
+      "IssuedTo": "Bruce Wayne",
+      "eMail1": "Bruce.Wayne@HallofJustice.com",
+      "eMail2": "Clark.Kent@HallofJustice.com",
+      "AppID": "ccf5bdb6-7fff-4844-a5e1-f23b885e1b65",
+      "AppName": "Test BatKey",
+      "AppDescription": "Bruce's test key",
+      "expiration": "2017-05-06T00:00:00.0000000"
+    }
+  ],
   "ErrorCode": "SUCCESS"
 }
 ```
 
 #### Response Body
 
-**SystemInfo object**
+**APIKey object (Array)**
 
 Element | Datatype | Description
 ------- | -------- | -----------
-
-
+DevID | String/Guid | A unqiue Guid identifying the company/3rd party developer the key is issued to.
+DevName | String | The name of the company/3rd party developer the key is issued to.
+IssuedTo | String | The name of the person the key was issued to.
+eMail1 | String | The primary eMail address of the key owner. This email will be used to notify the 3rd party of pending APIKey expirations and other relevant events.
+eMail2 | String | A backup eMail address of the key owner. Ideally this is a different individual to ensure any emails. regarding pending APIKey expirations will be received by the 3rd party developer.
+AppID | String/Guid | A unique Guid identifying the application/use case using this APIKey.
+AppName | String | The name of the application/use case using this APIKey.
+AppDescription | String | A brief description of the application using this APIKey.
+expiration | DateTime | The expiration Date of the APIKey. After the key expires, requests made using this APIKey will cease to function.
 
