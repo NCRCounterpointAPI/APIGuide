@@ -36,7 +36,7 @@ Endpoint | Operations (Verbs) | Description
 `/Database` |  `GET` `PUT` `DELETE` | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD).
 `/Databases` | `GET` `POST` | Manages the Databases the API is able to interact with in bulk.
 `/Databases/ini` | `GET` | Gets a list of company DB information from a companies.ini file
-`/SystemInfo` | `GET` | Gets information about the API server and hardware environment.
+`/SystemInfo` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
 
 ### Company Endpoints
 Endpoint | Operations (Verbs) | Description
