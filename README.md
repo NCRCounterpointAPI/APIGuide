@@ -35,8 +35,11 @@ Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
 `/APIKey` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKey.md) | Gets information on a single API Key.
 `/APIKeys` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKeys.md) | Gets a list of all API Keys installed on the server.
-`/Database` |  `GET` `PUT` `DELETE` | Manages the Databases the API is able to interact with (NCR Counterpoint Database and corresponding TLD).
-`/Databases` | `GET` `POST` | Manages the Databases the API is able to interact with in bulk.
+`/Database` | `GET` | Gets information about a Database (Company) configured for use by the API Server.
+`/Database` | `PUT` | Updates information about a Database (Company) configured for use by the API Server.
+`/Database` | `DELETE` | Deletes a Database (Company) so it can no longer be used by the API Server.
+`/Databases` | `GET` | Gets a list of all Databases (Companies) the API is able to interact with.
+`/Databases` | `POST` | Adds one or more Databases (Companies) the API can interact with.
 `/Databases/ini` | `GET` | Gets a list of company DB information from a companies.ini file
 `/SystemInfo` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
 
