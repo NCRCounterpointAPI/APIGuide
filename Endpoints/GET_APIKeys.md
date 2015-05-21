@@ -2,7 +2,7 @@
 # GET /APIKeys
 
 #### Description
-Gets a list of all APIKeys installed in the system.
+Gets a list of all APIKeys installed in the system. This request will also force the APIKey Cache to be reloaded from disk into memory.
 
 - Requires API Key: No
 - Requires System Administrator: Yes
