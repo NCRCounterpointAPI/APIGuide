@@ -47,34 +47,55 @@ Endpoint | Operations (Verbs) | Description
 Endpoint | Operations (Verbs) | Description
 -------- | ------------------ | -----------
 `/Company` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Company.md) | Gets information about the given company (from SY_COMP & DB_CTL).
-`/Customer` |  [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Customer.md) `PATCH` | Methods to manage customer information.
-`/Customer/{CustNo}/Address` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer shipping addresses.
-`/Customer/{CustNo}/Card` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer cards on file.
-`/Customer/{CustNo}/Note` | `GET` `POST` `PATCH` `DELETE` | Methods to manage customer notes.
+`/Customer` | [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Customer.md) | Adds a new customer record.
+`/Customer/{CustNo}` | [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) | Gets information about a customer.
+`/Customer/{CustNo}` |  `PATCH` | Updates information about a customer.
+`/Customer/{CustNo}/Address` | `GET` | Gets customer shipping addresses.
+`/Customer/{CustNo}/Address` | `POST` | Adds a new shipping address to an existing customer.
+`/Customer/{CustNo}/Address` | `PATCH` | Updates an existing shipping address for an existing customer.
+`/Customer/{CustNo}/Address` | `DELETE` | Deletes a shipping address from an existing customer.
+`/Customer/{CustNo}/Card` | `GET` | Gets credit cards on file for an existing customer.
+`/Customer/{CustNo}/Card` | `POST` | Adds a credit card on file to an existing customer.
+`/Customer/{CustNo}/Card` | `PATCH` | Updates an existing credit card on file for an existing customer.
+`/Customer/{CustNo}/Card` | `DELETE` | Deletes a credit card on file for an exsitng customer.
+`/Customer/{CustNo}/Note` | `GET` | Gets customer notes for a given customer.
+`/Customer/{CustNo}/Note` | `POST` | Adds a new note to an existing customer.
+`/Customer/{CustNo}/Note` | `PATCH` | Updates an existing note on an existing customer.
+`/Customer/{CustNo}/Note` | `DELETE` | Deletes a note from an existing customer.
 `/Customer/{CustNo}/OpenItems` | `GET` | Gets customer AR Open Item information.
 `/CustomerControl` | `GET` | Gets customer control information.
 `/Customers` | `GET` | Gets information on customers in bulk.
 `/Customers/EC` | `GET` | Gets information on eCommerce customers in bulk.
-`/Document` | `GET` `POST` | Methods to add or edit documents (tickets).
-`/Document/{DocId}/Contact` | `POST` `PATCH` `DELETE` | Methods to add or edit document contacts.
+`/Document` | `POST` | Adds a new document (ticket).
+`/Document/{DocId}` | `GET` | Gets information on an existing document (ticket) that hasn't been posted yet.
+`/Document/{DocId}/Contact` | `POST` | Adds a contact to an existing document.
+`/Document/{DocId}/Contact` | `PATCH` | Updates a contact on an existing document.
+`/Document/{DocId}/Contact` | `DELETE` | Deletes a contact from an existing document.
 `/Document/{DocId}/Lines` | `POST` | Adds Lines to a document.
-`/Document/{DocId}/Note` | `POST` `PATCH` `DELETE` | Methods to manage document notes.
+`/Document/{DocId}/Note` | `POST` | Adds a note to an existing document.
+`/Document/{DocId}/Note` | `PATCH` | Updates a note on an existing document.
+`/Document/{DocId}/Note` | `DELETE` | Deletes a note from an existing document.
 `/Document/{DocId}/Payments` | `POST` | Adds Payments to a document.
 `/EC` | `GET` | Gets eCommerce settings.
 `/ECCategories` | `GET` | Gets eCommerce Categories and items.
-`/GiftCard` | `GET` | Gets gift card information.
-`/GiftCardCode` | `GET` | Gets gift card code information.
+`/GiftCard/{GiftCardNo}` | `GET` | Gets gift card information.
+`/GiftCardCode/{GiftCardCode}` | `GET` | Gets gift card code information.
 `/GiftCardCodes` | `GET` | Gets information on gift card codes in bulk.
 `/GiftCards` | `GET` | Gets information of Gift Cards in bulk.
 `/InventoryControl` | `GET` | Gets inventory control information.
-`/Item` | `GET` | Methods to get item and item inventory information.
+`/Item/{ItemNo}` | `GET` | Methods to get item and item inventory information.
+`/Item/{ItemNo}/Images` | `GET` | Gets a list of available item images for a given item.
+`/Item/{ItemNo}/Images/{Filename} ` | `GET` | Gets an item image for the given item and filename.
+`/Item/{ItemNo}/Inventory/{LocId}` | `GET` | Gets item inventory information for a given item and location.
+`/Item/Inventory/EC` | `GET` | Gets eCommerce inventory information for all eCommerce items.
 `/ItemCategories` | `GET` | Gets item Categories in bulk.
-`/ItemCategory` | `GET` | Gets item category information.
+`/ItemCategory/{CategoryCode}` | `GET` | Gets item category information for the given category code.
 `/Items` | `GET` | Gets item information in bulk.
-`/PayCode` | `GET` `PATCH` | Methods to manage PayCodes.
+`/PayCode/{Paycode}` | `GET` | Gets information about a given Paycode.
+`/PayCode/{Paycode}` | `PATCH` | Updates information about a Paycode.
 `/PayCodes` | `GET` | Gets information on Paycodes in bulk.
-`/Store` | `GET` | Gets information on a store.
+`/Store/{StoreId}` | `GET` | Gets information on a store.
 `/Store/{StoreId}/Station` | `GET` | Gets information on a station.
 `/TaxCodes` | `GET` | Gets information on Tax Codes.
-`/User` | `GET` | Gets information on a User.
-`/Workgroup` | `GET` | Gets workgroup information.
+`/User/{UserId}` | `GET` | Gets information on a User.
+`/Workgroup/{WorkgroupId}` | `GET` | Gets workgroup information.
