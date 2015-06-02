@@ -4,7 +4,7 @@ Installing the NCR Counterpoint API server is simple: run the .msi installer on 
 
 When the install completes, the server should be up and running on the default port (81). The API installs as a windows service, and can be found under the name "NCR Counterpoint API" in the services console:
 
-**Need image**
+![Services console](/InstallationAndConfiguration/NCRCounterpointAPIServicesConsole.png)
 
 To verify the API Server is working correctly, you can try accessing it from a browser on the local machine at https://localhost:81/app/index.htm#/login. This will load the login page to the NCR Counteropint API Management console. If the service does not respond, please ensure it's running by checking the services console (`services.msc`). The only problem we've typically seen with the server not starting or responding is if the port being used by the API server is already used by another process. If this is the case, you can either stop or remove the other process, or change the port that the server is using by editing the `CPAPI.Console.exe.config` file. 
 
@@ -25,3 +25,17 @@ App_Data | System data folder | This folder contains the sysadmin.sqlite file, w
 Logfiles | Log folder | This folder holds the log files for the API server (CPAPI.log). There is one logfile for the API server, and by default it is configured as a rolling log file, so each day the log file for the day will be archived as CPAPIyymmdd.log. By default a maximum of 10 days of log files will be kept. The API server uses standard Log4Net logging so the log file can be reconfigured by editing the `<log4net>` node of CPAPI.Console.exe.config per standard log4net specifications.
 x64 | 64bit folder | This folder holds binary files that are needed for operation on 64bit machines. There should never be a need to be touched.
 x86 | 32bit folder | This folder holds binary files that are needed for operation on 32bit machines. There should never be a need to be touched.
+
+## Permissions
+As a web server, all non-administrative functionality should be accessed through the REST API itself, or the web based NCR Counterpoint API Management Console. Windows access to installation folder (and ideally the entire machine hosting the API Server) should be locked down and restricted to administrative access only.
+
+In addition, the NCR Counterpoint API Server needs to be able to access the company specific data it provides via the API, which includes the following:
+- Read/Write access to the TLD and all subfolders of the TLD of the companies that are accessible via the API.
+- Database administrative access to the Counterpoint databases that are accessible via the API.
+
+## Service Account
+By default, the NCR Counterpoint API Service will run under the LocalSystem account, as shown on the "Log On" tab of the property page for the service:
+
+![Service properties](/InstallationAndConfiguration/ServicePropertiesLogOn.png)
+
+This can be changed if needed using the dialog above. Whatever account that is configured for the service to run under is the account that will need to be granted permissions to the afore mentioned TLD folder, as well as the account that will be used to connect to databases that are configured to use integrated security. Please note that the API server can be configured with different database credentials than those in the companies.ini folder, so it is not necessary to grant database admin rights to the database connection in companies.ini.
