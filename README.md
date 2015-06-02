@@ -31,7 +31,7 @@ Calls to the API Server are made in the form of http requests. See the page on [
 Calls to the API Server issue http responses similarly to other REST APIs. See the page on [API responses](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Responses.md) for specifics on how to work with http responses. See documentation on the language or script being used to handle the response for details on how to properly work with the response in your code.
 
 ### System Administration Endpoints
-Endpoint | Operations (Verbs) | Description
+Endpoint | Operation (Verb) | Description
 -------- | ------------------ | -----------
 `/APIKey` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKey.md) | Gets information on a single API Key.
 `/APIKeys` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKeys.md) | Gets a list of all API Keys installed on the server.
@@ -44,7 +44,7 @@ Endpoint | Operations (Verbs) | Description
 `/SystemInfo` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
 
 ### Company Endpoints
-Endpoint | Operations (Verbs) | Description
+Endpoint | Operation (Verb) | Description
 -------- | ------------------ | -----------
 `/Company` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Company.md) | Gets information about the given company (from SY_COMP & DB_CTL).
 `/Customer` | [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Customer.md) | Adds a new customer record.
