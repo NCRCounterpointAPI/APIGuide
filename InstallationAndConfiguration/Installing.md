@@ -21,7 +21,7 @@ Folder | Description | Contents
 ------ | ----------- | --------
 C:\Program Files (x86)\NCR\Counterpoint API | Installation folder | All binaries exist in the installation folder. These files should typically never need to be touched, with the exception of CPAPI.Console.exe.config, which may be edited for things such as configuring the port the server is listening on.
 APIKeys | API Key folder | This folder contains API keys for client applications that need access to the system. Developers of 3rd party applications using the API should put their XML key files (not the plain text TXT file) in this folder in order to allow their application to access this server.
-App_Data | System data folder | This folder contains the sysadmin.sqlite file, which is a system SQLite database managed internally by the API server. This database holds information like TLD and database connection information, sysadmin login information, and other system level data needed by the API server.
+App_Data | System data folder | This folder contains the sysadmin.sqlite file, which is a system SQLite database managed internally by the API server. This database holds information like TLD and database connection information, sysadmin login information, and other system level data needed by the API server. The sysadmin.sqlite file will be automatically recreated if deleted, but of course all information stored in the file would be lost, such as links to Counterpoint companies, sysadmin users, etc. All company level information would remain intact once a link to a Counterpoint database is re-established since that data is stored in the Counterpoint database and TLD.
 Logfiles | Log folder | This folder holds the log files for the API server (CPAPI.log). There is one logfile for the API server, and by default it is configured as a rolling log file, so each day the log file for the day will be archived as CPAPIyymmdd.log. By default a maximum of 10 days of log files will be kept. The API server uses standard Log4Net logging so the log file can be reconfigured by editing the `<log4net>` node of CPAPI.Console.exe.config per standard log4net specifications.
 x64 | 64bit folder | This folder holds binary files that are needed for operation on 64bit machines. There should never be a need to be touched.
 x86 | 32bit folder | This folder holds binary files that are needed for operation on 32bit machines. There should never be a need to be touched.
@@ -39,3 +39,17 @@ By default, the NCR Counterpoint API Service will run under the LocalSystem acco
 ![Service properties](/InstallationAndConfiguration/ServicePropertiesLogOn.png)
 
 This can be changed if needed using the dialog above. Whatever account that is configured for the service to run under is the account that will need to be granted permissions to the afore mentioned TLD folder, as well as the account that will be used to connect to databases that are configured to use integrated security. Please note that the API server can be configured with different database credentials than those in the companies.ini folder, so it is not necessary to grant database admin rights to the database connection in companies.ini.
+
+## Changes to Counterpoint databases
+Currently, the only change the API server will make to a Counterpoint database is to add a table called "KeyValueData" to the database. This is why the server needs database administrative access. The table will be added whenever it's found to be missing. The structure of the table is:
+
+Column | Datatype | Description
+------ | -------- | -----------
+Id | int (Auto-increment) | A unique Id for the object being stored.
+Key | varchar(8000) | A unique identifier for the object being stored. For instance, if it's a user role, the name of the user role.
+Type | varchar(8000) | The type of data being stored in the "Value" column. This is automatically filled in by the API Server based on the .NET type being stored, and is used to filter out all objects of a given type from the table.
+Value | varchar(max) | The object being stored. This is a JSON serialization of the object.
+
+This table is used as a generic storage location for data specific to the API, such as API users (that are tied to Counterpoint SY_USR users), and API roles. The intent is to continue to store company specific data in the Counterpoint company databases, while system/administrative level data is stored in the SQLite database. This also ensures that if a Counterpoint database is ever removed from an API server for some reason, and linked back at a later time (or moved to a different API server), that the proper data continues to live and persist with Counterpoint.
+
+The KeyValueData table stores data objects that are serialized into JSON strings, similar to how a NoSQL database stores data. This allows for very quick reading and writing of data, or accessing of data by Id or Name, but it is not ideal for querying data filtered by specific attributes (such as finding all roles with access to "GET /Customers"). However, we currently have little need for that when working with data in this table, and typically the volume of data in the table will be small enough that performance is not a major concern.
