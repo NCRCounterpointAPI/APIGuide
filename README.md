@@ -40,7 +40,7 @@ Endpoint | Operations (Verbs) | Description
 `/Database/{Id}` | [`DELETE`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/DELETE_Database.md) | Deletes a Database (Company) so it can no longer be used by the API Server.
 `/Databases` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Databases.md) | Gets a list of all Databases (Companies) the API is able to interact with.
 `/Databases` | `POST` | Adds one or more Databases (Companies) the API can interact with.
-`/Databases/ini` | `GET` | Gets a list of company DB information from a companies.ini file
+`/Databases/ini` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Databases_Ini.md) | Gets a list of company DB information from a companies.ini file
 `/SystemInfo` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
 
 ### Company Endpoints
