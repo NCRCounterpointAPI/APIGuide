@@ -30,6 +30,9 @@ Calls to the API Server are made in the form of http requests. See the page on [
 ## Working with http responses
 Calls to the API Server issue http responses similarly to other REST APIs. See the page on [API responses](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Responses.md) for specifics on how to work with http responses. See documentation on the language or script being used to handle the response for details on how to properly work with the response in your code.
 
+## Endpoints
+The endpoints below each represent individual REST API calls/requests that the API server supports. Each endpoint is either for system administrative functions or company functions, as categorized below. System administrative functions require a system username and password to be included in the Authorization header, while company functions require a counterpoint username (with a company prefix: <company>.<username>) and password to be submitted in the authorization header.
+
 ### System Administration Endpoints
 Endpoint | Operation (Verb) | Description
 -------- | ------------------ | -----------
