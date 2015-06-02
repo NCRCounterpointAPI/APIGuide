@@ -14,7 +14,7 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 * Client applications or scripts using the API must provide a valid API Key, which is installed on the API Server, and included in the "APIKey" header for the request. See the page on [APIKeys](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/APIKeys/APIKeys.md) for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
 
 ## Installation
-Installation of the API Server is simple, you essentially just run the .msi to install. Seeing the [Installing](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/InstallationAndConfiguration/Installing.md) page for more details.
+Installation of the API Server is simple, you essentially just run the .msi to install. See the [Installing](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/InstallationAndConfiguration/Installing.md) page for more details.
 
 ## Configuration and Administration
 In progress
