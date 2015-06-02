@@ -10,7 +10,7 @@ To verify the API Server is working correctly, you can try accessing it from a b
 
 **NOTE** If you change the port that the API Server is using, you will need to unbind your SSL certificate and rebind it to the new port (or install a new certificate and bind it to the new port), otherwise, the SSL certficiate will break and cause issues accessing the server. 
 
-If you have problems accsesing the NCR Counterpoint Admin Console, please see the troubleshooting page for help.
+If you have problems accsesing the NCR Counterpoint Admin Console, please see the [troubleshooting wiki page](https://github.com/NCRCounterpointAPI/APIGuide/wiki/Troubleshooting) for help.
 
 Once you've verified the server is running, you can move on to configuring the server.
 
