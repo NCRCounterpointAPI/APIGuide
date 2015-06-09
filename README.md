@@ -97,7 +97,7 @@ Endpoint | Operation (Verb) | Description
 `/PayCode/{Paycode}` | `GET` | Gets information about a given Paycode.
 `/PayCode/{Paycode}` | `PATCH` | Updates information about a Paycode.
 `/PayCodes` | `GET` | Gets information on Paycodes in bulk.
-`/Store/{StoreID}` | `GET` | Gets information on a store.
+`/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | Gets information on a store.
 `/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | Gets information on a station.
 `/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | Gets information on Tax Codes.
 `/User/{UserID}` | [`GET`](Endpoints/GET_User.md) | Gets information on a User.
