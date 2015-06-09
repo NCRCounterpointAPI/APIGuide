@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /ItemCategories
 
 #### Description
-
+Gets a list of all Categories and subcategories in the system. This will return a hierarchical list, with subcategory records structured as children of their parent category.
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/ItemCategories`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
@@ -29,27 +29,161 @@ None
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
 - `SUCCESS`: The request was successful and the customer information is present under the `SystemInfo` section of the response body.
-- `ERROR_RECORD_NOT_FOUND`: The requested System Info was not present. Restarting the server should regenerate the information
 
 #### Sample Response Body
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
+  "ItemCategories": [
+    {
+      "CATEG_COD": "APPAREL",
+      "DESCR": "Apparel items",
+      "DESCR_UPR": "APPAREL ITEMS",
+      "LST_MAINT_DT": "2009-07-29T16:56:00.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "MIN_PFT_PCT": 50,
+      "RS_UTC_DT": "2015-03-13T19:11:33.2470000",
+      "TRGT_PFT_PCT": 70,
+      "RS_STAT": 1,
+      "IM_SUBCAT_COD": [
+        {
+          "SUBCAT_COD": "MENS",
+          "CATEG_COD": "APPAREL",
+          "DESCR": "Apparel - Mens",
+          "DESCR_UPR": "APPAREL - MENS",
+          "LST_MAINT_DT": "2001-11-14T09:23:05.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "WOMENS",
+          "CATEG_COD": "APPAREL",
+          "DESCR": "Apparel - Womens",
+          "DESCR_UPR": "APPAREL - WOMENS",
+          "LST_MAINT_DT": "2001-11-14T09:23:13.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        }
+      ]
+    },
+    {
+      "CATEG_COD": "FOOD",
+      "DESCR": "Food items",
+      "DESCR_UPR": "FOOD ITEMS",
+      "LST_MAINT_DT": "2009-07-29T15:17:51.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "MIN_PFT_PCT": 30,
+      "RS_UTC_DT": "2015-03-13T19:11:33.2470000",
+      "TRGT_PFT_PCT": 50,
+      "RS_STAT": 1,
+      "IM_SUBCAT_COD": [
+        {
+          "SUBCAT_COD": "DRINKS",
+          "CATEG_COD": "FOOD",
+          "DESCR": "Food - Drinks",
+          "DESCR_UPR": "FOOD - DRINKS",
+          "LST_MAINT_DT": "2001-11-14T09:23:00.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "SNACKS",
+          "CATEG_COD": "FOOD",
+          "DESCR": "Food - Snacks",
+          "DESCR_UPR": "FOOD - SNACKS",
+          "LST_MAINT_DT": "2001-11-14T09:23:09.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        }
+      ]
+    },
+    {
+      "CATEG_COD": "FORECAST",
+      "DESCR": "Demo forecasting data",
+      "DESCR_UPR": "DEMO FORECASTING DATA",
+      "LST_MAINT_DT": "2009-07-29T15:17:57.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "MIN_PFT_PCT": 30,
+      "RS_UTC_DT": "2015-03-13T19:11:33.2470000",
+      "TRGT_PFT_PCT": 50,
+      "RS_STAT": 1,
+      "IM_SUBCAT_COD": []
+    },
+    {
+      "CATEG_COD": "GOLF",
+      "DESCR": "Golf items",
+      "DESCR_UPR": "GOLF ITEMS",
+      "LST_MAINT_DT": "2009-07-29T16:57:27.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "MIN_PFT_PCT": 50,
+      "RS_UTC_DT": "2015-03-13T19:11:33.2470000",
+      "TRGT_PFT_PCT": 65,
+      "RS_STAT": 1,
+      "IM_SUBCAT_COD": [
+        {
+          "SUBCAT_COD": "ACCES",
+          "CATEG_COD": "GOLF",
+          "DESCR": "Golf - Accessories",
+          "DESCR_UPR": "GOLF - ACCESSORIES",
+          "LST_MAINT_DT": "2001-11-14T09:22:54.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "BALLS",
+          "CATEG_COD": "GOLF",
+          "DESCR": "Golf - Balls",
+          "DESCR_UPR": "GOLF - BALLS",
+          "LST_MAINT_DT": "2001-11-14T09:22:56.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "CLUBS",
+          "CATEG_COD": "GOLF",
+          "DESCR": "Golf - Clubs",
+          "DESCR_UPR": "GOLF - CLUBS",
+          "LST_MAINT_DT": "2001-11-14T09:22:58.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "FEES",
+          "CATEG_COD": "GOLF",
+          "DESCR": "Golf - Fees",
+          "DESCR_UPR": "GOLF - FEES",
+          "LST_MAINT_DT": "2001-11-14T09:23:02.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "MISC",
+          "CATEG_COD": "GOLF",
+          "DESCR": "Golf - Misc items",
+          "DESCR_UPR": "GOLF - MISC ITEMS",
+          "LST_MAINT_DT": "2001-11-14T09:23:06.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        },
+        {
+          "SUBCAT_COD": "SPECIAL",
+          "CATEG_COD": "GOLF",
+          "DESCR": "Special order items for Golf",
+          "DESCR_UPR": "SPECIAL ORDER ITEMS FOR GOLF",
+          "LST_MAINT_DT": "2001-11-14T09:23:10.0000000",
+          "LST_MAINT_USR_ID": "Z",
+          "RS_STAT": 0
+        }
+      ]
+    }
+  ],
   "ErrorCode": "SUCCESS"
 }
 ```
 
 #### Response Body
 
-**SystemInfo object**
+**ItemCategory object**
 
 Element | Datatype | Description
 ------- | -------- | -----------
