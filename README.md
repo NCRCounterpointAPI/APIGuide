@@ -11,10 +11,10 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 * The NCR Counterpoint API server must have read/write access to the TLD folder for the company. This can be on a separate machine accessible via a UNC path.
 * The NCR Counterpoint API server must have administrative access to the company database
 * The company the server is connecting to must have the API user option enabled in its registration.ini file. There are some limited functions that will work without the API user option, but the bulk of the endpoints do require the registration option. See the documentation for an individual endpoint to determine if it requires the registration.ini option for use.
-* Most API calls require that client applications or scripts provide a valid "APIKey" header in each request. This APIKey must also be installed on the API Server. See the page on [APIKeys](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/APIKeys/APIKeys.md) for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
+* Most API calls require that client applications or scripts provide a valid "APIKey" header in each request. This APIKey must also be installed on the API Server. See the page on [APIKeys](APIKeys/APIKeys.md) for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
 
 ## Installation
-Installation of the API Server is simple, you essentially just run the .msi to install. See the [Installing](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/InstallationAndConfiguration/Installing.md) page for more details.
+Installation of the API Server is simple, you essentially just run the .msi to install. See the [Installing](InstallationAndConfiguration/Installing.md) page for more details.
 
 ## Configuration and Administration
 In progress
@@ -25,10 +25,10 @@ For ad hoc testing, we use and recommend the [Postman (Packaged app)](https://ch
 You can find all the automated tests we run for the API [here](https://github.com/NCRCounterpointAPI/APITests). They are written to run against a standard Counterpoint test database and TLD (coming soon). The tests are published not only as reference examples of API usage, but also in hopes the community will contribute to the test cases as well, to help reproduce bugs and improve test coverage. The preferable way to get an improvement to tests or documentation is for users to submit pull requests containing tests to illustrate issues or provide new test coverage. Please submit tests that will work against the standard test database and are structured similarly to our existing conventions.
 
 ## Making http requests
-Calls to the API Server are made in the form of http requests. See the page on [API requests](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Requests.md) for specifics on how to form http requests for the NCR Counterpoint API. See documentation on the language or script being used to make the request for details on how to properly create the request in your code.
+Calls to the API Server are made in the form of http requests. See the page on [API requests](Basics/Requests.md) for specifics on how to form http requests for the NCR Counterpoint API. See documentation on the language or script being used to make the request for details on how to properly create the request in your code.
 
 ## Working with http responses
-Calls to the API Server issue http responses similarly to other REST APIs. See the page on [API responses](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Basics/Responses.md) for specifics on how to work with http responses. See documentation on the language or script being used to handle the response for details on how to properly work with the response in your code.
+Calls to the API Server issue http responses similarly to other REST APIs. See the page on [API responses](Basics/Responses.md) for specifics on how to work with http responses. See documentation on the language or script being used to handle the response for details on how to properly work with the response in your code.
 
 ## Endpoints
 The endpoints below each represent individual REST API calls/requests that the API server supports. Each endpoint is either for system administrative functions or company functions, as categorized below. System administrative functions require a system username and password to be included in the Authorization header, while company functions require a counterpoint username (with a company prefix: <company>.<username>) and password to be submitted in the authorization header.
@@ -36,22 +36,22 @@ The endpoints below each represent individual REST API calls/requests that the A
 ### System Administration Endpoints
 Endpoint | Operation (Verb) | Description
 -------- | ------------------ | -----------
-`/APIKey` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKey.md) | Gets information on a single API Key.
-`/APIKeys` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_APIKeys.md) | Gets a list of all API Keys installed on the server.
-`/Database/{Id}` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Database.md) | Gets information about a Database (Company) configured for use by the API Server.
-`/Database/{Id}` | [`PUT`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/PUT_Database.md) | Updates information about a Database (Company) configured for use by the API Server.
-`/Database/{Id}` | [`DELETE`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/DELETE_Database.md) | Deletes a Database (Company) so it can no longer be used by the API Server.
-`/Databases` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Databases.md) | Gets a list of all Databases (Companies) the API is able to interact with.
-`/Databases` | [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Databases.md) | Adds one or more Databases (Companies) the API can interact with.
-`/Databases/ini` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Databases_Ini.md) | Gets a list of company DB information from a companies.ini file
-`/SystemInfo` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
+`/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | Gets information on a single API Key.
+`/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | Gets a list of all API Keys installed on the server.
+`/Database/{Id}` | [`GET`](Endpoints/GET_Database.md) | Gets information about a Database (Company) configured for use by the API Server.
+`/Database/{Id}` | [`PUT`](Endpoints/PUT_Database.md) | Updates information about a Database (Company) configured for use by the API Server.
+`/Database/{Id}` | [`DELETE`](Endpoints/DELETE_Database.md) | Deletes a Database (Company) so it can no longer be used by the API Server.
+`/Databases` | [`GET`](Endpoints/GET_Databases.md) | Gets a list of all Databases (Companies) the API is able to interact with.
+`/Databases` | [`POST`](Endpoints/POST_Databases.md) | Adds one or more Databases (Companies) the API can interact with.
+`/Databases/ini` | [`GET`](Endpoints/GET_Databases_Ini.md) | Gets a list of company DB information from a companies.ini file
+`/SystemInfo` | [`GET`](Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
 
 ### Company Endpoints
 Endpoint | Operation (Verb) | Description
 -------- | ------------------ | -----------
-`/Company` | [`GET`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/GET_Company.md) | Gets information about the given company (from SY_COMP & DB_CTL).
-`/Customer` | [`POST`](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Endpoints/POST_Customer.md) | Adds a new customer record.
-`/Customer/{CustNo}` | [`GET`](https://github.com/NCRCounterpointAPI/NCRCounterpointAPI/blob/master/Endpoints/GET_Customer.md) | Gets information about a customer.
+`/Company` | [`GET`](Endpoints/GET_Company.md) | Gets information about the given company (from SY_COMP & DB_CTL).
+`/Customer` | [`POST`](Endpoints/POST_Customer.md) | Adds a new customer record.
+`/Customer/{CustNo}` | [`GET`](Endpoints/GET_Customer.md) | Gets information about a customer.
 `/Customer/{CustNo}` |  `PATCH` | Updates information about a customer.
 `/Customer/{CustNo}/Address` | `GET` | Gets customer shipping addresses.
 `/Customer/{CustNo}/Address` | `POST` | Adds a new shipping address to an existing customer.
@@ -101,4 +101,4 @@ Endpoint | Operation (Verb) | Description
 `/Store/{StoreId}/Station` | `GET` | Gets information on a station.
 `/TaxCodes` | `GET` | Gets information on Tax Codes.
 `/User/{UserId}` | `GET` | Gets information on a User.
-`/Workgroup/{WorkgroupId}` | `GET` | Gets workgroup information.
+`/Workgroup/{WorkgroupId}` | [`GET`](Endpoints/GET_Workgroup.md) | Gets workgroup information.
