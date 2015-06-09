@@ -94,9 +94,9 @@ Endpoint | Operation (Verb) | Description
 `/ItemCategories` | `GET` | Gets item Categories in bulk.
 `/ItemCategory/{CategoryCode}` | `GET` | Gets item category information for the given category code.
 `/Items` | `GET` | Gets item information in bulk.
-`/PayCode/{Paycode}` | `GET` | Gets information about a given Paycode.
+`/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | Gets information about a given Paycode.
 `/PayCode/{Paycode}` | `PATCH` | Updates information about a Paycode.
-`/PayCodes` | `GET` | Gets information on Paycodes in bulk.
+`/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | Gets information on Paycodes in bulk.
 `/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | Gets information on a store.
 `/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | Gets information on a station.
 `/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | Gets information on Tax Codes.
