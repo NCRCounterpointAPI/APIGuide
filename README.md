@@ -100,5 +100,5 @@ Endpoint | Operation (Verb) | Description
 `/Store/{StoreId}` | `GET` | Gets information on a store.
 `/Store/{StoreId}/Station` | `GET` | Gets information on a station.
 `/TaxCodes` | `GET` | Gets information on Tax Codes.
-`/User/{UserId}` | `GET` | Gets information on a User.
+`/User/{UserId}` | [`GET`](Endpoints/GET_User.md) | Gets information on a User.
 `/Workgroup/{WorkgroupId}` | [`GET`](Endpoints/GET_Workgroup.md) | Gets workgroup information.
