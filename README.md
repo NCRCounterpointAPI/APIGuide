@@ -93,7 +93,7 @@ Endpoint | Operation (Verb) | Description
 `/Item/Inventory/EC` | `GET` | Gets eCommerce inventory information for all eCommerce items.
 `/ItemCategories` | `GET` | Gets item Categories in bulk.
 `/ItemCategory/{CategoryCode}` | `GET` | Gets item category information for the given category code.
-`/Items` | `GET` | Gets item information in bulk.
+`/Items` | [`GET`](Endpoints/GET_Items.md) | Gets item information in bulk.
 `/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | Gets information about a given Paycode.
 `/PayCode/{Paycode}` | `PATCH` | Updates information about a Paycode.
 `/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | Gets information on Paycodes in bulk.
