@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /Workgroup/{WorkgroupID}
 
 #### Description
-
+Gets information about a workgroup
 
 - Requires API Key: Yes
 - Requires System Administrator: No
