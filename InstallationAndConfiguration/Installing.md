@@ -4,7 +4,7 @@ Installing the NCR Counterpoint API server is simple: run the .msi installer on 
 
 When the install completes, the server should be up and running on the default port (81). The API installs as a windows service, and can be found under the name "NCR Counterpoint API" in the services console:
 
-![Services console](/InstallationAndConfiguration/NCRCounterpointAPIServicesConsole.png)
+![Services console](NCRCounterpointAPIServicesConsole.png)
 
 To verify the API Server is working correctly, you can try accessing it from a browser on the local machine at https://localhost:81/app/index.htm#/login. This will load the login page to the NCR Counterpoint API Management console. If the service does not respond, please ensure it's running by checking the services console (`services.msc`). The only problem we've typically seen with the server not starting or responding is if the port being used by the API server is already used by another process. If this is the case, you can either stop or remove the other process, or change the port that the server is using by editing the `CPAPI.Console.exe.config` file. 
 
@@ -36,7 +36,7 @@ In addition, the NCR Counterpoint API Server needs to be able to access the comp
 ## Service Account
 By default, the NCR Counterpoint API Service will run under the LocalSystem account, as shown on the "Log On" tab of the property page for the service:
 
-![Service properties](/InstallationAndConfiguration/ServicePropertiesLogOn.png)
+![Service properties](ServicePropertiesLogOn.png)
 
 This can be changed if needed using the dialog above. Whatever account that is configured for the service to run under is the account that will need to be granted permissions to the afore mentioned TLD folder, as well as the account that will be used to connect to databases that are configured to use integrated security. Please note that the API server can be configured with different database credentials than those in the companies.ini folder, so it is not necessary to grant database admin rights to the database connection in companies.ini.
 
