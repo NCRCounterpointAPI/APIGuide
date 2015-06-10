@@ -60,7 +60,7 @@ Endpoint | Operation (Verb) | Description
 `/Customer/{CustNo}/Card` | `GET` | Gets credit cards on file for an existing customer.
 `/Customer/{CustNo}/Card` | `POST` | Adds a credit card on file to an existing customer.
 `/Customer/{CustNo}/Card` | `PATCH` | Updates an existing credit card on file for an existing customer.
-`/Customer/{CustNo}/Card` | `DELETE` | Deletes a credit card on file for an exsitng customer.
+`/Customer/{CustNo}/Card` | `DELETE` | Deletes a credit card on file for an existing customer.
 `/Customer/{CustNo}/Note` | `GET` | Gets customer notes for a given customer.
 `/Customer/{CustNo}/Note` | `POST` | Adds a new note to an existing customer.
 `/Customer/{CustNo}/Note` | `PATCH` | Updates an existing note on an existing customer.
