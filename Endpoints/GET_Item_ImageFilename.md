@@ -2,7 +2,7 @@
 # GET /Item/Images/{filename}
 
 #### Description
-Gets the image for the given filename. Note this returns the actual image. To get a list of available image filenames for a given item, use the [/Item/{ItemNo}/Images](Endpoints/GET_Item_Images.md) endpoint.
+Gets the image for the given filename. Note this returns the actual image. To get a list of available image filenames for a given item, use the [/Item/{ItemNo}/Images](GET_Item_Images.md) endpoint.
 
 - Requires API Key: Yes
 - Requires System Administrator: No
