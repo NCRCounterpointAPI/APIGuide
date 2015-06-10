@@ -85,7 +85,7 @@ Endpoint | Operation (Verb) | Description
 `/GiftCardCode/{GiftCardCode}` | `GET` | Gets gift card code information.
 `/GiftCardCodes` | `GET` | Gets information on gift card codes in bulk.
 `/GiftCards` | `GET` | Gets information of Gift Cards in bulk.
-`/InventoryControl` | `GET` | Gets inventory control information.
+`/InventoryControl` | [`GET`](Endpoints/GET_InventoryControl.md) | Gets inventory control information.
 `/Item/Images/{Filename} ` | [`GET`](Endpoints/GET_Item_ImageFilename.md) | Gets an item image for the given item and filename.
 `/Item/{ItemNo}` | [`GET`](Endpoints/GET_Item.md) | Methods to get item and item inventory information.
 `/Item/{ItemNo}/Images` | [`GET`](Endpoints/GET_Item_Images.md) | Gets a list of available item images for a given item.
