@@ -35,7 +35,9 @@ Recently, several exploits have been found and publicized that makes many older 
 The encryption schemes are controlled at the windows level, not by the individual application, and the API installation does not do anything to modify this. Making this change is outside of the scope of this document, but in general the approach is to modify the registry to disable older schemes (SSL 3.0, TLS 1.0, TLS 1.1) and enable TLS 1.2. [This](https://support.microsoft.com/en-us/kb/245030) MSDN article should get you started.
 
 To see what encryption scheme (and certificate) is being used, you can visit the login page for the API Management Console (`https://<server_name>:<port>/app/index.htm#/login`), the use the browser to view certificate information. Using Chrome, I clicked on the lock in the address bar (next to the login URL above), then clicked the "connection" tab on the resulting dialog:
+
 ![Chrome certificate Information](ChromeCertificate.png)
+
 This shows that my connection is using TLS 1.2, and I can click "Certificate Information" to view more information about the SSL certificate protecting this site.
 
 ## Directory structure
