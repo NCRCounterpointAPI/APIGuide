@@ -29,6 +29,15 @@ If needed, a signed certificate can be purchased from a certified trusted issuer
 
 [This](https://msdn.microsoft.com/en-us/library/ms733791(v=vs.110).aspx) MSDN page describes how to bind and unbind certificates from ports.
 
+## SSL and TLS
+Recently, several exploits have been found and publicized that makes many older encryption schemes used by SSL vulnerable. For a description of TLS encryption schemes and recent exploits against them, please see [this](https://en.wikipedia.org/wiki/Transport_Layer_Security) Wikipedia article. The TLS encryption scheme used is determined via a negotiation between the client and server called an [SSL Handshake](https://support.microsoft.com/en-us/kb/257591?wa=wsignin1.0). Because of this, for maximum security we recommend requiring TLS1.2, but depending on a user's individual needs, this requirement can cause some incompatibility issues with some older browsers, so it's ultimately up to the user to determine the minimum encryption scheme that will be supported.
+
+The encryption schemes are controlled at the windows level, not by the individual application, and the API installation does not do anything to modify this. Making this change is outside of the scope of this document, but in general the approach is to modify the registry to disable older schemes (SSL 3.0, TLS 1.0, TLS 1.1) and enable TLS 1.2. [This](https://support.microsoft.com/en-us/kb/245030) MSDN article should get you started.
+
+To see what encryption scheme (and certificate) is being used, you can visit the login page for the API Management Console (`https://<server_name>:<port>/app/index.htm#/login`), the use the browser to view certificate information. Using Chrome, I clicked on the lock in the address bar (next to the login URL above), then clicked the "connection" tab on the resulting dialog:
+![Chrome certificate Information](ChromeCertificate.png)
+This shows that my connection is using TLS 1.2, and I can click "Certificate Information" to view more information about the SSL certificate protecting this site.
+
 ## Directory structure
 Below is a description of the directory structure and key files and locations for the API server. This structure all exists underneath the installation folder, which is assumed below to be the default of `C:\Program Files (x86)\NCR\Counterpoint API`.
 
