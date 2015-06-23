@@ -6,7 +6,7 @@ When the install completes, the server should be up and running on the default p
 
 ![Services console](NCRCounterpointAPIServicesConsole.png)
 
-To verify the API Server is working correctly, you can try accessing it from a browser on the local machine at `https://localhost:81/app/index.htm#/login`. This will load the login page to the NCR Counterpoint API Management console. If the service does not respond, please ensure it's running by checking the services console (`services.msc`). The only problem we've typically seen with the server not starting or responding is if the port being used by the API server is already used by another process. If this is the case, you can either stop or remove the other process, or change the port that the server is using by editing the `CPAPI.Console.exe.config` file. 
+To verify the API Server is working correctly, you can try accessing it from a browser on the local machine at `https://<machine_name>:<port>/app/index.htm#/login`. This will load the login page to the NCR Counterpoint API Management console. If the service does not respond, please ensure it's running by checking the services console (`services.msc`). The only problem we've typically seen with the server not starting or responding is if the port being used by the API server is already used by another process. If this is the case, you can either stop or remove the other process, or change the port that the server is using by editing the `CPAPI.Console.exe.config` file. 
 
 **NOTE** If you change the port that the API Server is using, you will need to unbind your SSL certificate and rebind it to the new port (or install a new certificate and bind it to the new port), otherwise, the SSL certficiate will break and cause issues accessing the server. 
 
