@@ -28,17 +28,15 @@
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
 - `SUCCESS`: The request was successful and the list of admins is present under the `CompanyAdmins` section of the response body.
-- Company not found - Add?
 
 #### Sample Response Body
 
 ```
 {
   "CompanyAdmins": [
-    "Dev3",
-    "MGR",
-    "Person1",
-    "User2"
+    "Mark",
+    "POS1",
+    "MGR2"
   ],
   "ErrorCode": "SUCCESS"
 }
