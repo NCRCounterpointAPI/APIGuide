@@ -34,71 +34,71 @@ Calls to the API Server issue http responses similarly to other REST APIs. See t
 The endpoints below each represent individual REST API calls/requests that the API server supports. Each endpoint is either for system administrative functions or company functions, as categorized below. System administrative functions require a system username and password to be included in the Authorization header, while company functions require a counterpoint username (with a company prefix: <company>.<username>) and password to be submitted in the authorization header.
 
 ### System Administration Endpoints
-Endpoint | Operation (Verb) | Description
--------- | ------------------ | -----------
-`/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | Gets information on a single API Key.
-`/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | Gets a list of all API Keys installed on the server.
-`/Database/{Id}` | [`GET`](Endpoints/GET_Database.md) | Gets information about a Database (Company) configured for use by the API Server.
-`/Database/{Id}` | [`PUT`](Endpoints/PUT_Database.md) | Updates information about a Database (Company) configured for use by the API Server.
-`/Database/{Id}` | [`DELETE`](Endpoints/DELETE_Database.md) | Deletes a Database (Company) so it can no longer be used by the API Server.
-`/Databases` | [`GET`](Endpoints/GET_Databases.md) | Gets a list of all Databases (Companies) the API is able to interact with.
-`/Databases` | [`POST`](Endpoints/POST_Databases.md) | Adds one or more Databases (Companies) the API can interact with.
-`/Databases/ini` | [`GET`](Endpoints/GET_Databases_Ini.md) | Gets a list of company DB information from a companies.ini file
-`/SystemInfo` | [`GET`](Endpoints/GET_SystemInfo.md) | Gets information about the API server and hardware environment.
+Endpoint | Operation (Verb) | APIKey | CP Registration | Description
+-------- | ---------------- | ------ | --------------- | -----------
+`/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | | | Gets information on a single API Key.
+`/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | | |  Gets a list of all API Keys installed on the server.
+`/Database/{Id}` | [`GET`](Endpoints/GET_Database.md) | | |  Gets information about a Database (Company) configured for use by the API Server.
+`/Database/{Id}` | [`PUT`](Endpoints/PUT_Database.md) | | |  Updates information about a Database (Company) configured for use by the API Server.
+`/Database/{Id}` | [`DELETE`](Endpoints/DELETE_Database.md) | | |  Deletes a Database (Company) so it can no longer be used by the API Server.
+`/Databases` | [`GET`](Endpoints/GET_Databases.md) | | |  Gets a list of all Databases (Companies) the API is able to interact with.
+`/Databases` | [`POST`](Endpoints/POST_Databases.md) | | |  Adds one or more Databases (Companies) the API can interact with.
+`/Databases/ini` | [`GET`](Endpoints/GET_Databases_Ini.md) | | |  Gets a list of company DB information from a companies.ini file
+`/SystemInfo` | [`GET`](Endpoints/GET_SystemInfo.md) | | |  Gets information about the API server and hardware environment.
 
 ### Company Endpoints
-Endpoint | Operation (Verb) | Description
--------- | ------------------ | -----------
-`/Company` | [`GET`](Endpoints/GET_Company.md) | Gets information about the given company (from SY_COMP & DB_CTL).
-`/Customer` | [`POST`](Endpoints/POST_Customer.md) | Adds a new customer record.
-`/Customer/{CustNo}` | [`GET`](Endpoints/GET_Customer.md) | Gets information about a customer.
-`/Customer/{CustNo}` |  `PATCH` | Updates information about a customer.
-`/Customer/{CustNo}/Address` | `GET` | Gets customer shipping addresses.
-`/Customer/{CustNo}/Address` | `POST` | Adds a new shipping address to an existing customer.
-`/Customer/{CustNo}/Address` | `PATCH` | Updates an existing shipping address for an existing customer.
-`/Customer/{CustNo}/Address` | `DELETE` | Deletes a shipping address from an existing customer.
-`/Customer/{CustNo}/Card` | `GET` | Gets credit cards on file for an existing customer.
-`/Customer/{CustNo}/Card` | `POST` | Adds a credit card on file to an existing customer.
-`/Customer/{CustNo}/Card` | `PATCH` | Updates an existing credit card on file for an existing customer.
-`/Customer/{CustNo}/Card` | `DELETE` | Deletes a credit card on file for an existing customer.
-`/Customer/{CustNo}/Note` | `GET` | Gets customer notes for a given customer.
-`/Customer/{CustNo}/Note` | `POST` | Adds a new note to an existing customer.
-`/Customer/{CustNo}/Note` | `PATCH` | Updates an existing note on an existing customer.
-`/Customer/{CustNo}/Note` | `DELETE` | Deletes a note from an existing customer.
-`/Customer/{CustNo}/OpenItems` | `GET` | Gets customer AR Open Item information.
-`/CustomerControl` | `GET` | Gets customer control information.
-`/Customers` | `GET` | Gets information on customers in bulk.
-`/Customers/EC` | `GET` | Gets information on eCommerce customers in bulk.
-`/Document` | `POST` | Adds a new document (ticket).
-`/Document/{DocId}` | `GET` | Gets information on an existing document (ticket) that hasn't been posted yet.
-`/Document/{DocId}/Contact` | `POST` | Adds a contact to an existing document.
-`/Document/{DocId}/Contact` | `PATCH` | Updates a contact on an existing document.
-`/Document/{DocId}/Contact` | `DELETE` | Deletes a contact from an existing document.
-`/Document/{DocId}/Lines` | `POST` | Adds Lines to a document.
-`/Document/{DocId}/Note` | `POST` | Adds a note to an existing document.
-`/Document/{DocId}/Note` | `PATCH` | Updates a note on an existing document.
-`/Document/{DocId}/Note` | `DELETE` | Deletes a note from an existing document.
-`/Document/{DocId}/Payments` | `POST` | Adds Payments to a document.
-`/EC` | `GET` | Gets eCommerce settings.
-`/ECCategories` | `GET` | Gets eCommerce Categories and items.
-`/GiftCard/{GiftCardNo}` | `GET` | Gets gift card information.
-`/GiftCardCode/{GiftCardCode}` | `GET` | Gets gift card code information.
-`/GiftCardCodes` | `GET` | Gets information on gift card codes in bulk.
-`/GiftCards` | `GET` | Gets information of Gift Cards in bulk.
-`/InventoryControl` | [`GET`](Endpoints/GET_InventoryControl.md) | Gets inventory control information.
-`/Item/Images/{Filename} ` | [`GET`](Endpoints/GET_Item_ImageFilename.md) | Gets an item image for the given item and filename.
-`/Item/{ItemNo}` | [`GET`](Endpoints/GET_Item.md) | Methods to get item and item inventory information.
-`/Item/{ItemNo}/Images` | [`GET`](Endpoints/GET_Item_Images.md) | Gets a list of available item images for a given item.
-`/Item/{ItemNo}/Inventory/{LocId}` | `GET` | Gets item inventory information for a given item and location.
-`/Item/Inventory/EC` | `GET` | Gets eCommerce inventory information for all eCommerce items.
-`/ItemCategories` | [`GET`](Endpoints/GET_ItemCategories.md) | Gets item Categories in bulk.
-`/ItemCategory/{CategoryCode}` | [`GET`](Endpoints/GET_ItemCategory.md) | Gets item category information for the given category code.
-`/Items` | [`GET`](Endpoints/GET_Items.md) | Gets item information in bulk.
-`/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | Gets information about a given Paycode.
-`/PayCode/{Paycode}` | `PATCH` | Updates information about a Paycode.
-`/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | Gets information on Paycodes in bulk.
-`/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | Gets information on a store.
-`/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | Gets information on a station.
-`/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | Gets information on Tax Codes.
-`/User/{UserID}` | [`GET`](Endpoints/GET_User.md) | Gets information on a User.
-`/Workgroup/{WorkgroupID}` | [`GET`](Endpoints/GET_Workgroup.md) | Gets workgroup information.
+Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
+-------- | ---------------- | ------ | --------------- |  -----------
+`/Company` | [`GET`](Endpoints/GET_Company.md) | X | X | Gets information about the given company (from SY_COMP & DB_CTL).
+`/Customer` | [`POST`](Endpoints/POST_Customer.md) | X | X | Adds a new customer record.
+`/Customer/{CustNo}` | [`GET`](Endpoints/GET_Customer.md) | X | X | Gets information about a customer.
+`/Customer/{CustNo}` |  `PATCH` | X | X | Updates information about a customer.
+`/Customer/{CustNo}/Address` | `GET` | X | X | Gets customer shipping addresses.
+`/Customer/{CustNo}/Address` | `POST` | X | X | Adds a new shipping address to an existing customer.
+`/Customer/{CustNo}/Address` | `PATCH` | X | X | Updates an existing shipping address for an existing customer.
+`/Customer/{CustNo}/Address` | `DELETE` | X | X | Deletes a shipping address from an existing customer.
+`/Customer/{CustNo}/Card` | `GET` | X | X | Gets credit cards on file for an existing customer.
+`/Customer/{CustNo}/Card` | `POST` | X | X | Adds a credit card on file to an existing customer.
+`/Customer/{CustNo}/Card` | `PATCH` | X | X | Updates an existing credit card on file for an existing customer.
+`/Customer/{CustNo}/Card` | `DELETE` | X | X | Deletes a credit card on file for an existing customer.
+`/Customer/{CustNo}/Note` | `GET` | X | X | Gets customer notes for a given customer.
+`/Customer/{CustNo}/Note` | `POST` | X | X | Adds a new note to an existing customer.
+`/Customer/{CustNo}/Note` | `PATCH` | X | X | Updates an existing note on an existing customer.
+`/Customer/{CustNo}/Note` | `DELETE` | X | X | Deletes a note from an existing customer.
+`/Customer/{CustNo}/OpenItems` | `GET` | X | X | Gets customer AR Open Item information.
+`/CustomerControl` | `GET` | X | X | Gets customer control information.
+`/Customers` | `GET` | X | X | Gets information on customers in bulk.
+`/Customers/EC` | `GET` | X | X | Gets information on eCommerce customers in bulk.
+`/Document` | `POST` | X | X | Adds a new document (ticket).
+`/Document/{DocId}` | `GET` | X | X | Gets information on an existing document (ticket) that hasn't been posted yet.
+`/Document/{DocId}/Contact` | `POST` | X | X | Adds a contact to an existing document.
+`/Document/{DocId}/Contact` | `PATCH` | X | X | Updates a contact on an existing document.
+`/Document/{DocId}/Contact` | `DELETE` | X | X | Deletes a contact from an existing document.
+`/Document/{DocId}/Lines` | `POST` | X | X | Adds Lines to a document.
+`/Document/{DocId}/Note` | `POST` | X | X | Adds a note to an existing document.
+`/Document/{DocId}/Note` | `PATCH` | X | X | Updates a note on an existing document.
+`/Document/{DocId}/Note` | `DELETE` | X | X | Deletes a note from an existing document.
+`/Document/{DocId}/Payments` | `POST` | X | X | Adds Payments to a document.
+`/EC` | `GET` | X | X | Gets eCommerce settings.
+`/ECCategories` | `GET` | X | X | Gets eCommerce Categories and items.
+`/GiftCard/{GiftCardNo}` | `GET` | X | X | Gets gift card information.
+`/GiftCardCode/{GiftCardCode}` | `GET` | X | X | Gets gift card code information.
+`/GiftCardCodes` | `GET` | X | X | Gets information on gift card codes in bulk.
+`/GiftCards` | `GET` | X | X | Gets information of Gift Cards in bulk.
+`/InventoryControl` | [`GET`](Endpoints/GET_InventoryControl.md) | X | X | Gets inventory control information.
+`/Item/Images/{Filename} ` | [`GET`](Endpoints/GET_Item_ImageFilename.md) | X | X | Gets an item image for the given item and filename.
+`/Item/{ItemNo}` | [`GET`](Endpoints/GET_Item.md) | X | X | Methods to get item and item inventory information.
+`/Item/{ItemNo}/Images` | [`GET`](Endpoints/GET_Item_Images.md) | X | X | Gets a list of available item images for a given item.
+`/Item/{ItemNo}/Inventory/{LocId}` | `GET` | X | X | Gets item inventory information for a given item and location.
+`/Item/Inventory/EC` | `GET` | X | X | Gets eCommerce inventory information for all eCommerce items.
+`/ItemCategories` | [`GET`](Endpoints/GET_ItemCategories.md) | X | X | Gets item Categories in bulk.
+`/ItemCategory/{CategoryCode}` | [`GET`](Endpoints/GET_ItemCategory.md) | X | X | Gets item category information for the given category code.
+`/Items` | [`GET`](Endpoints/GET_Items.md) | X | X | Gets item information in bulk.
+`/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | X | X | Gets information about a given Paycode.
+`/PayCode/{Paycode}` | `PATCH` | X | X | Updates information about a Paycode.
+`/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | X | X | Gets information on Paycodes in bulk.
+`/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | X | X | Gets information on a store.
+`/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | X | X | Gets information on a station.
+`/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | X | X | Gets information on Tax Codes.
+`/User/{UserID}` | [`GET`](Endpoints/GET_User.md) | X | X | Gets information on a User.
+`/Workgroup/{WorkgroupID}` | [`GET`](Endpoints/GET_Workgroup.md) | X | X | Gets workgroup information.
