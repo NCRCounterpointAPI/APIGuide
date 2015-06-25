@@ -1,5 +1,5 @@
 # API Licensing
-While there are some administrative and other select API calls that can be freely used, most endpoints the API exposes require either a developer API key, a Counterpoint registration.ini, or both. A description of each licensing component is below.
+While there are some administrative and other select API calls that can be freely used, most endpoints the API exposes require either a developer API key, a Counterpoint registration.ini option, or both. A description of each licensing component is below.
 
 ## Developer API Keys
 Any 3rd party that wishes to use endpoints restricted by API Keys must submit an online application for a free NCR Counterpoint API Developer Key `need link`. More details are on the signup site but essentially developers will need to provide some information explaining what they will use the API Key for, and agree to the Terms of Use for the API.
