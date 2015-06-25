@@ -19,6 +19,9 @@ Installation of the API Server is simple, you essentially just run the .msi to i
 ## Configuration and Administration
 In progress
 
+## API Keys and licensing
+Most, but not all calls to the API will require a free API License key (for the client application or script), and a paid registration.ini option for the Counterpoint merchant. The endpoint chart below indicates which endpoints require each piece of data. See the [API Keys and licensing page](InstallationAndConfiguration/Licensing.md) for more details.
+
 ### Testing
 For ad hoc testing, we use and recommend the [Postman (Packaged app)](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en). It's a chrome web app that allows creating and saving REST requests. We're writing automated functional tests using Postman (and their $10 "Jetpacks" addon, which is well worth it). 
 
