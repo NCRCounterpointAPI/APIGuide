@@ -12,7 +12,14 @@ While API Keys are free to obtain, a primary requirement is that a distinct key 
 
 Once a developer API Key request is approved, they will get two files:
 - **`<Appname>_license.txt:`** This file contains the unencrypted, plain text API key. This key will be embedded in the developer application and submitted with each API request. This key should be reasonably protected inside the application (not easily obtainable), and not shared with anyone.
-- **`<Appname>_license.xml:`** This is a signed XML file containing information about the application, an encrypted version of the API Key, and an expiration date. If this file is edited in any way, the digital signature validation will fail and API Server instances will fail to recognize it. This file should be placed in the "APIKeys" subfolder of any API Server instance that your application will connect to.
+- **`<Appname>_license.xml:`** This is a signed XML file containing information about the application, an encrypted version of the API Key, and an expiration date. If this file is edited in any way, the digital signature validation will fail and API Server instances will fail to recognize it. This file should be placed in the "APIKeys" subfolder of any API Server instance that your application will connect to. The client application will then submit the API Key in the `APIKey` header of each API call as follows:
+ 
+**`APIKey : KEkPhw538hsFS17dadWwXqmqUdpz2RGY4dqGQkuE`**
+
+Any API Call that requires an API Key will fail with a `403 Forbidden` result if:
+- No API Key is provided in the `APIKey` header for the call.
+- The API Key file (xml file) on the server has an invalid signature indicating the file has been tampered with.
+- The API Key file on the server is expired.
 
 #### Expiration Dates
 To ensure reliability, the API was designed to not require any connectivity to NCR. So instead of real-time API Key validity checks, we've implemented API Key expiration. Our initial plan is that API Keys will be valid for two years. At that point they will need to be renewed, and the renewed API Key file will need to be distributed to any API Server instance that your application connects to. For future functionality, we're looking into the ability for the API Server to automatically download renewed API Key files from NCR if connectivity is available.
