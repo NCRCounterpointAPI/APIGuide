@@ -18,8 +18,8 @@
 - `Accept : application/json`
 
 #### Parameters
-**CompanyName**: The Company Name to retrieve information for.
-**AdminUser**: The Admin User ID to delete.
+- **CompanyName**: The Company Name to retrieve information for.
+- **AdminUser**: The Admin User ID to delete.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
