@@ -25,7 +25,7 @@ Name | Parameter Type | Data Type | Required | Description
 RoleName | path | string | true | The name of the role to add or update.
 
 #### Response Codes
-- **<code>201 Created</code>** The request was successful, the customer was added to the Counterpoint database.
+- **<code>200 OK</code>** The request was successful, the roles data was returned.
 - **<code>401 Unauthorized</code>** The request could not be fulfilled. Likely due to a missing or invalid authorization header.
 - **<code>404 Not Found</code>** The request could not be fulfilled.  The role name provided was not found.
 - **<code>500 Internal Server Error</code>** The request could not be fulfilled due to an unexpected internal error. This could be caused by a bug in the system, an unavailable database, or any other unexpected internal problem processing the request.
