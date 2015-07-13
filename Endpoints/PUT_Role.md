@@ -8,7 +8,6 @@ Add or update a role.
 - Requires Counterpoint Registration option: No
 - Requires Company Administrator: Yes
 
-
 #### Sample Request
 
 **URI**
@@ -19,6 +18,12 @@ Add or update a role.
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
 - `Accept : application/json`
 - `Content-Type : application/json`
+
+#### Parameters
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+RoleName | path | string | true | The name of the role to add or update.
+Role | body | Object | true | The role contains a list of endpoints available.
 
 **Request Body**
 ```
@@ -45,8 +50,7 @@ Add or update a role.
 #### Request Body
 Name | Parameter Type | Data Type | Required | Description
 ----- | -------------- | --------- | -------- | -----------
-Role | body | Role | true | Contains a list of endpoints.
-Name | path | string | true | The name of the role.
+endpoints | body | List<Endpoint> | true | A list of endpoints available for this role.
 
 Endpoint | Required | Field Description
 -------- | -------- | -----------------
