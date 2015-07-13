@@ -18,6 +18,9 @@ Adds a new company admin to the database
 - `Accept : application/json`
 - `Content-Type : application/json`
 
+**Parameters**
+- **CompanyName**: The Company Name to post admins for.
+
 **Request Body**
 ```
 {
