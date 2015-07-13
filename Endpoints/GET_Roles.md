@@ -94,3 +94,21 @@ The following error codes may be returned from requests to this endpoint:
 #### Response Body
 
 **Role List**
+
+Element | Datatype | Description
+------- | -------- | -----------
+roleList | List<Role> | A list of roles.
+
+**Role object**
+
+Element | Datatype | Description
+------- | -------- | -----------
+Name | string | The name of the role.
+Endpoints | List<Endpoint> | A list of endpoints and verbs the role has access to.
+
+**Endpoint object**
+
+Element | Datatype | Description
+------- | -------- | -----------
+Path | string | The path of this endpoint.
+VerbsAllowed | List<string> | A list of verbs available for this endpoint.
