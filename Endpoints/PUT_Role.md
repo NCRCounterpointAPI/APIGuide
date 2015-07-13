@@ -54,8 +54,8 @@ endpoints | body | List<Endpoint> | true | A list of endpoints available for thi
 
 Endpoint | Required | Field Description
 -------- | -------- | -----------------
-Path | | The path for this endpoint.
-VerbsAllowed | | The verbs allowed for this path.
+Path | true | The path for this endpoint.
+VerbsAllowed | true | The verbs allowed for this path.
 
 #### Response Codes
 - **<code>201 Created</code>** The request was successful, the customer was added to the Counterpoint database.
