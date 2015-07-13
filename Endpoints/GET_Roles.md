@@ -5,6 +5,7 @@
 - Requires API Key: No
 - Requires System Administrator: No
 - Requires Counterpoint Registration option: No
+- Requires Company Administrator: Yes
 
 #### Sample Request
 
@@ -23,16 +24,68 @@
  
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
-- `SUCCESS`: The request was successful and the list of admins is present under the `CompanyAdmins` section of the response body.
+- `SUCCESS`: The request was successful and a list of Roles was returned.
 
 #### Sample Response Body
 
 ```
 {
-  "Roles": [
-    "Role1",
-    "Role2",
-    "Role3"
+  "roleList": [
+    {
+      "name": "Role1",
+      "endpoints": [
+        {
+          "path": "/Customer",
+          "verbsAllowed": [
+            "POST"
+          ]
+        },
+        {
+          "path": "/Customer/{CustNo}/Address",
+          "verbsAllowed": [
+            "POST",
+            "DELETE"
+          ]
+        },
+        {
+          "path": "/Customer/{CustNo}/Card",
+          "verbsAllowed": [
+            "POST",
+            "DELETE"
+          ]
+        }
+        ...
+      ]
+    },
+    {
+      "name": "Role2",
+      "endpoints": [
+        {
+          "path": "/Company",
+          "verbsAllowed": [
+            "GET"
+          ]
+        },
+        {
+          "path": "/Document/{docid}",
+          "verbsAllowed": [
+            "GET"
+          ]
+        },
+        {
+          "path": "/GiftCardCode/{GiftCardCode}",
+          "verbsAllowed": [
+            "GET"
+          ]
+        },
+        {
+          "path": "/GiftCardCodes",
+          "verbsAllowed": [
+            "GET"
+          ]
+        }
+      ]
+    }
   ],
   "ErrorCode": "SUCCESS"
 }
