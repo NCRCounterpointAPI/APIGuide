@@ -41,6 +41,10 @@ Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 -------- | ---------------- | ------ | --------------- | -----------
 `/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | | | Gets information on a single API Key.
 `/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | | |  Gets a list of all API Keys installed on the server.
+`/CompanyAdmin/{CompanyName}/{AdminUser}` | [`DELETE`](Endpoints/DELETE_CompanyAdmin.md) | | | Delete a company admin by user id.
+`CompanyAdmins/{CompanyName}` | [`GET`](Endpoints/GET_CompanyAdmins.md) | | | Gets a list of Company Admins for the company.
+`CompanyAdmins/{CompanyName}` | [`POST`](Endpoints/POST_CompanyAdmins.md) | | | Adds a list of Company Admins.
+`CompanyAdmins/{CompanyName}` | [`PUT`](Endpoints/PUT_CompanyAdmins.md) | | | Sets a list of Company Admins for the company.
 `/Database/{Id}` | [`GET`](Endpoints/GET_Database.md) | | |  Gets information about a Database (Company) configured for use by the API Server.
 `/Database/{Id}` | [`PUT`](Endpoints/PUT_Database.md) | | |  Updates information about a Database (Company) configured for use by the API Server.
 `/Database/{Id}` | [`DELETE`](Endpoints/DELETE_Database.md) | | |  Deletes a Database (Company) so it can no longer be used by the API Server.
