@@ -104,8 +104,21 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | X | X | Gets information about a given Paycode.
 `/PayCode/{Paycode}` | `PATCH` | X | X | Updates information about a Paycode.
 `/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | X | X | Gets information on Paycodes in bulk.
+`/Role/Endpoints` | [`GET`](Endpoints/GET_RoleEndpoints.md) | | | Gets a list of endpoints that can be made available to any role.
+`/Role/{RoleName}` | [`DELETE`](Endpoints/DELETE_Role.md) | | | Delete a role.
+`/Role/{RoleName}` | [`GET`](Endpoints/GET_Role.md) | | | Gets endpoint information for a role.
+`/Role/{RoleName}` | [`PUT`](Endpoints/PUT_Role.md) | | | Update or insert a role.
+`/Role/{RoleName}/Users` | [`GET`](Endpoints/GET_RoleUsers.md) | | | Gets a list of users assigned to the role.
+`/Role/{RoleName}/Users` | [`PUT`](Endpoints/PUT_RoleUsers.md) | | | Add or update the users list belonging to the role.
+`/Roles` | [`GET`](Endpoints/GET_Roles.md) | | | Gets a list of roles with endpoint data.
+`/Roles/Names` | [`GET`](Endpoints/GET_RoleNames.md) | | | Gets a list of role names.
+`/Roles/Users` | [`GET`](Endpoints/GET_RolesUsers.md) | | | Gets a list of all roles with permissions and assigned users.
 `/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | X | X | Gets information on a store.
 `/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | X | X | Gets information on a station.
 `/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | X | X | Gets information on Tax Codes.
 `/User/{UserID}` | [`GET`](Endpoints/GET_User.md) | X | X | Gets information on a User.
+`/User/{UserID}/Roles` | [`DELETE`](Endpoints/DELETE_UserRoles.md) | |  | Deletes a user's assigned roles.
+`/User/{UserID}/Roles` | [`GET`](Endpoints/GET_UserRoles.md) | |  | Get a list of roles for the user.
+`/User/{UserID}/Roles` | [`PUT`](Endpoints/PUT_UserRoles.md) | |  | Update a user's assigned roles.
+`/Users/Roles` | [`GET`](Endpoints/GET_UsersRoles.md) | |  | Get a list of users and their assigned roles.
 `/Workgroup/{WorkgroupID}` | [`GET`](Endpoints/GET_Workgroup.md) | X | X | Gets workgroup information.
