@@ -52,6 +52,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 `/Databases` | [`POST`](Endpoints/POST_Databases.md) | | |  Adds one or more Databases (Companies) the API can interact with.
 `/Databases/ini` | [`GET`](Endpoints/GET_Databases_Ini.md) | | |  Gets a list of company DB information from a companies.ini file
 `/SystemInfo` | [`GET`](Endpoints/GET_SystemInfo.md) | | |  Gets information about the API server and hardware environment.
+`/Users/{CompanyName}` | [`GET`](Endpoints/GET_UsersForCompany.md) | | |  Gets a list of users for the company.
 
 ### Company Endpoints
 Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
@@ -120,5 +121,6 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/User/{UserID}/Roles` | [`DELETE`](Endpoints/DELETE_UserRoles.md) | |  | Deletes a user's assigned roles.
 `/User/{UserID}/Roles` | [`GET`](Endpoints/GET_UserRoles.md) | |  | Get a list of roles for the user.
 `/User/{UserID}/Roles` | [`PUT`](Endpoints/PUT_UserRoles.md) | |  | Update a user's assigned roles.
+`/Users` | [`GET`](Endpoints/GET_Users.md) | | |  Gets a list of users.
 `/Users/Roles` | [`GET`](Endpoints/GET_UsersRoles.md) | |  | Get a list of users and their assigned roles.
 `/Workgroup/{WorkgroupID}` | [`GET`](Endpoints/GET_Workgroup.md) | X | X | Gets workgroup information.
