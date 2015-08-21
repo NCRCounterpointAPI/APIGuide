@@ -17,7 +17,7 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 Installation of the API Server is simple, you essentially just run the .msi to install. See the [Installing](InstallationAndConfiguration/Installing.md) page for more details.
 
 ## Configuration and Administration
-In progress
+The API server allows fine grained configuring over the companies, users, and API calls each user can make. See the [Configuring the NCR Counterpoint API Server](InstallationAndConfiguration/Configuring.md) page for information on how to configure the server properly for your environment.
 
 ## API Keys and licensing
 Most, but not all calls to the API will require a free API License key (for the client application or script), and a paid registration.ini option for the Counterpoint merchant. The endpoint chart below indicates which endpoints require each piece of data. See the [API Keys and licensing page](InstallationAndConfiguration/Licensing.md) for more details.
