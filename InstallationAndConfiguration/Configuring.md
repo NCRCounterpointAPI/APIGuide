@@ -8,7 +8,7 @@ Once the server is installed and running, it must be configured per the requirem
 
 ## Creating System Administrators
 System Administrators have the ability to add and remove company access via the API server, as well as designating company administrators within each company. By default, there is a single system administrator login created during installation with the name/password of "admin"/"password". It is recommended that the password be changed on this user immediately upon login. It is also recommended that logins should not be shared. Each individual with authority should have their own system administrator login created, that is to be used only by them. To create a system administrator login:
-* Login to the API administrator console at https://<apiservername>:<port>/app/index.htm#/login using an existing system administrator login ("admin") if this is a brand new system
+* Login to the API administrator console at `https://<apiservername>:<port>/app/index.htm#/login` using an existing system administrator login ("admin") if this is a brand new system
 * Select "Configuration" > "Add Admin User"
 * Enter a User ID for and password for the new Admin user
 * Click "OK" to save the user
@@ -20,12 +20,12 @@ In order for the API server to do anything useful, it must be told how to connec
 * If a companies.ini file is found, each company in the file will be automatically added to the API server
 
 To see what companies, if any, the API server is aware of:
-* Login to the API administrator console at https://<apiservername>:<port>/app/index.htm#/login using a system administrator login
+* Login to the API administrator console at `https://<apiservername>:<port>/app/index.htm#/login` using a system administrator login
 * Select "Configuration" > "Companies"
 A list of companies the API server is aware of will be displayed. Note that companies can be disabled without removing them from the server, which will prevent access to the company.
 
 If you need to add companies to the API server:
-* Login to the API administrator console at https://<apiservername>:<port>/app/index.htm#/login using a system administrator login
+* Login to the API administrator console at `https://<apiservername>:<port>/app/index.htm#/login` using a system administrator login
 * Select "Configuration" > "Companies"
 
 There are two ways to add companies: Manually and automatically via an existing companies.ini.
@@ -49,7 +49,7 @@ To add a company automatically via companies.ini:
 
 ## Designating Company Administrators
 By default, NCR Counterpoint users don't have access to their data via the API server, even after the company is added. The system administrator must identify existing NCR Counterpoint users who should have authority to administer the company. Company administrators have the ability to create and edit roles, as well as assign and unassign roles from other Counterpoint users in their company. Only system administrators can add & remove company administrators. To add a company administrator:
-* Login to the API administrator console at https://<apiservername>:<port>/app/index.htm#/login using a system administrator login
+* Login to the API administrator console at `https://<apiservername>:<port>/app/index.htm#/login` using a system administrator login
 * Select "Configuration" > "Companies"
 * Click on the desired company name to expand the details of the company connection
 * In the "Company Admins" section, select "Edit Admins"
@@ -58,7 +58,7 @@ By default, NCR Counterpoint users don't have access to their data via the API s
 
 ## Creating and Assigning Roles
 Roles determine what API calls a given user can make. Roles are defined, then assigned to company level users. To create a role:
-* Login to the API administrator console at https://<apiservername>:<port>/app/index.htm#/login using a company administrator login (NOTE: company logins should always enter <CompanyAlias>.<Counterpoint User name> for their API User ID, for example "TESTGOLF.MGR")
+* Login to the API administrator console at `https://<apiservername>:<port>/app/index.htm#/login` using a company administrator login (NOTE: company logins should always enter `<CompanyAlias>.<Counterpoint User name>` for their API User ID, for example "TESTGOLF.MGR")
 * Select "Roles" > "Edit Roles"
 * Enter the name for the new role and click "Add New Role"
 * The new role will be added immediately. Click on the role name to exand it, then click on "Endpoints" to expand the list of API endpoints
