@@ -32,11 +32,11 @@ There are two ways to add companies: Manually and automatically via an existing 
 To add a company manually:
 * Click the "Add" button on the Companies screen
 * Enter all the required information to allow the server to connect to the company
-** Name: This is an alias for the company. It is highly recommended that this match the company alias in the companies.ini file
-** TLD: This is a path to the TLD from the server. The server must have read access to the TLD. This can be a UNC path
-** Server: The name or IP address of the SQL server hosting the Counterpoint database
-** Database: The database name in SQL Server
-** Security: Select either "Integrated Security" or "SQL Security" depending on your needs. If "SQL Security is chosen, you'll also need to enter a SQL username & password.
+  * Name: This is an alias for the company. It is highly recommended that this match the company alias in the companies.ini file
+  * TLD: This is a path to the TLD from the server. The server must have read access to the TLD. This can be a UNC path
+  * Server: The name or IP address of the SQL server hosting the Counterpoint database
+  * Database: The database name in SQL Server
+  * Security: Select either "Integrated Security" or "SQL Security" depending on your needs. If "SQL Security is chosen, you'll also need to enter a SQL username & password.
 NOTE: The SQL credentials used by the server must allow full read/write access to all Counterpoint tables, as well as permissions to create tables (The API server does create a table in the company DB to store company specific API configuration data)
 * Click "OK" to save the company
 
