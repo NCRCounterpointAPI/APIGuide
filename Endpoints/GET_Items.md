@@ -18,7 +18,8 @@ Gets information about all items in the company
 - `Accept : application/json`
 
 #### Parameters
-None
+- CategCod | Query | The IM_CATEG_COD of the items to retrieve | Optional
+- SubcatCod | Query | The IM_SUBCAT_COD of the items to retrieve | Optional
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
