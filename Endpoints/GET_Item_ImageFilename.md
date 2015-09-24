@@ -4,9 +4,9 @@
 #### Description
 Gets the image for the given filename. Note this returns the actual image. To get a list of available image filenames for a given item, use the [/Item/{ItemNo}/Images](GET_Item_Images.md) endpoint.
 
-- Requires API Key: Yes
+- Requires API Key: No
 - Requires System Administrator: No
-- Requires Counterpoint Registration option: Yes
+- Requires Counterpoint Registration option: No
 
 #### Sample Request
 
@@ -14,7 +14,6 @@ Gets the image for the given filename. Note this returns the actual image. To ge
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
-- `APIKey : `
 
 #### Parameters
 Name | Parameter Type | Data Type | Required | Description
