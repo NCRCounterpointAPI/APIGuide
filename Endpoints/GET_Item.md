@@ -111,7 +111,13 @@ The following error codes may be returned from requests to this endpoint:
     "ECOMM_DISC_ON_SAL": "Y",
     "ECOMM_ITEM_IS_DISCNTBL": "Y",
     "RS_STAT": 0,
-    "IM_ITEM_NOTE": []
+    "IM_ITEM_NOTE": [],
+    "EC_ITEM_DESCR": {
+      "ITEM_NO": "ADM-SCD",
+      "HTML_DESCR": "<B>Adams</B> exclusive <B>Spin Control Technology</B>.\r\nUses a proprietary stainless steel casting process.\r\nKeeps ball on target and produces greater distance.\r\n\r\n",
+      "LST_MAINT_DT": "2002-09-24T19:11:45.0000000",
+      "LST_MAINT_USR_ID": "Z"
+    }    
   },
   "ErrorCode": "SUCCESS"
 }
