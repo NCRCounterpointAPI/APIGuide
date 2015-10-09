@@ -103,7 +103,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Item/{ItemNo}/InventoryCost/{LocId}` | [`GET`](Endpoints/GET_InventoryCost.md) | X | X | Gets item inventory information for a given item and location.
 `/ItemCategories` | [`GET`](Endpoints/GET_ItemCategories.md) | X | X | Gets item Categories in bulk.
 `/ItemCategory/{CategoryCode}` | [`GET`](Endpoints/GET_ItemCategory.md) | X | X | Gets item category information for the given category code.
-`/Items` | [`GET`](Endpoints/GET_Items.md) | X | X | Gets item information in bulk.
+`/Items` | [`GET`](Endpoints/GET_Items.md) | X | X | Gets item information in bulk. Can be further filtered by category or subcategory.
 `/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | X | X | Gets information about a given Paycode.
 `/PayCode/{Paycode}` | `PATCH` | X | X | Updates information about a Paycode.
 `/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | X | X | Gets information on Paycodes in bulk.
