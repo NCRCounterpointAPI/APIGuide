@@ -77,7 +77,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/CustomerControl` | `GET` | X | X | Gets customer control information.
 `/Customers` | `GET` | X | X | Gets information on customers in bulk.
 `/Customers/EC` | `GET` | X | X | Gets information on eCommerce customers in bulk.
-`/Document` | `POST` | X | X | Adds a new document (ticket).
+`/Document` | [`POST`](Endpoints/POST_Document.md) | X | X | Adds a new document (ticket).
 `/Document/{DocId}` | `GET` | X | X | Gets information on an existing document (ticket) that hasn't been posted yet.
 `/Document/{DocId}/Contact` | `POST` | X | X | Adds a contact to an existing document.
 `/Document/{DocId}/Contact` | `PATCH` | X | X | Updates a contact on an existing document.
