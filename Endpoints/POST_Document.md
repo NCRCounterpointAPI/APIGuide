@@ -58,6 +58,38 @@ The example below creates a minimal order in Counterpoint
           "CR_CARD_EXP_DAT": "12/2018"
         }
       }
+    ],
+    "PS_DOC_TAX": [
+    {
+      "AUTH_COD": "MEMPHIS",
+      "RUL_COD": "TAX",
+      "TAX_DOC_PART": "O",
+      "LIN_AMT": "200",
+      "TXBL_LIN_AMT": "200",
+      "TXBL_QTY": "1.00",
+      "TAX_AMT": "4.00",
+      "TOT_TXBL_AMT": "200"
+    },
+    {
+      "AUTH_COD": "SHELBY",
+      "RUL_COD": "TAX",
+      "TAX_DOC_PART": "O",
+      "LIN_AMT": "200",
+      "TXBL_LIN_AMT": "200",
+      "TXBL_QTY": "1.00",
+      "TAX_AMT": "6.00",
+      "TOT_TXBL_AMT": "200"
+    },
+    {
+      "AUTH_COD": "TN",
+      "RUL_COD": "TAX",
+      "TAX_DOC_PART": "O",
+      "LIN_AMT": "200",
+      "TXBL_LIN_AMT": "200",
+      "TXBL_QTY": "1.00",
+      "TAX_AMT": "6.00",
+      "TOT_TXBL_AMT": "200"
+    }
     ]
   }
 }
