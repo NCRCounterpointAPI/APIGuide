@@ -22,10 +22,10 @@ The API server allows fine grained configuring over the companies, users, and AP
 ## API Keys and licensing
 Most, but not all calls to the API will require a free API License key (for the client application or script), and a paid registration.ini option for the Counterpoint merchant. The endpoint chart below indicates which endpoints require each piece of data. See the [API Keys and licensing page](InstallationAndConfiguration/Licensing.md) for more details.
 
-### Functionality and Testing
+## Functionality and Testing
 Automated testing is used to validate the operation and accuracy of the API calls. It is highly recommended that consumers of the API review the automated tests to ensure the API provides the needed capabilities. In short, if it's not covered by our automated tests, there's no guarantee that a given usage of the API will continue to work as expected. 
 
-### Reporting defects
+## Reporting defects
 To report a defect in the API, an automated test that illustrates the defect, using Postman, is required to be submitted as a pull request to our API Tests project. The test should follow the structure of the other tests in the repository as closely as possible. Hardcoded values may be used if needed. NCR will use your test case to reproduce the issue. If NCR deems the issue to be a defect, it will be resolved and the test will be added to our test suites (the test may be modified to better fit our structure, etc.). This method ensures we build a robust automated test suite, and ensures that your needed functionality is always tested and ensured to work in future releases of the API.
 
 In addition, if there is a usage of the API that is working as expected, but not yet covered by an automated test, and you want to ensure it continues to work as expected, you should submit a pull request with an automated test case for us to consider including in the test suite.
