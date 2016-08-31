@@ -11,12 +11,12 @@ While API Keys are free to obtain, a primary requirement is that a distinct key 
 - For support, it allows us to analyze and identify any applications that may not be working properly, flooding the server, or causing other issues. It will also allow us to filter data on the server to help troubleshoot issues with particular applications.
 
 The following information must be provided to request an API key:
-- Company Name: The name of the company developing the application
-- Issued To: The name of an individual who is a contact point for the application
-- eMail1: The email of the contact point for the application (eMail could be used for any communication from NCR relating to the application, such as a notice to renew their API Key)
-- eMail2: A backup email contact for communications
-- Application Name: The name of the application being developed.
-- Description: A description of the application being developed.
+- **Company Name**: The name of the company developing the application
+- **Issued To**: The name of an individual who is a contact point for the application
+- **eMail1**: The email of the contact point for the application (eMail could be used for any communication from NCR relating to the application, such as a notice to renew their API Key)
+- **eMail2**: A backup email contact for communications
+- **Application Name**: The name of the application being developed.
+- **Description**: A description of the application being developed.
 
 Once a developer API Key request is approved, they will get two files:
 - **`<Appname>_license.txt:`** This file contains the unencrypted, plain text API key. This file is for safekeeping by the developer. The key value inside this file should be embedded in the developer application and submitted with each API request. Reasonable attempts should be made to protect the key inside the application (not easily obtainable), and it should not be shared with anyone.
