@@ -6,6 +6,14 @@ Once the server is installed and running, it must be configured per the requirem
 * Designating Company Administrators
 * Creating and Assigning Roles
 
+## Key API Management concepts
+It's important to understand the high level concepts relating to how the API Server is configured and managed. The API server is designed to allow a single API instance to connect to multiple companies, which could each be fully indenpendent. As such, the following security and administration concepts were put in place:
+* Server Administrator: A Server administrator is someone who is able to manage high level configuration of the API server itself. A default server administrator with the user name "admin" is created when the server is installed. Server administrators are the only ones with user logins that don't contain a company prefix. This effectively includes:
+  * Adding and removing companies to the API server: This defines what Counterpoint companies (Databases and TLDs) the API server knows how to connect to
+  * Adding and removing company administrators: This defines what Counterpoint user can manage roles and permissions for API access to a specific company.
+* Company Administrator: Company administrators use Counterpoint login credentials, and their user name is prefixed with their company name as defined in the company configuration (see "Adding Companies" below)
+* Roles: Roles define what endpoints (API calls) users assigned to the given role are allowed to make. Roles can be use to limit what Counterpoint users have access to specific API calls.
+
 ## Creating System Administrators
 System Administrators have the ability to add and remove company access via the API server, as well as designating company administrators within each company. By default, there is a single system administrator login created during installation with the name/password of "admin"/"password". It is recommended that the password be changed on this user immediately upon login. It is also recommended that logins should not be shared. Each individual with authority should have their own system administrator login created, that is to be used only by them. To create a system administrator login:
 * Login to the API administrator console at `https://<apiservername>:<port>/app/index.htm#/login` using an existing system administrator login ("admin") if this is a brand new system
