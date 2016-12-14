@@ -51,7 +51,9 @@ such as:
 When submitting dates and times in a request, the same format should be used. If only a date is needed, the time portion can be left off. Similarly, the precision of the seconds can be shortened if it isn't needed. If only a time is needed, and no date, the date portion will be ignored (but must be provided).
 
 ## Caching
-Certain data that is assumed to be relatively static is cached by the server after it's intially read. See the page on caching for more information. To force the server to reload data, the `need name` header can be used.
+Certain data that is assumed to be relatively static is cached by the server after it's intially read. See the page on caching for more information. To force the server to reload data, the `ServerCache` header can be used:
+
+`ServerCache: no-cache
 
 The following data is cached for 24 hours from the point it's intially loaded. No data is preloaded, it is all lazily loaded upon the first request for the data:
 
