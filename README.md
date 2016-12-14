@@ -36,7 +36,11 @@ In addition, if there is a usage of the API that is working as expected, but not
 
 We use and recommend the [Postman (Packaged app)](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en). It's a chrome web app that allows creating and saving REST requests. We also recommend the "Jetpacks" addon, which is very affordable and allows automated test scripting. These tools are required to create and submit additional test cases to NCR.
 
-You can find all the automated tests we run for the API [here](https://github.com/NCRCounterpointAPI/APITests). They are written to run against a standard Counterpoint test database and TLD (coming soon). The tests are published not only as reference examples of API usage, but also in hopes the community will contribute to the test cases as well, to help reproduce bugs and improve test coverage. The preferable way to get an improvement to tests or documentation is for users to submit pull requests containing tests to illustrate issues or provide new test coverage. Please submit tests that will work against the standard test database and are structured similarly to our existing conventions.
+You can find all the automated tests we run for the API [here](https://github.com/NCRCounterpointAPI/APITests). They are written to run against a standard Counterpoint test database and TLD (coming soon). The tests are published not only as reference examples of API usage, but also in hopes the community will contribute to the test cases as well, to help reproduce bugs and improve test coverage. The preferable way to get an improvement to tests or documentation is for users to submit pull requests containing tests to illustrate issues or provide new test coverage. Please submit tests that will work against the standard test database and are structured similarly to our existing conventions. Test databases can be downloaded via ftp from:
+
+`files165.cyberlynk.net`
+
+Using credentials provided from NCR.
 
 ## Making http requests
 Calls to the API Server are made in the form of http requests. See the page on [API requests](Basics/Requests.md) for specifics on how to form http requests for the NCR Counterpoint API. See documentation on the language or script being used to make the request for details on how to properly create the request in your code.
