@@ -23,7 +23,7 @@ Once you've verified the server is running, you can move on to configuring the s
 ## Certificates and SSL
 By default, the installer will generate and install a self-signed SSL certificate issued to the name of the machine the API Server is being installed on. This certificate will be bound to the port that the server is initially configured to use. This will allow API calls to be made on the local network using the format `https://<machine_name>:<port>`.
 
-**NOTE** Since the default certificate we install is self-signed, browsers may give warnings, or even deny access to the server since it can't verify the authenticity of the certificate. This can be addressed by adding an exception in the browser (this varies by browser) or installing the public certficate as a "Trusted Root Certification Authority" on the client machine.
+**NOTE** Since the default certificate we install is self-signed, browsers may give warnings, or even deny access to the server since it can't verify the authenticity of the certificate. This can be addressed by adding an exception in the browser (this varies by browser) or installing the public certficate as a "Trusted Root Certification Authority" on the client machine. To configure your Chrome browser to always accept a certain self-signed certificate, see [this article](http://superuser.com/questions/632059/how-to-add-a-self-signed-certificate-as-an-exception-in-chrome)
 
 If needed, a signed certificate can be purchased from a certified trusted issuer and installed in place of the default self-signed certificate. The process is generally identical to purchasing and installing certificates for any other web server:
 - Purchase a signed certificate from a certified issuer.
