@@ -7,9 +7,13 @@ The NCR Counterpoint API is a [REST](http://en.wikipedia.org/wiki/Representation
 
 ## Requirements
 Any instance of the NCR Counterpoint API server can connect to multiple NCR Counterpoint installations and companies. In order for the server to work against an NCR Counterpoint company, the following requirements must be met:
+* Windows 7 (desktop OS) or Windows Server 2012 R2 (server OS) or newer.
+* .NET 4.5.2
+* 4GB RAM Minimum (8GB recommended)
 * The NCR Counterpoint API server must be installed and running on an open http port.
 * The NCR Counterpoint API server must have read/write access to the TLD folder for the company. This can be on a separate machine accessible via a UNC path.
-* The NCR Counterpoint API server must have administrative access to the company database
+* The NCR Counterpoint API server must have administrative access to the company database.
+* The NCR Counterpoint API does not support offline databases.
 * The company the server is connecting to must have the API user option enabled in its registration.ini file. There are some limited functions that will work without the API user option, but the bulk of the endpoints do require the registration option. See the documentation for an individual endpoint to determine if it requires the registration.ini option for use.
 * Most API calls require that client applications or scripts provide a valid "APIKey" header in each request. This APIKey must also be installed on the API Server. See the page on [APIKeys](InstallationAndConfiguration/Licensing.md) for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
 
