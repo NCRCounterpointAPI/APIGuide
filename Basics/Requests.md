@@ -72,11 +72,11 @@ The following data is cached for 24 hours from the point it's intially loaded. N
 - Tax Codes
 - Workstations
 
-**NOTE:** When resources are added through the server (such as a POST to /Database), the cache is automatically updated with the new information, since the server is aware of the change. The cache typically will become stale when changes are made to the TLD or Counterpoint database that don't go through the API.
+**NOTE:** When resources are added through the server (such as a POST to /Database), the cache is automatically updated with the new information, since the server is aware of the change. The cache typically will become stale when changes are made to the TLD or Counterpoint database that don't go through the API, such as editing data via the Counterpoint application.
 
 There are three ways to force the cache to be updated:
 - Restart the NCR Counterpoint API server
 - Issue a DELETE request to the /CACHE endpoint: All data cached for the company indicated in the authentication header will be invalidated and reloaded upon the next request for that data.
-- Include a `need name` header in the request. This will invalidate all cached data for the company indicated in the authentication header. All data will be reloaded upon the next request for that data.
-More to come...
+- Include a `ServerCache` header in the request. This will invalidate all cached data for the company indicated in the authentication header. All data will be reloaded upon the next request for that data.
+
 
