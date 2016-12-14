@@ -53,7 +53,7 @@ When submitting dates and times in a request, the same format should be used. If
 ## Caching
 Certain data that is assumed to be relatively static is cached by the server after it's intially read. See the page on caching for more information. To force the server to reload data, the `ServerCache` header can be used:
 
-`ServerCache: no-cache
+`ServerCache: no-cache`
 
 The following data is cached for 24 hours from the point it's intially loaded. No data is preloaded, it is all lazily loaded upon the first request for the data:
 
