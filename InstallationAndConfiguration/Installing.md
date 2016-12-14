@@ -2,7 +2,13 @@
 
 Installing the NCR Counterpoint API server is simple: run the .msi installer on the machine you wish to be the API Server. By default, the API server will install to `C:\Program Files (x86)\NCR\Counterpoint API`. This path can be changed during the install process if needed.
 
-When the install completes, the server should be up and running on the default port (81). The API installs as a windows service, and can be found under the name "NCR Counterpoint API" in the services console:
+The latest API installation package can be downloaded via FTP from:
+
+`files165.cyberlynk.net`
+
+Please contact NCR or your NCR Counterpoint partner for credentials to download the API.
+
+When the install completes, the server should be up and running on the default port (52000). The API installs as a windows service, and can be found under the name "NCR Counterpoint API" in the services console:
 
 ![Services console](NCRCounterpointAPIServicesConsole.png)
 
