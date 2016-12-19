@@ -21,6 +21,7 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 Initially, the Counterpoint API is tested and supported with the following Counterpoint verions:
 * 8.4.6.18
 * 8.5.2.1
+
 Please note that the API relies on the database version value in `DB_CTL.DB_VER` for versioning information, and thus it cannot distinguish between multiple Counteproint versions that share a given value for `DB_CTL.DB_VER`. There are also no restrictions preventing the API from working with some other versions of Counterpoint Databases. It's very likely that the Counterpoint API will work with other versions of Counterpoint, but the versions listed above are the only versions that the API has been fully tested and is supported on. If there is sufficient demand for support of additional versions, then the scope of supported Counterpoint versions may be expanded.
 
 ## Installation
