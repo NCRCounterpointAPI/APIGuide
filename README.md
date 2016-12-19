@@ -17,8 +17,14 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 * The company the server is connecting to must have the API user option enabled in its registration.ini file. There are some limited functions that will work without the API user option, but the bulk of the endpoints do require the registration option. See the documentation for an individual endpoint to determine if it requires the registration.ini option for use.
 * Most API calls require that client applications or scripts provide a valid "APIKey" header in each request. This APIKey must also be installed on the API Server. See the page on [APIKeys](InstallationAndConfiguration/Licensing.md) for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
 
+## Supported Counterpoint versions
+Initially, the Counterpoint API is tested and supported with the following Counterpoint verions:
+* 8.4.6.18
+* 8.5.2.1
+Please note that the API relies on the database version value in `DB_CTL.DB_VER` for versioning information, and thus it cannot distinguish between multiple Counteproint versions that share a given value for `DB_CTL.DB_VER`. There are also no restrictions preventing the API from working with some other versions of Counterpoint Databases. It's very likely that the Counterpoint API will work with other versions of Counterpoint, but the versions listed above are the only versions that the API has been fully tested and is supported on. If there is sufficient demand for support of additional versions, then the scope of supported Counterpoint versions may be expanded.
+
 ## Installation
-Installation of the API Server is simple, you essentially just run the .msi to install. See the [Installing](InstallationAndConfiguration/Installing.md) page for more details.
+Installation of the API Server is simple, you essentially just run the .exe to install. See the [Installing](InstallationAndConfiguration/Installing.md) page for more details.
 
 ## Configuration and Administration
 The API server allows fine grained configuring over the companies, users, and API calls each user can make. See the [Configuring the NCR Counterpoint API Server](InstallationAndConfiguration/Configuring.md) page for information on how to configure the server properly for your environment.
