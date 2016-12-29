@@ -2,7 +2,7 @@
 While there are some administrative and other select API calls that can be freely used, most endpoints the API exposes require either a developer API key, a Counterpoint registration.ini option, or both. A description of each licensing component is below.
 
 ## Developer API Keys
-Any 3rd party that wishes to use endpoints restricted by API Keys must submit an online application for a free NCR Counterpoint API Developer Key at [https://retailchannel.radiantsystems.com/api_request]. All requests will be manually reviewed, and API Key files will be emailed to the provided contact for approved requests.
+Any 3rd party that wishes to use endpoints restricted by API Keys must submit an online application for a free NCR Counterpoint API Developer Key at [https://retailchannel.radiantsystems.com/api_request.htm]. All requests will be manually reviewed, and API Key files will be emailed to the provided contact for approved requests.
 
 While API Keys are free to obtain, a primary requirement is that a distinct key is used for each "usage" of the API. If a developer plans on building two applications that use the API, they should apply for two developer keys. This serves a few purposes:
 
