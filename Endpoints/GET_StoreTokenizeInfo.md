@@ -1,8 +1,8 @@
 
-# GET /Store/{SEC_PAY_STR}/Tokenize
+# GET /Store/{StoreId}/Tokenize
 
 #### Description
-Gets information about a store.
+Gets tokenization information for the store.
 
 - Requires API Key: Yes
 - Requires System Administrator: No
@@ -20,7 +20,7 @@ Gets information about a store.
 #### Parameters
 Name | Parameter Type | Data Type | Required | Description
 ---- | -------------- | --------- | -------- | -----------
-SEC_PAY_STR | path | string | true | The STR_ID of the store to retrieve tokenize information.
+StoreId | path | string | true | The STR_ID to retrieve configuration information for.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
