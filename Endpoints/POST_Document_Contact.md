@@ -1,5 +1,5 @@
 
-# GET /(endpoint)
+# POST /(endpoint)
 
 #### Description
 
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/Document`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
