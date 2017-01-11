@@ -1,5 +1,5 @@
 
-# GET /(endpoint)
+# POST /(endpoint)
 
 #### Description
 
