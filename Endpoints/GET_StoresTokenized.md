@@ -28,12 +28,16 @@ Gets the tokenized count of customer cards on file for each secure pay store.
 The following error codes may be returned from requests to this endpoint:
 - `SUCCESS`: The request was successful.
 
+#### Sample Response Body
+
+```
+{
+  "StoreId": "100",
+  "NonTokenizedCount": 0,
+  "TokenizedCount": 1,
+  "BlankCount": 9,
+  "ErrorCode": "SUCCESS"
+}
+```
 
 #### Response Body
-
-**Item object**
-
-Element | Datatype | Description
-------- | -------- | -----------
-
-
