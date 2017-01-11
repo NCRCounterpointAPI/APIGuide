@@ -36,7 +36,7 @@ Adds a new credit card to customer in the database
 #### Request Body
 Name | Parameter Type | Data Type | Required | Description
 ---- | -------------- | --------- | -------- | -----------
-Workgroup | body | string | false | The WRKGRP_ID of the workgroup settings used to determine the template customer and next CUST_NO. If not provided, the default workgroup of the logged in user is used. All explicitly provided values will override workgroup driven values.
+CardName | body | string | false | The card name description of the card being added.
 AR_CUST_CARD | body | string | true | A JSON structure containing the customer card data to add.
 **NOTE:** Whenever possible, the template customer is used to determine defaults for fields that aren't provided explicitly. The template customer is obtained from the record of the provided workgroup (WRKGRP_ID). If a WKRGRP_ID isn't provided, the default workgroup for the logged in user is used.
 
