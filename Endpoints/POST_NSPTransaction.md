@@ -34,8 +34,7 @@ EndDate | body | string | false | The secure pay store ID.
  
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
-- `SUCCESS`: The request was successful and the admin was added to the Counterpoint database.
-- `ERROR_RECORD_NOT_FOUND`: No matching SY_USR record was found for the admin.
+- `SUCCESS`: The request was successful.
 
 #### Response Body
 Name | Parameter Type | Data Type | Description
