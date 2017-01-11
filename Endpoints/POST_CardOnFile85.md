@@ -1,4 +1,4 @@
-# POST /Customer
+# POST /CardOnFile85
 
 #### Description
 Adds a new credit card to customer in the database
