@@ -42,6 +42,7 @@ CardSeqNo | path | string | true | The sequence number of that identifies the ca
 Name | Parameter Type | Data Type | Required | Description
 ----- | -------------- | --------- | -------- | -----------
 AR_CUST_CARD | body | object | true | values required to edit card on file.
+CardName | body | string | false | Name describing the card on file.
 
 #### Response Codes
 - **<code>201 Created</code>** The request was successful, the customer was added to the Counterpoint database.
