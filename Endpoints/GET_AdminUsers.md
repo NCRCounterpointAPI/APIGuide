@@ -1,5 +1,5 @@
 
-# GET /APIAdmins
+# GET /AdminUsers
 
 #### Description
 
