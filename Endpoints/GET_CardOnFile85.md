@@ -1,4 +1,4 @@
-# GET /Customer/{CustNo}
+# GET /CardOnFile85
 
 #### Description
 Retrieves information about a specified customer
