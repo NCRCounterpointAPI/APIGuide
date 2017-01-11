@@ -1,5 +1,5 @@
 
-# DELETE /APIAdmin
+# DELETE /AdminUser
 
 #### Description
 
