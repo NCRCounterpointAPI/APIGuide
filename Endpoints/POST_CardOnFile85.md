@@ -39,6 +39,7 @@ Name | Parameter Type | Data Type | Required | Description
 AR_CUST_CARD | body | string | true | A JSON structure containing the customer card data to add.
 CardName | body | string | false | the card name description of the card being added.
 **NOTE:** Whenever possible, the template customer is used to determine defaults for fields that aren't provided explicitly. The template customer is obtained from the record of the provided workgroup (WRKGRP_ID). If a WKRGRP_ID isn't provided, the default workgroup for the logged in user is used.
+
 AR_CUST_CARD | Required | Field Description
 ------------ | -------- | -----------------
 CUST_NO | * | The CUST_NO for the customer. If not provided, the CUST_NO will be determined by the provided settings in the WRKGRP_ID. if that is not provided, the workgroup settings from the user will be used.
