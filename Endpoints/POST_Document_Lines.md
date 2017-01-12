@@ -1,10 +1,10 @@
 
-# POST //Document/{DocId}/Lines
+# POST /Document/{DocId}/Lines
 
 #### Description
 
 
-- Requires API Key: No
+- Requires API Key: Yes
 - Requires System Administrator: Yes
 - Requires Counterpoint Registration option: No
 
