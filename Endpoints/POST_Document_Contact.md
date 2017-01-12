@@ -4,9 +4,9 @@
 #### Description
 Adds a contact to an existing document.
 
-- Requires API Key: Yes
+- Requires API Key: No
 - Requires System Administrator: Yes
-- Requires Counterpoint Registration option: No
+- Requires Counterpoint Registration option: Yes
 
 #### Sample Request
 
