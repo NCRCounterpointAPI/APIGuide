@@ -19,7 +19,9 @@ Gets information about the specified document.
 - `Accept : application/json`
 
 #### Parameters
-None
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+DocId | path | string | true | The DOC_ID of the document to retrieve.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
@@ -29,7 +31,7 @@ None
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
 - `SUCCESS`: The request was successful and the document information is present in the response body.
-- `ERROR_RECORD_NOT_FOUND`: The requested System Info was not present. Restarting the server should regenerate the information
+- `ERROR_RECORD_NOT_FOUND`: The specified document Doc_ID does not exist.
 
 #### Sample Response Body
 
