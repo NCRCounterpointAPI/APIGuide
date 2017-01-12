@@ -5,7 +5,7 @@
 Updates an existing customer note..
 
 - Requires API Key: Yes
-- Requires System Administrator: Yes
+- Requires System Administrator: No
 - Requires Counterpoint Registration option: No
 
 #### Sample Request
