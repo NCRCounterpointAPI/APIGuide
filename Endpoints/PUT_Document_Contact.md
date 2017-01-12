@@ -4,9 +4,9 @@
 #### Description
 Adds a contact to an existing document.
 
-- Requires API Key: Yes
+- Requires API Key: No
 - Requires System Administrator: Yes
-- Requires Counterpoint Registration option: No
+- Requires Counterpoint Registration option: Yes
 
 #### Sample Request
 
@@ -57,28 +57,3 @@ FAX_2 | |
 The following error codes may be returned from requests to this endpoint:
 - `SUCCESS`: The request was successful and the customer information is present under the `SystemInfo` section of the response body.
 - `ERROR_RECORD_NOT_FOUND`: The requested System Info was not present. Restarting the server should regenerate the information
-
-#### Sample Response Body
-
-```
-{
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
-  "ErrorCode": "SUCCESS"
-}
-```
-
-#### Response Body
-
-**SystemInfo object**
-
-Element | Datatype | Description
-------- | -------- | -----------
-
-
