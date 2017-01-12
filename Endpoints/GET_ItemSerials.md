@@ -10,7 +10,7 @@ Gets serials that are active for the given item at the given location.
 
 #### Sample Request
 
-`GET https://localhost:81/Items/MAIN/Item/{ItemNo}/Serial/{SerialNo}`
+`GET https://localhost:81/Item/ADM-LASER/Serials/Location/SECURE PAY`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
