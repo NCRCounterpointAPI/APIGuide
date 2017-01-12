@@ -5,7 +5,7 @@
 Deletes an existing document contact
 
 - Requires API Key: Yes
-- Requires System Administrator: Yes
+- Requires System Administrator: No
 - Requires Counterpoint Registration option: Yes
 
 #### Sample Request
