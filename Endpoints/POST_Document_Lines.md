@@ -5,8 +5,8 @@
 
 
 - Requires API Key: Yes
-- Requires System Administrator: Yes
-- Requires Counterpoint Registration option: No
+- Requires System Administrator: No
+- Requires Counterpoint Registration option: Yes
 
 #### Sample Request body
 ````
