@@ -1,5 +1,5 @@
 
-# GET //GiftCard/{GiftCardNo}
+# GET /GiftCard/{GiftCardNo}
 
 #### Description
 Gets Gift card information for a given Gift card number
