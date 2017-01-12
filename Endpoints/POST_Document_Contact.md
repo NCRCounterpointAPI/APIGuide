@@ -1,10 +1,10 @@
 
-# POST /(endpoint)
+# POST /Document/{DocId}/Contact
 
 #### Description
+Adds a contact to an existing document.
 
-
-- Requires API Key: No
+- Requires API Key: Yes
 - Requires System Administrator: Yes
 - Requires Counterpoint Registration option: No
 
@@ -12,14 +12,41 @@
 
 **URI**
 
-`GET https://localhost:81/Document`
+`GET https://localhost:81/Document/{DocId}/Contact`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
 - `Accept : application/json`
 
 #### Parameters
-None
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+DocId | path | string | true | The DOC_ID of the document to add a contact to.
+PS_DOC_CONTACT | body | PS_DOC_CONTACT_POST | true | The document contact (PS_DOC_CONTACT) to add.
+
+PS_DOC_CONTACT | Required | Field Description
+CONTACT_ID | * | The contact Id provided. This is used in a Contact POST but not in a Document POST
+NAM | |
+FST_NAM | |
+LST_NAM | |
+SALUTATION | |
+ADRS_1 | |
+ADRS_2 | |
+ADRS_3 | |
+CITY | |
+STATE | |
+ZIP_COD | |
+CNTRY | |
+PHONE_1 | |
+PHONE_2 | |
+ADRS_ID | |
+NAM_TYP | * | The name type for the contact.
+EMAIL_ADRS_1 | |
+EMAIL_ADRS_2 | |
+CONTCT_1 | |
+CONTCT_2 | |
+FAX_1 | |
+FAX_2 | |
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
