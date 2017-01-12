@@ -1,5 +1,5 @@
 
-# POST //Document/{DocId}/Note
+# POST /Document/{DocId}/Note
 
 #### Description
 Adds a note to an existing document.
