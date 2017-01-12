@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /GiftCardCode/{GiftCardCode}
 
 #### Description
-
+Gets Gift card code information for a given Gift card code
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,14 +12,16 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/GiftCardCode/CG100`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
 - `Accept : application/json`
 
 #### Parameters
-None
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+GiftCardCode | path | string | true | Gift card code to get Gift ccard code information.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
@@ -35,13 +37,25 @@ The following error codes may be returned from requests to this endpoint:
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
+  "SY_GFC_COD": {
+    "GFC_COD": "CG100",
+    "DESCR": "$100 Gift Card",
+    "DESCR_UPR": "$100 GIFT CARD",
+    "SELL_DESCR": "$100 Gift Card",
+    "DFLT_AMT": 100,
+    "ALLOW_AMT_CHNG": "Y",
+    "LIAB_ACCT_NO": "2090",
+    "LIAB_METH": "!",
+    "RDM_ACCT_NO": "2090",
+    "RDM_METH": "!",
+    "FORF_ACCT_NO": "8510",
+    "FORF_METH": "!",
+    "CREATE_AS_STC": "Y",
+    "USE_RDR": "Y",
+    "LST_MAINT_DT": "2016-04-06T09:24:53.0000000",
+    "LST_MAINT_USR_ID": "MGR",
+    "RS_UTC_DT": "2016-04-06T13:24:53.2430000",
+    "RS_STAT": 1
   },
   "ErrorCode": "SUCCESS"
 }
