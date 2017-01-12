@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /GiftCardCodes
 
 #### Description
-
+Gets a list of Gift Card Codes.
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/GiftCardCodes`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
@@ -35,14 +35,49 @@ The following error codes may be returned from requests to this endpoint:
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
+  "GiftCardCodes": [
+    {
+      "GFC_COD": "CG100",
+      "DESCR": "$100 Gift Card",
+      "DESCR_UPR": "$100 GIFT CARD",
+      "SELL_DESCR": "$100 Gift Card",
+      "DFLT_AMT": 100,
+      "ALLOW_AMT_CHNG": "Y",
+      "LIAB_ACCT_NO": "2090",
+      "LIAB_METH": "!",
+      "RDM_ACCT_NO": "2090",
+      "RDM_METH": "!",
+      "FORF_ACCT_NO": "8510",
+      "FORF_METH": "!",
+      "CREATE_AS_STC": "Y",
+      "USE_RDR": "Y",
+      "LST_MAINT_DT": "2016-04-06T09:24:53.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "RS_UTC_DT": "2016-04-06T13:24:53.2430000",
+      "RS_STAT": 1
+    },
+    {
+      "GFC_COD": "GC",
+      "DESCR": "Gift Card",
+      "DESCR_UPR": "GIFT CARD",
+      "SELL_DESCR": "Gift Card",
+      "DFLT_AMT": 20,
+      "ALLOW_AMT_CHNG": "Y",
+      "LIAB_ACCT_NO": "2090",
+      "LIAB_METH": "!",
+      "RDM_ACCT_NO": "2090",
+      "RDM_METH": "!",
+      "FORF_ACCT_NO": "8510",
+      "FORF_METH": "!",
+      "CREATE_AS_STC": "N",
+      "USE_RDR": "N",
+      "LST_MAINT_DT": "2011-03-11T17:09:39.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "RS_UTC_DT": "2011-03-11T22:09:39.0000000",
+      "RS_STAT": 0
+    }
+   }
+  ],
   "ErrorCode": "SUCCESS"
 }
 ```
