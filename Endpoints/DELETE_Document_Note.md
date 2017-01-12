@@ -6,7 +6,7 @@ Deletes an existing customer note.
 
 - Requires API Key: Yes
 - Requires System Administrator: Yes
-- Requires Counterpoint Registration option: No
+- Requires Counterpoint Registration option: Yes
 
 #### Sample Request
 
@@ -19,7 +19,12 @@ Deletes an existing customer note.
 - `Accept : application/json`
 
 #### Parameters
-- **DocId**: The DOC_ID of the document the note is attached to.
+
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+DocId | path | string | true | The DOC_ID of the document to add a contact to.
+NoteId | query | string | true | The PS_DOC_NOTE.NOTE_ID of the note to update.
+
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
