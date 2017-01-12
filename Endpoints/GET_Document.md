@@ -6,7 +6,7 @@ Gets information about the specified document.
 
 - Requires API Key: No
 - Requires System Administrator: Yes
-- Requires Counterpoint Registration option: No
+- Requires Counterpoint Registration option: Yes
 
 #### Sample Request
 
