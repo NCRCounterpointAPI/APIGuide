@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /GiftCards
 
 #### Description
-
+Gets a list of Gift Cards
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/GiftCards`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
@@ -35,14 +35,36 @@ The following error codes may be returned from requests to this endpoint:
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
+  "GiftCards": [
+    {
+      "GFC_NO": "100001",
+      "DESCR": "Gift Certificate",
+      "DESCR_UPR": "GIFT CERTIFICATE",
+      "ORIG_DAT": "2002-01-25T00:00:00.0000000",
+      "ORIG_STR_ID": "MAIN",
+      "ORIG_STA_ID": "1",
+      "ORIG_DOC_NO": "100116",
+      "ORIG_CUST_NO": "CASH",
+      "GFC_COD": "GC",
+      "NO_EXP_DAT": "Y",
+      "ORIG_AMT": 50,
+      "CURR_AMT": 0,
+      "CREATE_METH": "G",
+      "LIAB_ACCT_NO": "2090",
+      "RDM_ACCT_NO": "2090",
+      "RDM_METH": "!",
+      "FORF_ACCT_NO": "8510",
+      "IS_VOID": "N",
+      "LST_ACTIV_DAT": "2002-01-25T00:00:00.0000000",
+      "LST_MAINT_DT": "2002-09-24T11:38:15.0000000",
+      "LST_MAINT_USR_ID": "Z",
+      "LST_LCK_DT": "2002-01-25T15:37:42.2100000",
+      "ORIG_DOC_ID": 201325549094,
+      "ORIG_BUS_DAT": "2002-01-25T00:00:00.0000000",
+      "RS_STAT": 0,
+      "SY_GFC_ACTIV": []
+    }
+    ],
   "ErrorCode": "SUCCESS"
 }
 ```
