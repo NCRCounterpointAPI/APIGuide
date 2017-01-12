@@ -25,6 +25,7 @@ DocId | path | string | true | The DOC_ID of the document to add a contact to.
 PS_DOC_CONTACT | body | PS_DOC_CONTACT_POST | true | The document contact (PS_DOC_CONTACT) to add.
 
 PS_DOC_CONTACT | Required | Field Description
+-------------- | -------- | -----------------
 CONTACT_ID | * | The contact Id provided. This is used in a Contact POST but not in a Document POST
 NAM | |
 FST_NAM | |
