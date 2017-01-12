@@ -1,5 +1,5 @@
 
-# POST /(endpoint)
+# POST //Document/{DocId}/Lines
 
 #### Description
 
@@ -8,18 +8,35 @@
 - Requires System Administrator: Yes
 - Requires Counterpoint Registration option: No
 
-#### Sample Request
+#### Sample Request body
+````
+{
+  "PS_DOC_LIN": [
+    {
+      "LIN_TYP": "O",
+      "ITEM_NO": "{{ITEM_NO}}",
+      "QTY_SOLD": "3.0",
+      "UNIT_COST": "1.1953",
+      "PRESUMED_COST": "1.1953"
+    }
+  ]
+}
+```
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/Document/{DocId}/Lines`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
 - `Accept : application/json`
 
 #### Parameters
-None
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+ITEM_NO | body | string | true | The name of the item to be added.
+DocId | path | string | true | The DOC_ID of the document to add a line to.
+PS_DOC_LIN | body | PS_DOC_LIN_POST | true | An array of document lines (PS_DOC_LIN) to add.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
@@ -28,21 +45,23 @@ None
  
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
-- `SUCCESS`: The request was successful and the customer information is present under the `SystemInfo` section of the response body.
+- `SUCCESS`: The request was successful.
 - `ERROR_RECORD_NOT_FOUND`: The requested System Info was not present. Restarting the server should regenerate the information
 
 #### Sample Response Body
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
+  "Documents": [
+    {
+      "DOC_ID": 735137152807488,
+      "reference": "Order",
+      "Link": {
+        "uri": "https://localhost:81/Document/735137152807488/Lines",
+        "method": "get"
+      }
+    }
+  ],
   "ErrorCode": "SUCCESS"
 }
 ```
