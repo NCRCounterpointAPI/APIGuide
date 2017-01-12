@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /ECCategories
 
 #### Description
-
+Gets eCommerce category information.
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/ECCategories`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
@@ -35,15 +35,56 @@ The following error codes may be returned from requests to this endpoint:
 
 ```
 {
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
-  "ErrorCode": "SUCCESS"
+  "EC_CATEG": [
+    {
+      "CATEG_ID": "2002092510211378",
+      "DESCR": "Apparel",
+      "DESCR_UPR": "APPAREL",
+      "IMG_FILE": "Category-Apparel.jpg",
+      "HTML_DESCR": "",
+      "DISP_SEQ_NO": 0,
+      "LST_MAINT_DT": "2002-09-25T19:45:01.0000000",
+      "LST_MAINT_USR_ID": "Z",
+      "EC_CATEG_ITEM": []
+    },
+    {
+      "CATEG_ID": "2002092510224995",
+      "DESCR": "Golf",
+      "DESCR_UPR": "GOLF",
+      "IMG_FILE": "Category-Golf.jpg",
+      "HTML_DESCR": "",
+      "DISP_SEQ_NO": 1,
+      "LST_MAINT_DT": "2002-09-25T19:45:01.0000000",
+      "LST_MAINT_USR_ID": "Z",
+      "EC_CATEG_ITEM": []
+    },
+    {
+      "CATEG_ID": "2002092510233822",
+      "DESCR": "Misc Items",
+      "DESCR_UPR": "MISC ITEMS",
+      "IMG_FILE": "Category-Misc.jpg",
+      "HTML_DESCR": "\r\n",
+      "DISP_SEQ_NO": 2,
+      "LST_MAINT_DT": "2002-09-25T19:45:01.0000000",
+      "LST_MAINT_USR_ID": "Z",
+      "EC_CATEG_ITEM": [
+        {
+          "ITEM_NO": "APL-UMB",
+          "CATEG_ID": "2002092510233822",
+          "ENTRY_SEQ_NO": 1,
+          "LST_MAINT_DT": "2002-09-25T10:59:26.0000000",
+          "LST_MAINT_USR_ID": "Z"
+        },
+        {
+          "ITEM_NO": "BALL-RET-PRO",
+          "CATEG_ID": "2002092510233822",
+          "ENTRY_SEQ_NO": 1,
+          "LST_MAINT_DT": "2002-09-25T11:00:24.0000000",
+          "LST_MAINT_USR_ID": "Z"
+        }
+      ]
+    },
+    "ErrorCode": "SUCCESS"
 }
 ```
 
