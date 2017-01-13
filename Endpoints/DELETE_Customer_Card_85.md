@@ -1,6 +1,6 @@
 
 
-# DELETE /CardOnFile85
+# DELETE /customer/{CustNo}/CARD?CardSeqNo={CardSeqNo}
 
 #### Description
 
