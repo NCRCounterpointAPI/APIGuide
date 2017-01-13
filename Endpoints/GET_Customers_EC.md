@@ -1,5 +1,5 @@
 
-# GET /(endpoint)
+# GET /Customers/EC
 
 #### Description
 
@@ -12,7 +12,7 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81/Customers/EC`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
