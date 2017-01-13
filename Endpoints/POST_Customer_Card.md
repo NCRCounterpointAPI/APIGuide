@@ -1,4 +1,4 @@
-# POST /CardOnFile
+# POST /customer/{custNo}/CARD
 
 #### Description
 Adds a new credit card to customer in the database
@@ -39,6 +39,15 @@ Name | Parameter Type | Data Type | Required | Description
 CardName | body | string | false | The card name description of the card being added.
 AR_CUST_CARD | body | string | true | A JSON structure containing the customer card data to add.
 **NOTE:** Whenever possible, the template customer is used to determine defaults for fields that aren't provided explicitly. The template customer is obtained from the record of the provided workgroup (WRKGRP_ID). If a WKRGRP_ID isn't provided, the default workgroup for the logged in user is used.
+
+AR_CUST_CARD | Required | Field Description
+------------ | -------- | -----------------
+DEFAULT_CARD | * | Indicates whether the card is a default card
+CARD_DESCR | |
+PAY_COD | * | Indicates the type of paycode of the card. 
+CARD_NO | |
+CARD_EXP_DAT | * | The expiration date of credit card.
+CARD_NAM | |
 
 #### Response Codes
 - **<code>201 Created</code>** The request was successful, the customer was added to the Counterpoint database.
