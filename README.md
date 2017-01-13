@@ -97,28 +97,28 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Customers` | [`GET`](Endpoints/GET_Customers.md) | X | X | Gets information on customers in bulk.
 `/Customers/EC` | [`GET`](Endpoints/GET_Customers_EC.md) | X | X | Gets information on eCommerce customers in bulk.
 `/Document` | [`POST`](Endpoints/POST_Document.md) | X | X | Adds a new document (ticket).
-`/Document/{DocId}` | `GET` | X | X | Gets information on an existing document (ticket) that hasn't been posted yet.
-`/Document/{DocId}/Contact` | `POST` | X | X | Adds a contact to an existing document.
-`/Document/{DocId}/Contact` | `PATCH` | X | X | Updates a contact on an existing document.
-`/Document/{DocId}/Contact` | `DELETE` | X | X | Deletes a contact from an existing document.
-`/Document/{DocId}/Lines` | `POST` | X | X | Adds Lines to a document.
-`/Document/{DocId}/Note` | `POST` | X | X | Adds a note to an existing document.
-`/Document/{DocId}/Note` | `PATCH` | X | X | Updates a note on an existing document.
-`/Document/{DocId}/Note` | `DELETE` | X | X | Deletes a note from an existing document.
-`/Document/{DocId}/Payments` | `POST` | X | X | Adds Payments to a document.
-`/EC` | `GET` | X | X | Gets eCommerce settings.
-`/ECCategories` | `GET` | X | X | Gets eCommerce Categories and items.
-`/GiftCard/{GiftCardNo}` | `GET` | X | X | Gets gift card information.
-`/GiftCardCode/{GiftCardCode}` | `GET` | X | X | Gets gift card code information.
-`/GiftCardCodes` | `GET` | X | X | Gets information on gift card codes in bulk.
-`/GiftCards` | `GET` | X | X | Gets information of Gift Cards in bulk.
-`/Inventory/{LocId}` | `GET` | X | X | Gets inventory information for all items for a given location. Can be filtered further by category or subcategory
+`/Document/{DocId}` | [`GET`](Endpoints/GET_Document.md) | X | X | Gets information on an existing document (ticket) that hasn't been posted yet.
+`/Document/{DocId}/Contact` | [`POST`](Endpoints/POST_Document_Contact.md) | X | X | Adds a contact to an existing document.
+`/Document/{DocId}/Contact` | [`PATCH`](Endpoints/PUT_Document_Contact.md) | X | X | Updates a contact on an existing document.
+`/Document/{DocId}/Contact` | [`DELETE`](Endpoints/DELETE_Document_Contact.md) | X | X | Deletes a contact from an existing document.
+`/Document/{DocId}/Lines` | [`POST`](Endpoints/POST_Document_Lines.md) | X | X | Adds Lines to a document.
+`/Document/{DocId}/Note` | [`POST`](Endpoints/PUT_Document_Note.md) | X | X | Adds a note to an existing document.
+`/Document/{DocId}/Note` | [`PATCH`](Endpoints/PUT_Document_Note.md) | X | X | Updates a note on an existing document.
+`/Document/{DocId}/Note` | [`DELETE`](Endpoints/DELETE_Document_Note.md) | X | X | Deletes a note from an existing document.
+`/Document/{DocId}/Payments` | [`POST`](Endpoints/POST_Document_Payments.md) | X | X | Adds Payments to a document.
+`/EC` | [`GET`](Endpoints/GET_EC.md) | X | X | Gets eCommerce settings.
+`/ECCategories` | [`GET`](Endpoints/GET_ECCategories.md) | X | X | Gets eCommerce Categories and items.
+`/GiftCard/{GiftCardNo}` | [`GET`](Endpoints/GET_GiftCard.md) | X | X | Gets gift card information.
+`/GiftCardCode/{GiftCardCode}` | [`GET`](Endpoints/GET_GiftCardCode.md) | X | X | Gets gift card code information.
+`/GiftCardCodes` | [`GET`](Endpoints/GET_GiftCardCodes.md) | X | X | Gets information on gift card codes in bulk.
+`/GiftCards` | [`GET`](Endpoints/GET_GiftCards.md) | X | X | Gets information of Gift Cards in bulk.
+`/Inventory/{LocId}` | [`GET`](Endpoints/GET_Inventory_ByLocation.md) | X | X | Gets inventory information for all items for a given location. Can be filtered further by category or subcategory
 `/InventoryControl` | [`GET`](Endpoints/GET_InventoryControl.md) | X | X | Gets inventory control information.
-`/Inventory/EC` | `GET` | X | X | Gets eCommerce inventory information for all eCommerce items.
+`/Inventory/EC` | [`GET`](Endpoints/GET_InventoryEC.md) | X | X | Gets eCommerce inventory information for all eCommerce items.
 `/Item/Images/{Filename} ` | [`GET`](Endpoints/GET_Item_ImageFilename.md) | X | X | Gets an item image for the given item and filename.
 `/Item/{ItemNo}` | [`GET`](Endpoints/GET_Item.md) | X | X | Methods to get item and item inventory information.
 `/Item/{ItemNo}/Images` | [`GET`](Endpoints/GET_Item_Images.md) | X | X | Gets a list of available item images for a given item.
-`/Item/{ItemNo}/Inventory/{LocId}` | `GET` | X | X | Gets item inventory information for a given item and location.
+`/Item/{ItemNo}/Inventory/{LocId}` | [`GET`](Endpoints/GET_Item_Inventory.md) | X | X | Gets item inventory information for a given item and location.
 `/Item/{ItemNo}/InventoryCost/{LocId}` | [`GET`](Endpoints/GET_InventoryCost.md) | X | X | Gets item inventory information for a given item and location.
 `/ItemCategories` | [`GET`](Endpoints/GET_ItemCategories.md) | X | X | Gets item Categories in bulk.
 `/ItemCategory/{CategoryCode}` | [`GET`](Endpoints/GET_ItemCategory.md) | X | X | Gets item category information for the given category code.
