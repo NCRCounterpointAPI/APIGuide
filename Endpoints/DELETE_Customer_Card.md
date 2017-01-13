@@ -20,6 +20,7 @@
 - `Accept : application/json`
 
 #### Parameters
+Name | Parameter Type | Data Type | Required | Description
 ---- | -------------- | --------- | -------- | -----------
 custNo | path | string | true | The CUST_NO of the customer to update.
 CardSeqNo | query | string | true | The AR_CUST_CARD.CARD_SEQ_NO of the card to delete.
