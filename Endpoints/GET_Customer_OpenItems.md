@@ -1,8 +1,8 @@
 
-# GET /(endpoint)
+# GET /Customer/{CustNo}/OpenItems
 
 #### Description
-
+Retrieves AR_OPN_ITEM records for the given customer
 
 - Requires API Key: No
 - Requires System Administrator: Yes
@@ -12,14 +12,16 @@
 
 **URI**
 
-`GET https://localhost:81/(endpoint)`
+`GET https://localhost:81//Customer/1000/OpenItems`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
 - `Accept : application/json`
 
 #### Parameters
-None
+Name | Parameter Type | Data Type | Required | Description
+---- | -------------- | --------- | -------- | -----------
+CustNo | path | string | true | The CUST_NO of the customer to retrieve.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
@@ -28,31 +30,40 @@ None
  
 #### Error Codes
 The following error codes may be returned from requests to this endpoint:
-- `SUCCESS`: The request was successful and the customer information is present under the `SystemInfo` section of the response body.
-- `ERROR_RECORD_NOT_FOUND`: The requested System Info was not present. Restarting the server should regenerate the information
+- `SUCCESS`: The request was successful.
 
 #### Sample Response Body
 
 ```
-{
-  "SystemInfo": {
-    "SystemDBCreatedDateTime": "2015-05-19T13:36:51.3570000-04:00",
-    "ServerLastStartedDateTime": "2015-05-20T09:36:58.8644532-04:00",
-    "ServerCodeVersion": "1.0.0.0",
-    "ServerOS": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-    "Is64bitOS": true,
-    "ServerUser": "CORP\\mr185122"
-  },
+ "AR_OPN_ITEM": [
+    {
+      "CUST_NO": "1000",
+      "DOC_DAT": "2001-02-15T00:00:00.0000000",
+      "DOC_NO": "100105",
+      "DOC_TYP": "T",
+      "AMT": 1138.59,
+      "ENTD_AMT": 1138.59,
+      "TOT_WRTOFF_AMT": 0,
+      "DISC_TAKEN": 0,
+      "TERMS_COD": "NET30",
+      "DUE_DAT": "2001-03-17T00:00:00.0000000",
+      "DISC_DAT": "2001-02-15T00:00:00.0000000",
+      "DISC_PCT": 0,
+      "SLS_REP": "MGR",
+      "STR_ID": "MAIN",
+      "SELF_APPLIED": "Y",
+      "LST_MAINT_DT": "2016-03-23T11:16:29.0000000",
+      "LST_MAINT_USR_ID": "MGR",
+      "WRK_STMNT_ACTIV": "N",
+      "WRK_STMNT_BEG_BAL": 0,
+      "WRK_STMNT_END_BAL": 0,
+      "STA_ID": "1",
+      "EVENT_NO": "12",
+      "STMNT_DOC_TYP_ORDER": 1,
+      "DOC_ID": 201346426533
+    }
+  ],
   "ErrorCode": "SUCCESS"
 }
 ```
-
-#### Response Body
-
-**SystemInfo object**
-
-Element | Datatype | Description
-------- | -------- | -----------
-
-
 
