@@ -1,6 +1,6 @@
 
 
-# DELETE /CardOnFile846
+# DELETE /customer/{custNo}/CARD
 
 #### Description
 
