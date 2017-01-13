@@ -1,6 +1,6 @@
 
 
-# DELETE /customer/{custNo}/CARD
+# DELETE /Customer/{CustNo}/Card
 
 #### Description
 
@@ -13,14 +13,16 @@
 
 **URI**
 
-`DELETE https://localhost:81/customer/{custNo}/CARD`
+`DELETE https://localhost:81/Customer/{CustNo}/CARD?CardSeqNo={CardSeqNo}`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
 - `Accept : application/json`
 
 #### Parameters
-**custNo**: The customer number to whom the card to be deleted belongs to.
+---- | -------------- | --------- | -------- | -----------
+custNo | path | string | true | The CUST_NO of the customer to update.
+CardSeqNo | query | string | true | The AR_CUST_CARD.CARD_SEQ_NO of the card to delete.
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
