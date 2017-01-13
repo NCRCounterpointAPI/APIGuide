@@ -86,18 +86,16 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Customer/{CustNo}/Address` | [`POST`](Endpoints/POST_Customer_Address.md) | X | X | Adds a new shipping address to an existing customer.
 `/Customer/{CustNo}/Address` | [`PATCH`](Endpoints/PUT_Customer_Adress) | X | X | Updates an existing shipping address for an existing customer.
 `/Customer/{CustNo}/Address` | [`DELETE`](Endpoints/DELETE_Customer_Address.md) | X | X | Deletes a shipping address from an existing customer.
-`/Customer/{CustNo}/Card` | `GET` | X | X | Gets credit cards on file for an existing customer.
-`/Customer/{CustNo}/Card` | `POST` | X | X | Adds a credit card on file to an existing customer.
-`/Customer/{CustNo}/Card` | `PATCH` | X | X | Updates an existing credit card on file for an existing customer.
-`/Customer/{CustNo}/Card` | `DELETE` | X | X | Deletes a credit card on file for an existing customer.
-`/Customer/{CustNo}/Note` | `GET` | X | X | Gets customer notes for a given customer.
-`/Customer/{CustNo}/Note` | `POST` | X | X | Adds a new note to an existing customer.
-`/Customer/{CustNo}/Note` | `PATCH` | X | X | Updates an existing note on an existing customer.
-`/Customer/{CustNo}/Note` | `DELETE` | X | X | Deletes a note from an existing customer.
-`/Customer/{CustNo}/OpenItems` | `GET` | X | X | Gets customer AR Open Item information.
-`/CustomerControl` | `GET` | X | X | Gets customer control information.
-`/Customers` | `GET` | X | X | Gets information on customers in bulk.
-`/Customers/EC` | `GET` | X | X | Gets information on eCommerce customers in bulk.
+`/Customer/{CustNo}/Card` | [`POST`](Endpoints/POST_Customer_Card.md) | X | X | Adds a credit card on file to an existing customer.
+`/Customer/{CustNo}/Card` | [`PATCH`](Endpoints/PUT_Customer_Card.md) | X | X | Updates an existing credit card on file for an existing customer.
+`/Customer/{CustNo}/Card` | [`DELETE`](Endpoints/DELETE_Customer_Card.md) | X | X | Deletes a credit card on file for an existing customer.
+`/Customer/{CustNo}/Note` | [`POST`](Endpoints/POST_Customer_Note.md) | X | X | Adds a new note to an existing customer.
+`/Customer/{CustNo}/Note` | [`PATCH`](Endpoints/PUT_Customer_Note.md) | X | X | Updates an existing note on an existing customer.
+`/Customer/{CustNo}/Note` | [`DELETE`](Endpoints/DELETE_Customer_Note.md) | X | X | Deletes a note from an existing customer.
+`/Customer/{CustNo}/OpenItems` | [`GET`](Endpoints/GET_Customer_OpenItems.md) | X | X | Gets customer AR Open Item information.
+`/CustomerControl` | [`GET`](Endpoints/GET_CustomerControl.md) | X | X | Gets customer control information.
+`/Customers` | [`GET`](Endpoints/GET_Customers.md) | X | X | Gets information on customers in bulk.
+`/Customers/EC` | [`GET`](Endpoints/GET_Customers_EC.md) | X | X | Gets information on eCommerce customers in bulk.
 `/Document` | [`POST`](Endpoints/POST_Document.md) | X | X | Adds a new document (ticket).
 `/Document/{DocId}` | `GET` | X | X | Gets information on an existing document (ticket) that hasn't been posted yet.
 `/Document/{DocId}/Contact` | `POST` | X | X | Adds a contact to an existing document.
