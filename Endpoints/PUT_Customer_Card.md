@@ -1,4 +1,4 @@
-# PUT /CardOnFile ExpDate
+# PUT /Customer/{CustNo}/Card
 
 #### Description
 Add or update a credit card's expiration date.
@@ -12,7 +12,7 @@ Add or update a credit card's expiration date.
 
 **URI**
 
-`PUT https://localhost:81/customer/{custNo}/CARD?CardSeqNo={CardSeqNo}`
+`PUT https://localhost:81/Customer/{CustNo}/CARD?CardSeqNo={CardSeqNo}`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
@@ -22,10 +22,20 @@ Add or update a credit card's expiration date.
 #### Parameters
 Name | Parameter Type | Data Type | Required | Description
 ---- | -------------- | --------- | -------- | -----------
-custNo | path | string | true | The number of of customer card belongs to.
-CardSeqNo | path | string | true | The sequence number of that identifies the card.
+custNo | path | string | true | The CUST_NO of the customer to update.
+CardSeqNo | query | string | true | The AR_CUST_CARD.CARD_SEQ_NO of the card to update.
+AR_CUST_CARD | body | AR_CUST_CARDS_PATCH | true | The customer card on file to update. CARD_SEQ_NO of the card to update must be included, along with any other fields to update.
 
-**Request Body**
+AR_CUST_CARD | Required | Field Description
+------------ | -------- | -----------------
+DEFAULT_CARD | * | Indicates whether the card is a default card
+CARD_DESCR | |
+PAY_COD | * | Indicates the type of paycode of the card. 
+CARD_NO | |
+CARD_EXP_DAT | * | The expiration date of credit card.
+CARD_NAM | |
+
+**Sample Request Body**
 ```
 {"AR_CUST_CARD":{ 
   
@@ -38,12 +48,6 @@ CardSeqNo | path | string | true | The sequence number of that identifies the ca
 }}
 ```
 
-#### Request Body
-Name | Parameter Type | Data Type | Required | Description
------ | -------------- | --------- | -------- | -----------
-AR_CUST_CARD | body | object | true | values required to edit card on file.
-CardName | body | string | false | Name describing the card on file.
-
 #### Response Codes
 - **<code>201 Created</code>** The request was successful, the customer was added to the Counterpoint database.
 - **<code>401 Unauthorized</code>** The request could not be fulfilled. Likely due to a missing or invalid authorization header.
@@ -53,9 +57,6 @@ CardName | body | string | false | Name describing the card on file.
 The following error codes may be returned from requests to this endpoint:
 - `SUCCESS`: The request was successful.
 - `ERROR_UNKNOWN`: An error occurred during Customer Update.
-
-#### Response Body
-
 
 #### Sample Response Body
 ```
