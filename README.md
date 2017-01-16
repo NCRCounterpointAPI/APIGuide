@@ -61,6 +61,8 @@ The endpoints below each represent individual REST API calls/requests that the A
 ### System Administration Endpoints
 Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 -------- | ---------------- | ------ | --------------- | -----------
+`/AdminUsers` | [GET](Endpoints/GET_AdminUsers.md) | | X | Gets a list of admins for the API.
+`AdminUser/{UserId} | [DELETE](Endpoints/DELETE_AdminUser.md) | | | Deletes the provided administrator.
 `/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | | | Gets information on a single API Key.
 `/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | | |  Gets a list of all API Keys installed on the server.
 `/CompanyAdmin/{CompanyName}/{AdminUser}` | [`DELETE`](Endpoints/DELETE_CompanyAdmin.md) | | | Delete a company admin by user id.
@@ -73,6 +75,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 `/Databases` | [`GET`](Endpoints/GET_Databases.md) | | |  Gets a list of all Databases (Companies) the API is able to interact with.
 `/Databases` | [`POST`](Endpoints/POST_Databases.md) | | |  Adds one or more Databases (Companies) the API can interact with.
 `/Databases/ini` | [`GET`](Endpoints/GET_Databases_Ini.md) | | |  Gets a list of company DB information from a companies.ini file
+`/DeviveConfig/{WorkstationID}` | [GET](Endpoints/GET_Device_Config.md) | | | Get the device config for the workstation.
 `/SystemInfo` | [`GET`](Endpoints/GET_SystemInfo.md) | | |  Gets information about the API server and hardware environment.
 `/Users/{CompanyName}` | [`GET`](Endpoints/GET_UsersForCompany.md) | | |  Gets a list of users for the company.
 
@@ -120,10 +123,13 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Item/{ItemNo}/Images` | [`GET`](Endpoints/GET_Item_Images.md) | X | X | Gets a list of available item images for a given item.
 `/Item/{ItemNo}/Inventory/{LocId}` | [`GET`](Endpoints/GET_Item_Inventory.md) | X | X | Gets item inventory information for a given item and location.
 `/Item/{ItemNo}/InventoryCost/{LocId}` | [`GET`](Endpoints/GET_InventoryCost.md) | X | X | Gets item inventory information for a given item and location.
+`/Item/{ItemNo}/Serial/{SerialNo}` | [GET](Endpoints/GET_ItemSerial.md) | X | | Gets serial information for the given item & serial number.
+`/Item/{ItemNo}/Serials/Location/{LocId}` | [GET](Endpoints/GET_ItemSerials.md) | X | | Gets serials that are active for the given item at the given location.
 `/ItemCategories` | [`GET`](Endpoints/GET_ItemCategories.md) | X | X | Gets item Categories in bulk.
 `/ItemCategory/{CategoryCode}` | [`GET`](Endpoints/GET_ItemCategory.md) | X | X | Gets item category information for the given category code.
 `/Items` | [`GET`](Endpoints/GET_Items.md) | X | X | Gets item information in bulk. Can be further filtered by category or subcategory.
 `/Items/{LocId}` | [`GET`](Endpoints/GET_Items_ByLocation.md) | X | X | Gets item information for a given location in bulk. Can be further filtered by category or subcategory.
+`/NSPTransaction` | [POST](Endpoints/POST_NSPTransaction.md) | | | POSTs a list of secure pay transactions from Monetra to the db.
 `/PayCode/{Paycode}` | [`GET`](Endpoints/GET_Paycode.md) | X | X | Gets information about a given Paycode.
 `/PayCode/{Paycode}` | [`PATCH`](Endpoints/PUT_PayCode.md) | X | X | Updates information about a Paycode.
 `/PayCodes` | [`GET`](Endpoints/GET_Paycodes.md) | X | X | Gets information on Paycodes in bulk.
@@ -138,11 +144,16 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Roles/Users` | [`GET`](Endpoints/GET_RolesUsers.md) | | | Gets a list of all roles with permissions and assigned users.
 `/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | X | X | Gets information on a store.
 `/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | X | X | Gets information on a station.
+`/Store/{StoreId}/Tokenize` | [POST](Endpoints/POST_StoreTokenize.md) | X | X | Tokenizes the cards for the store.
+`/Store/{StoreId}/Tokenize` | [GET](Endpoints/GET_StoreTokenizeInfo.md) | X | X | Gets tokenization information for the store.
+`/Stores/Tokenized` | [GET](Endpoints/GET_StoresTokenized.md) | X | X | Gets the tokenized count of customer cards on file for each secure pay store.
 `/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | X | X | Gets information on Tax Codes.
+`/User/Admin` | [POST](Endpoints/POST_APIAdmin.md) | | X | Adds a new sysadmin user.
 `/User/{UserID}` | [`GET`](Endpoints/GET_User.md) | X | X | Gets information on a User.
 `/User/{UserID}/Roles` | [`DELETE`](Endpoints/DELETE_UserRoles.md) | |  | Deletes a user's assigned roles.
 `/User/{UserID}/Roles` | [`GET`](Endpoints/GET_UserRoles.md) | |  | Get a list of roles for the user.
 `/User/{UserID}/Roles` | [`PUT`](Endpoints/PUT_UserRoles.md) | |  | Update a user's assigned roles.
 `/Users` | [`GET`](Endpoints/GET_Users.md) | | |  Gets a list of users.
 `/Users/Roles` | [`GET`](Endpoints/GET_UsersRoles.md) | |  | Get a list of users and their assigned roles.
+`/VendorItem/{VendorNo}/Item/{ItemNo}` | [GET](Endpoints/GET_VendorItem.md) | X | X | Retrieves information about Vendor Item.
 `/Workgroup/{WorkgroupID}` | [`GET`](Endpoints/GET_Workgroup.md) | X | X | Gets workgroup information.
