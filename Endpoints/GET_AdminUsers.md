@@ -1,5 +1,6 @@
 
 # GET /AdminUsers
+Gets a list of admins for the API
 
 #### Description
 
