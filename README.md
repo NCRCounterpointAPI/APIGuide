@@ -62,7 +62,7 @@ The endpoints below each represent individual REST API calls/requests that the A
 Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 -------- | ---------------- | ------ | --------------- | -----------
 `/AdminUsers` | [`GET`](Endpoints/GET_AdminUsers.md) | | X | Gets a list of admins for the API.
-`AdminUser/{UserId}' | [`DELETE`](Endpoints/DELETE_AdminUser.md) | | | Deletes the provided administrator.
+`/AdminUser/{UserId}` | [`DELETE`](Endpoints/DELETE_AdminUser.md) | | | Deletes the provided administrator.
 `/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | | | Gets information on a single API Key.
 `/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | | |  Gets a list of all API Keys installed on the server.
 `/CompanyAdmin/{CompanyName}/{AdminUser}` | [`DELETE`](Endpoints/DELETE_CompanyAdmin.md) | | | Delete a company admin by user id.
