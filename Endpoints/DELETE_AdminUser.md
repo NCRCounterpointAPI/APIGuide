@@ -1,5 +1,6 @@
 
 # DELETE AdminUser/{UserId}
+Deletes the provided administrator
 
 #### Description
 
