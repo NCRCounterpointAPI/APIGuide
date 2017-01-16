@@ -1,7 +1,7 @@
 # POST /APIAdmin
 
 #### Description
-Adds a new api admin to the repository
+Adds a new sysadmin user
 
 - Requires API Key: No
 - Requires System Administrator: Yes
