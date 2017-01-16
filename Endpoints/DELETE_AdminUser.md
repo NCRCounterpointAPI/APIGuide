@@ -1,5 +1,5 @@
 
-# DELETE /AdminUser
+# DELETE AdminUser/{UserId}
 
 #### Description
 
