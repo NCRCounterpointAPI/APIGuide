@@ -1,4 +1,4 @@
-# POST /APIAdmin
+# POST /User/Admin
 
 #### Description
 Adds a new sysadmin user
@@ -21,15 +21,16 @@ Adds a new sysadmin user
 **Request Body**
 ````
 {
-    "Password":{newPassword},
-    "UserId":{newUserId}
+    "Password":{Password},
+    "UserId":{UserId}
 }
 ```
 ####Request Body
 
 Name | Parameter Type | Data Type | Required | Description
 -----|----------------|-----------|----------|------------
-AdminUsers | body | string list | true | The API admin user to add.
+UserId | body | string| true | The User ID of the new sysadmin user.
+Password | body | string | true | The password of the new sysadmin user
 
 ####Response Codes
 - **<code>201 Created</code> The request was successful, the customer was added to the Counterpoint database.
