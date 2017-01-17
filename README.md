@@ -75,7 +75,6 @@ Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 `/Databases` | [`GET`](Endpoints/GET_Databases.md) | | |  Gets a list of all Databases (Companies) the API is able to interact with.
 `/Databases` | [`POST`](Endpoints/POST_Databases.md) | | |  Adds one or more Databases (Companies) the API can interact with.
 `/Databases/ini` | [`GET`](Endpoints/GET_Databases_Ini.md) | | |  Gets a list of company DB information from a companies.ini file
-`/DeviveConfig/{WorkstationID}` | [`GET`](Endpoints/GET_Device_Config.md) | | | Get the device config for the workstation.
 `/SystemInfo` | [`GET`](Endpoints/GET_SystemInfo.md) | | |  Gets information about the API server and hardware environment.
 `/Users/{CompanyName}` | [`GET`](Endpoints/GET_UsersForCompany.md) | | |  Gets a list of users for the company.
 
