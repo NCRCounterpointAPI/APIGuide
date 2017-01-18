@@ -64,6 +64,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration | Description
 `/AdminUsers` | [`GET`](Endpoints/GET_AdminUsers.md) | | X | Gets a list of admins for the API.
 `/AdminUser/{UserId}` | [`DELETE`](Endpoints/DELETE_AdminUser.md) | | | Deletes the provided administrator.
 `/APIKey` | [`GET`](Endpoints/GET_APIKey.md) | | | Gets information on a single API Key.
+`/APIKey` | [`POST`](Endpoints/POST_APIKey.md) | | | Post a new APIKey file and updates the APIKey cache.
 `/APIKeys` | [`GET`](Endpoints/GET_APIKeys.md) | | |  Gets a list of all API Keys installed on the server.
 `/CompanyAdmin/{CompanyName}/{AdminUser}` | [`DELETE`](Endpoints/DELETE_CompanyAdmin.md) | | | Delete a company admin by user id.
 `CompanyAdmins/{CompanyName}` | [`GET`](Endpoints/GET_CompanyAdmins.md) | | | Gets a list of Company Admins for the company.
@@ -147,6 +148,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Stores/Tokenized` | [`GET`](Endpoints/GET_StoresTokenized.md) | X | X | Gets the tokenized count of customer cards on file for each secure pay store.
 `/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | X | X | Gets information on Tax Codes.
 `/User/Admin` | [`POST`](Endpoints/POST_APIAdmin.md) | | X | Adds a new sysadmin user.
+`/User/Password` | [`PUT`](Endpoints/PUT_User_Password.md) | | | Updates the authenticated user's password.
 `/User/{UserID}` | [`GET`](Endpoints/GET_User.md) | X | X | Gets information on a User.
 `/User/{UserID}/Roles` | [`DELETE`](Endpoints/DELETE_UserRoles.md) | |  | Deletes a user's assigned roles.
 `/User/{UserID}/Roles` | [`GET`](Endpoints/GET_UserRoles.md) | |  | Get a list of roles for the user.
