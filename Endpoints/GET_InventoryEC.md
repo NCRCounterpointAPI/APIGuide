@@ -20,7 +20,15 @@ Gets eCommerce item inventory information for the current company.
 - `Accept : application/json`
 
 #### Parameters
-None
+##### Paging
+The paging parameters are optional for the request, but both are required together for the call to apply the paging logic.
+- Page | Query | The data page number to retrieve | Optional
+- Rows | Query | The number of rows to return per page | Optional
+
+##### Filters
+The StartDate and EndDate fields can be used in any combination - none, either one, or both.  StartDate must be earlier than EndDate.
+- StartDate | Query | The start date filter for the RS_UTC_DT field | Optional
+- EndDate | Query | The end date filter for the RS_UTC_DT field | Optional
 
 #### Response Codes
 - **<code>200 OK</code>** The request was successful, the result of the call will be in the response body.
