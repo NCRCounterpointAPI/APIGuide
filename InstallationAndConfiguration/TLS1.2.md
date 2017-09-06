@@ -1,6 +1,6 @@
 # Troubleshooting TLS Issues
 
-The NCR Counterpoint API installs a self-signed certificate that is valid with TLS 1.2, but based on server configurations, you may see issues where it wants to use TLS 1.1, older ciphers, or not work at all.  Here are some troubleshooting tips if you want to continue with this certificate instead of purchasing one from a 3rd party trusted authority.
+The NCR Counterpoint API installs a self-signed certificate that is valid with TLS 1.2, but based on server configurations, you may see issues where it wants to use TLS 1.1, older ciphers, or not work at all.  Here are some troubleshooting tips if you want to continue with this certificate instead of purchasing one from a 3rd party certificate authority.
 
 * Firefox - throws an error saying Self-Signed certificates are not safe/supported.
   * Add exceptions to Firefox to allow this manually.  If you can allow just the 1 site that would be best.
