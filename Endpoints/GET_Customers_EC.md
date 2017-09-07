@@ -25,7 +25,7 @@ The paging parameters are optional for the request, but both are required togeth
 - Rows | Query | The number of rows to return per page | Optional
 
 ##### Filters
-The StartDate and EndDate fields can be used in any combination - none, either one, or both.  StartDate must be earlier than EndDate.
+The StartDate and EndDate fields can be used in any combination - none, either one, or both.  StartDate must be earlier than EndDate.  See this page for [Supported Date Formats](../Basics/DateFormats.md).
 - StartDate | Query | The start date filter for the RS_UTC_DT field | Optional
 - EndDate | Query | The end date filter for the RS_UTC_DT field | Optional
 
