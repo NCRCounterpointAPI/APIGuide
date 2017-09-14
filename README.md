@@ -145,9 +145,9 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Roles/Users` | [`GET`](Endpoints/GET_RolesUsers.md) | | | Gets a list of all roles with permissions and assigned users.
 `/Store/{StoreID}` | [`GET`](Endpoints/GET_Store.md) | X | X | Gets information on a store.
 `/Store/{StoreID}/Station/{StationID}` | [`GET`](Endpoints/GET_Store_Station.md) | X | X | Gets information on a station.
-`/Store/{StoreId}/Tokenize` | [`POST`](Endpoints/POST_StoreTokenize.md) | X | X | Tokenizes the cards for the store.
-`/Store/{StoreId}/Tokenize` | [`GET`](Endpoints/GET_StoreTokenizeInfo.md) | X | X | Gets tokenization information for the store.
-`/Stores/Tokenized` | [`GET`](Endpoints/GET_StoresTokenized.md) | X | X | Gets the tokenized count of customer cards on file for each secure pay store.
+`/Store/{StoreId}/Tokenize` | [`POST`](Endpoints/POST_StoreTokenize.md) | | X | Tokenizes the cards for the store.
+`/Store/{StoreId}/Tokenize` | [`GET`](Endpoints/GET_StoreTokenizeInfo.md) | | X | Gets tokenization information for the store.
+`/Stores/Tokenized` | [`GET`](Endpoints/GET_StoresTokenized.md) | | X | Gets the tokenized count of customer cards on file for each secure pay store.
 `/TaxCodes` | [`GET`](Endpoints/GET_TaxCodes.md) | X | X | Gets information on Tax Codes.
 `/User/Admin` | [`POST`](Endpoints/POST_APIAdmin.md) | | X | Adds a new sysadmin user.
 `/User/Password` | [`PUT`](Endpoints/PUT_User_Password.md) | | | Updates the authenticated user's password.
