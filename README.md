@@ -88,13 +88,13 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Customer/{CustNo}` | [`GET`](Endpoints/GET_Customer.md) | X | X | Gets information about a customer.
 `/Customer/{CustNo}` |  [`PATCH`](Endpoints/PATCH_Customer.md) | X | X | Updates information about a customer.
 `/Customer/{CustNo}/Address` | [`POST`](Endpoints/POST_Customer_Address.md) | X | X | Adds a new shipping address to an existing customer.
-`/Customer/{CustNo}/Address` | [`PATCH`](Endpoints/PUT_Customer_Adress) | X | X | Updates an existing shipping address for an existing customer.
+`/Customer/{CustNo}/Address` | [`PATCH`](Endpoints/PATCH_Customer_Address) | X | X | Updates an existing shipping address for an existing customer.
 `/Customer/{CustNo}/Address` | [`DELETE`](Endpoints/DELETE_Customer_Address.md) | X | X | Deletes a shipping address from an existing customer.
 `/Customer/{CustNo}/Card` | [`POST`](Endpoints/POST_Customer_Card.md) | X | X | Adds a credit card on file to an existing customer.
-`/Customer/{CustNo}/Card` | [`PATCH`](Endpoints/PUT_Customer_Card.md) | X | X | Updates an existing credit card on file for an existing customer.
+`/Customer/{CustNo}/Card` | [`PATCH`](Endpoints/PaTCH_Customer_Card.md) | X | X | Updates an existing credit card on file for an existing customer.
 `/Customer/{CustNo}/Card` | [`DELETE`](Endpoints/DELETE_Customer_Card.md) | X | X | Deletes a credit card on file for an existing customer.
 `/Customer/{CustNo}/Note` | [`POST`](Endpoints/POST_Customer_Note.md) | X | X | Adds a new note to an existing customer.
-`/Customer/{CustNo}/Note` | [`PATCH`](Endpoints/PUT_Customer_Note.md) | X | X | Updates an existing note on an existing customer.
+`/Customer/{CustNo}/Note` | [`PATCH`](Endpoints/PATCH_Customer_Note.md) | X | X | Updates an existing note on an existing customer.
 `/Customer/{CustNo}/Note` | [`DELETE`](Endpoints/DELETE_Customer_Note.md) | X | X | Deletes a note from an existing customer.
 `/Customer/{CustNo}/OpenItems` | [`GET`](Endpoints/GET_Customer_OpenItems.md) | X | X | Gets customer AR Open Item information.
 `/CustomerControl` | [`GET`](Endpoints/GET_CustomerControl.md) | X | X | Gets customer control information.
