@@ -1,5 +1,5 @@
 
-# PUT /Customer/{CustNo}/Note
+# PATCH /Customer/{CustNo}/Note
 
 #### Description
 Updates an existing customer note
@@ -12,7 +12,7 @@ Updates an existing customer note
 
 **URI**
 
-`PUT https://localhost:81/Customer/{CustNo}/Note`
+`PATCH https://localhost:81/Customer/{CustNo}/Note`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
