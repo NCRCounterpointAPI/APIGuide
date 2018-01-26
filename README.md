@@ -86,7 +86,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Company` | [`GET`](Endpoints/GET_Company.md) | X | X | Gets information about the given company (from SY_COMP & DB_CTL).
 `/Customer` | [`POST`](Endpoints/POST_Customer.md) | X | X | Adds a new customer record.
 `/Customer/{CustNo}` | [`GET`](Endpoints/GET_Customer.md) | X | X | Gets information about a customer.
-`/Customer/{CustNo}` |  [`PATCH`](Endpoints/PUT_Customer.md) | X | X | Updates information about a customer.
+`/Customer/{CustNo}` |  [`PATCH`](Endpoints/PATCH_Customer.md) | X | X | Updates information about a customer.
 `/Customer/{CustNo}/Address` | [`POST`](Endpoints/POST_Customer_Address.md) | X | X | Adds a new shipping address to an existing customer.
 `/Customer/{CustNo}/Address` | [`PATCH`](Endpoints/PUT_Customer_Adress) | X | X | Updates an existing shipping address for an existing customer.
 `/Customer/{CustNo}/Address` | [`DELETE`](Endpoints/DELETE_Customer_Address.md) | X | X | Deletes a shipping address from an existing customer.
