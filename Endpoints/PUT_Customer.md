@@ -1,4 +1,4 @@
-# PUT /Customer/{CustNo}
+# PATCH /Customer/{CustNo}
 
 #### Description
 Updates an existing customer..
@@ -11,7 +11,7 @@ Updates an existing customer..
 
 **URI**
 
-`PUT https://localhost:81/Customer/{CustNo}`
+`PATCH https://localhost:81/Customer/{CustNo}`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
