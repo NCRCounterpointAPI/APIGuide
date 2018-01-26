@@ -1,4 +1,4 @@
-# PUT /Customer/{CustNo}/Card
+# PATCH /Customer/{CustNo}/Card
 
 #### Description
 Add or update a credit card's expiration date.
@@ -12,7 +12,7 @@ Add or update a credit card's expiration date.
 
 **URI**
 
-`PUT https://localhost:81/Customer/{CustNo}/CARD?CardSeqNo={CardSeqNo}`
+`PATCH https://localhost:81/Customer/{CustNo}/CARD?CardSeqNo={CardSeqNo}`
 
 **Headers**
 - `Authorization : Basic UUFUZXN0R29sZi5NR1I6cGFzc3dvcmQx`
