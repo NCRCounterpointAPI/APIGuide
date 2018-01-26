@@ -91,7 +91,7 @@ Endpoint | Operation (Verb) | APIKey | CP Registration |  Description
 `/Customer/{CustNo}/Address` | [`PATCH`](Endpoints/PATCH_Customer_Address) | X | X | Updates an existing shipping address for an existing customer.
 `/Customer/{CustNo}/Address` | [`DELETE`](Endpoints/DELETE_Customer_Address.md) | X | X | Deletes a shipping address from an existing customer.
 `/Customer/{CustNo}/Card` | [`POST`](Endpoints/POST_Customer_Card.md) | X | X | Adds a credit card on file to an existing customer.
-`/Customer/{CustNo}/Card` | [`PATCH`](Endpoints/PaTCH_Customer_Card.md) | X | X | Updates an existing credit card on file for an existing customer.
+`/Customer/{CustNo}/Card` | [`PATCH`](Endpoints/PATCH_Customer_Card.md) | X | X | Updates an existing credit card on file for an existing customer.
 `/Customer/{CustNo}/Card` | [`DELETE`](Endpoints/DELETE_Customer_Card.md) | X | X | Deletes a credit card on file for an existing customer.
 `/Customer/{CustNo}/Note` | [`POST`](Endpoints/POST_Customer_Note.md) | X | X | Adds a new note to an existing customer.
 `/Customer/{CustNo}/Note` | [`PATCH`](Endpoints/PATCH_Customer_Note.md) | X | X | Updates an existing note on an existing customer.
