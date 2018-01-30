@@ -35,6 +35,9 @@ The API server allows fine grained configuring over the companies, users, and AP
 ## API Keys and licensing
 Most, but not all calls to the API will require a free API License key (for the client application or script), and a paid registration.ini option for the Counterpoint merchant. The endpoint chart below indicates which endpoints require each piece of data. See the [API Keys and licensing page](InstallationAndConfiguration/Licensing.md) for more details.
 
+## Card on file tokenization
+The API has endpoints that can be used to replace card on file records with tokens from Secure Pay, as well as a web UI to allow for easy conversion of card on file data. Details can be found [here](/InstallationAndConfiguration/TokenizationUtility.md).
+
 ## Functionality and Testing
 Automated testing is used to validate the operation and accuracy of the API calls. It is highly recommended that consumers of the API review the automated tests to ensure the API provides the needed capabilities. In short, if it's not covered by our automated tests, there's no guarantee that a given usage of the API will continue to work as expected. 
 
