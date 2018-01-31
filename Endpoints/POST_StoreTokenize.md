@@ -4,7 +4,7 @@
 #### Description
 Tokenizes the cards for the store.
 
-- Requires API Key: Yes
+- Requires API Key: No
 - Requires System Administrator: No
 - Requires Counterpoint Registration option: Yes
 
