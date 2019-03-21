@@ -4,8 +4,8 @@
 #### Description
 Gets a list of all Categories and subcategories in the system. This will return a hierarchical list, with subcategory records structured as children of their parent category.
 
-- Requires API Key: No
-- Requires System Administrator: Yes
+- Requires API Key: Yes
+- Requires System Administrator: No
 - Requires Counterpoint Registration option: No
 
 #### Sample Request
