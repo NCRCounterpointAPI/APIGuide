@@ -2,7 +2,7 @@
 # NCR Counterpoint API v2.2 Release Notes
 Version 2.2 of the NCR Counterpoint API addresses several issues, including:
 
-### Issue CP-CP-10435 REST API: Security Questions in regards to access of API’s metadata, endpoint information and request logs information
+### Issue CP-10435 REST API: Security Questions in regards to access of API’s metadata, endpoint information and request logs information
 Previously an external user could access certain internal information from a running instance of the CPAPI process.
 
 In this version, a configuration setting has been added to allow the administrator to enable or disable internal information such as metadata, request logs, SOAP12, SOAP11,  Debug Info section, Postman plugin, Swagger plugin. 
