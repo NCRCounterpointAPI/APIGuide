@@ -3,11 +3,12 @@ The NCR Counterpoint API is a [REST](http://en.wikipedia.org/wiki/Representation
 - **Independent from Counterpoint code:** The API has no runtime dependencies on Counterpoint, and thus can be installed on a non-Counterpoint machine. This also allows flexibility in forward and backward compatibility and ensures that API upgrades aren't dependent on Counterpoint upgrades.
 - **Multi-company capable:** The API server can connect to multiple independent NCR Counterpoint companies from the same and or separate installs. As long as the API server has connectivity to a Counterpoint system, it can work with it.
 - **Multi-version capable:** The API server is designed to work with multiple versions of Counterpoint systems simultaneously. The same server instance can work with an 8.4.6.12 company and an 8.5.0 company. The API server determines the version of Counterpoint its connected to by querying <code>DB_CTL.DB_VER</code> from the Counterpoint database, and executes the proper set of business rules for the target version of Counterpoint.
-- **Lightweight, simple, and performant:** As much as possible, we hope to keep the API server small, simple, and high performance. As with any software, it will grow as functionality grows, but key design goals are simplicity and performance.
+- **Lightweight, simple, and performant:** As much as possible, we hope to keep the API server small, simple, and high performance. As with any https://github.com/NCRCounterpointAPI/APIGuide/tree/master/Release_Notessoftware, it will grow as functionality grows, but key design goals are simplicity and performance.
 ## Release Notes
 * [Version 2.0](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.0_Release_Notes.md)
 * [Version 2.1](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.1_Release_Notes.md)
 * [Version 2.2](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.2_Release_Notes.md)
+* [Version 2.3](https://github.com/NCRCounterpointAPI/APIGuide/tree/master/Release_Notes/API_2.3_Release_Notes.md)
 ## Requirements
 Any instance of the NCR Counterpoint API server can connect to multiple NCR Counterpoint installations and companies. In order for the server to work against an NCR Counterpoint company, the following requirements must be met:
 * Windows 7 (desktop OS) or Windows Server 2012 R2 (server OS) or newer.
