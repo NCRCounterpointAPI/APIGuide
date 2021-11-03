@@ -8,6 +8,7 @@ The NCR Counterpoint API is a [REST](http://en.wikipedia.org/wiki/Representation
 * [Version 2.0](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.0_Release_Notes.md)
 * [Version 2.1](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.1_Release_Notes.md)
 * [Version 2.2](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.2_Release_Notes.md)
+* [Version 2.3](https://github.com/NCRCounterpointAPI/APIGuide/blob/master/Release_Notes/API_2.3_Release_Notes.md)
 ## Requirements
 Any instance of the NCR Counterpoint API server can connect to multiple NCR Counterpoint installations and companies. In order for the server to work against an NCR Counterpoint company, the following requirements must be met:
 * Windows 7 (desktop OS) or Windows Server 2012 R2 (server OS) or newer.
