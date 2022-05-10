@@ -7,6 +7,8 @@ Adds a completed document/ticket to the database. This is the call that is used 
 
 Also note that currently, the API server has not gone through PA-DSS validation, so credit payments should not yet be used in production systems. Credit processing functionality may be disabled in the final release of the API server until PA-DSS certification is complete.
 
+Loyalty points are not supported.
+
 - Requires API Key: Yes
 - Requires System Administrator: No
 - Requires Counterpoint Registration option: Yes
