@@ -23,10 +23,9 @@ Any instance of the NCR Counterpoint API server can connect to multiple NCR Coun
 * Most API calls require that client applications or scripts provide a valid "APIKey" header in each request. This APIKey must also be installed on the API Server. See the page on [APIKeys](InstallationAndConfiguration/Licensing.md) for more information. There are some limited functions that will work without an API Key, but the bulk of the endpoints do require an API Key to be provided. See the documentation for an individual endpoint to determine if it requires an APIKey for use.
 
 ## Supported Counterpoint versions
-Version 2.0 of the NCR Counterpoint API is tested and supported with the following Counterpoint verions:
-* V8.4.6.18
-* V8.5.2.1
-* V8.5.3
+Version 2.4 of the NCR Counterpoint API is tested and supported with the following Counterpoint versions:
+* V8.6.0.0
+* V8.5.7.2
 
 Please note that the API relies on the database version value in `DB_CTL.DB_VER` for versioning information, and thus it cannot distinguish between multiple Counteproint versions that share a given value for `DB_CTL.DB_VER`. There are also no restrictions preventing the API from working with some other versions of Counterpoint Databases. It's very likely that the Counterpoint API will work with other versions of Counterpoint, but the versions listed above are the only versions that the API has been fully tested and is supported on. If there is sufficient demand for support of additional versions, then the scope of supported Counterpoint versions may be expanded.
 
